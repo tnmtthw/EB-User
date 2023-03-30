@@ -474,7 +474,7 @@ label {
 
   <!-- ======= Footer ======= -->
   
-@include('footer')
+@include('include.footer')
   
   </footer><!-- End Footer -->
 <!-- modal -->

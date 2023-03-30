@@ -473,9 +473,8 @@ label {
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <?php
-include('footer.php');
-?>
+  
+@include('footer')
   
   </footer><!-- End Footer -->
 <!-- modal -->

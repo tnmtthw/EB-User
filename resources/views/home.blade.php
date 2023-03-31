@@ -478,42 +478,57 @@ label {
   
   </footer><!-- End Footer -->
 <!-- modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header border-bottom-0">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-title text-center">
+        <h4>Login</h4>
       </div>
-      <div class="modal-body">
-        <div class="form-title text-center">
-          <h4>Login</h4>
+      <div class="d-flex flex-column text-center">
+        {{-- LOGIN ERROR MSG START HERE --}}
+        <div class="mt-5">
+        @if($errors->any())
+        <div class="col-12">
+            @foreach($errors->all() as $error)
+                <div class="alert alert-danger">{{$error}}</div>
+            @endforeach
         </div>
-        <div class="d-flex flex-column text-center">
-          <form>
-            <div class="form-group">
-            <label style="text-align:left; ";  for="username"></label>
-              <input type="email" class="form-control" id="email1"placeholder="Username">
-            </div>
-            <div class="form-group">
-            <label style="text-align:left"; for="password"></label>
-              <input type="password" class="form-control" id="password1" placeholder="Password">
-            </div>
-            <div class="form-group text-right">
-  <a href="#forgotPasswordModal" data-toggle="modal" data-dismiss="modal">Forgot Password?</a>
+          @endif
+          @if(session()->has('error'))
+              <div class="alert alert-danger">{{session('error')}}</div>
+          @endif
+          @if(session()->has('sucess'))
+              <div class="alert alert-sucess">{{session('sucess')}}</div>
+          @endif
+        </div>
+        {{-- LOGIN ERROR MSG END HERE --}}
+        {{-- LOGIN START HERE --}}
+        <form action="{{route('login.post')}}" method="POST">
+          @csrf
+          <div class="mb-3">
+              <label class="form-label">Email address</label>
+              <input type="email" class="form-control" name="email">
+          </div>
+          <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" name="password">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      {{-- LOGIN END HERE --}}   
+    <div class="modal-footer d-flex justify-content-center">
+      <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
+    </div>
 </div>
-            <button type="button" class="btn btn-info btn-block btn-round">Login</button>
-          </form>
-          
-      
-      <div class="modal-footer d-flex justify-content-center">
-        <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
-      </div>
-  </div>
 </div>
-        </div>
-        </div>
+</div>
+</div>
 
 
         

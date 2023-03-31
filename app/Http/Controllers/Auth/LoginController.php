@@ -22,6 +22,7 @@ class LoginController extends Controller
     }
 
     function logout(){
-        return redirect(route('home'));
+        Auth::logout();
+        return redirect(route('home'))->with('status', 'You have been logged out successfully.');
     }
 }

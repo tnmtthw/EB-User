@@ -18,13 +18,15 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/welcome', function () {
-    return view('welcome');
-})->name('welcome');
-
 Route::get('/home', function () {
     return view('home');
 })->name('home');
+Route::middleware(['auth'])->group(function () {
+    // protected routes here
+    Route::get('/welcome', function () {
+        return view('welcome');
+    })->name('welcome');
+});
 
 //Login Route
 Route::get('/login', [LoginController::class, 'login'])->name('login');

@@ -172,7 +172,7 @@
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="Home.html">Home</a></li>
+          <li><a class="nav-link scrollto " href="{{ route('home')}}">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link   scrollto" href="#portfolio">Contacts</a></li>
@@ -362,7 +362,7 @@
               <label for="accept-terms" style="display: inline-block;">I have read and agree to the <a href="#">terms and policies</a></label>
             </div>
           <button type="submit">Sign Up</button>
-          <p style="text-align:center">Already have an account? <a href="Home.html">Log in here</a></p>
+          <p style="text-align:center">Already have an account? <a href={{route('home')}}>Log in here</a></p>
         </form>
       </div>
     </section>

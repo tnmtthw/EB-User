@@ -38,94 +38,127 @@
 </head>
 
 <style>
-    body {
+  body {
+  margin-top: 50px;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  /*background-color: #4663ac;*/
+  background-image: url(assets/img/signup-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;            
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  }
+
+  .signup-form {
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px 15px;
+    background-color:white;
+    border-radius: 10px;
+  }
+
+  .signup-form header{
+    text-align: left;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  h3 {
+    text-align: center;
+    padding: 2px;
+    border-bottom: solid 3px #47b2e4;
+  }
+
+  h4 {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .form-group {
+    margin-bottom: 5px;
+    padding: 5  px;
+  }
+
+  label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  input:hover {
+    cursor: pointer;
+    border: 1px solid black;
+  }
+
+  .gender-option{
+      margin: 15px;
+      color: black;
+      display: flex;
+  }
+
+  .gender-option label{
+      padding: 0 20px 0 5px;
+  }
+  .gender-option label,
+  .gender-option input{
+      cursor: pointer;
+      display: initial;
+  }
+
+  button[type="submit"] {
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #47b2e4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button[type="submit"]:hover {
+    background-color: lightblue;
+  }
+
+  .inner-page p {
+    text-align: center;
     margin-top: 20px;
-    font-family: var(--bs-body-font-family);
-    font-size: var(--bs-body-font-size);
-    font-weight: var(--bs-body-font-weight);
-    line-height: var(--bs-body-line-height);
-    color: var(--bs-body-color);
-    text-align: var(--bs-body-text-align);
-    background-color: #4663ac;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-}
+  }
 
-.signup-form {
- 
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color:white;
-  border-radius: 10px;
-}
+  a {   
+    color:#4663ac;
+  }
 
-.signup-form h2 {
-  text-align: center;
-  margin-bottom: 2px;
-}
+  .terms-and-conditions input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    box-shadow: none;
+    margin-left: 15px;
+  }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  font-weight: normal;
-  margin-bottom: 10px;
-  font-size: 12spx;
-}
-
-input {
-  display: block;
-  width: 100%;
-  padding: 8px;                                        
-  font-size: 12px;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-button[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  background-color: #47b2e4;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: lightblue;
-}
-
-.inner-page p {
-  text-align: center;
-  margin-top: 20px;
-}
-
-a {
-   
-  color:#4663ac;
-}
-
-.terms-and-conditions input[type="checkbox"] {
-  height: 15px;
-  width: 15px;
-  display: inline-block;
-  box-shadow: none;
-
-
-}
-
-.terms-and-conditions label[for="accept-terms"] {
-  display: inline-block;
-
- 
-}
+  .terms-and-conditions label[for="accept-terms"] {
+    display: inline-block;
+  }
 
 </style>
 <body>
@@ -137,13 +170,12 @@ a {
       <h1 class="logo me-auto"><a href="index.html">EBarangay</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto " href="Home.html">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Contacts</a></li>
+          <li><a class="nav-link   scrollto" href="#portfolio">Contacts</a></li>
           <li><a class="nav-link scrollto" href="#team">News</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul> -->
@@ -176,53 +208,162 @@ a {
     <!-- ======= Breadcrumbs ======= -->
     <!-- <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-
-    
-          
+              
       </div>
     </section> -->
     <!-- End Breadcrumbs -->
 
     <section class="inner-page">
       <div class="container">
-        <form class="signup-form" action="" method="post">
-            <h2>Sign Up</h2>
-            <div class="form-group">
-              <label for="firstname">First Name</label>
-              <input type="text" id="firstname" name="firstname" required>
+        <form class="signup-form" action="#" method="post">
+          <h3>Registration</h3>
+          <h4>Personal Details</h4>
+          <!--User info-->
+          <!--3 ROWS-->
+            <div class="row"> 
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="firstname">First Name</label>
+                  <input type="text" id="firstname" name="firstname" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                    <label for="middlename">Middle Name</label>
+                    <input type="text" id="middlename" name="middlename" required>
+                </div>
+              </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                  </div>
+                </div>
             </div>
-            <div class="form-group">
-              <label for="lastname">Last Name</label>
-              <input type="text" id="lastname" name="lastname" required>
+            <div class ="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="phone">Contact Number</label>
+                  <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="bday">Date of Birth</label>
+                  <input type="date" id="bday" name="bday" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="gender">
+                  <label>Gender</label>
+                    <div class="gender-option">
+                      <div class="form-check">                  
+                        <input class="form-check-input" type="radio" name="gender" id="male">
+                          <label class="form-check-label" for="male">Male</label>
+                      </div>
+                      <div class="form-check">                  
+                        <input class="form-check-input" type="radio" name="gender" id="female">
+                          <label class="form-check-label" for="female">Female</label>
+                      </div>
+                    </div>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required>
+            <div class="row">
+              <!--3 ROWS-->
+              <!--ADDRESS-->
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="house-number">House Number</label>
+                    <input type="tel" id="house-number" name="house-number" pattern="[0-9]{4}" required>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="street">Street Name</label>
+                    <input type="text" id="street" name="street" required>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="sitio">Sitio</label>
+                    <input type="text" id="sitio" name="sitio" required>
+                  </div>
+                </div>
             </div>
-            <div class="form-group">
-              <label for="phone">Contact Number</label>
-              <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="brgy">Barangay</label>
+                  <input type="text" id="brgy" name="brgy" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="zip" required>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input type="text" id="username" name="username" required>
+            <!--ID-->
+            <div class="row">
+              <!--mas better sa type of ID naka drop down-->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="id">Type of ID</label>
+                  <input type="text" id="id" name="id" required>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="img">Valid ID</label>
+                  <input type="file" id="img" name="img" accept="image/*">
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" required>
+        <!--personal info end-->
+        <!--Log in info -->
+          <h4>Log in information</h4>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label for="username">Username</label>
+                  <input type="text" id="username" name="username" required>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="confirm-password">Confirm Password</label>
-              <input type="password" id="confirm-password" name="confirm-password" required>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+              </div>
             </div>
             <div class="terms-and-conditions">
-                <input type="checkbox" id="accept-terms" name="accept-terms" required> 
-                <label for="accept-terms" style="display: inline-block;">I have read and agree to the <a href="#">terms and policies</a></label>
-              </div>
-              <br>
-            <button type="submit">Sign Up</button>
-            <p>Already have an account? <a href="Home.html">Log in here</a></p>
-          </form>
+              <input type="checkbox" id="accept-terms" name="accept-terms" required> 
+              <label for="accept-terms" style="display: inline-block;">I have read and agree to the <a href="#">terms and policies</a></label>
+            </div>
+          <button type="submit">Sign Up</button>
+          <p style="text-align:center">Already have an account? <a href="Home.html">Log in here</a></p>
+        </form>
       </div>
     </section>
 

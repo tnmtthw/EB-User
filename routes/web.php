@@ -28,8 +28,12 @@ Route::middleware(['auth'])->group(function () {
     })->name('welcome');
 });
 
-//Login Route
+//Signin Route
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/login', [LoginController::class, 'loginPost'])->name('login.post');
+//Signup Route
+Route::get('/signup', function () {
+    return view('signup');
+})->name('signup');
 //Logout Route
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

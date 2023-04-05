@@ -523,7 +523,7 @@ label {
       </form>
       {{-- LOGIN END HERE --}}   
     <div class="modal-footer d-flex justify-content-center">
-      <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
+      <div class="signup-section">Not a member yet? <a href="{{ route('signup')}}" class="text-info"> Sign Up</a>.</div>
     </div>
 </div>
 </div>

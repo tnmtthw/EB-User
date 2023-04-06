@@ -215,28 +215,47 @@
 
     <section class="inner-page">
       <div class="container">
-        <form class="signup-form" action="#" method="post">
-          <h3>Registration</h3>
+        <form class="signup-form" action="{{route('signup.post')}}" method="POST">
+          @csrf
+          <h3>Signup</h3>
           <h4>Personal Details</h4>
+          <div class="container">
+            <div class="mt-5">
+            @if($errors->any())
+                <div class="col-12">
+                    @foreach($errors->all() as $error)
+                        <div class="alert alert-danger">{{$error}}</div>
+                    @endforeach
+                </div>
+            @endif
+
+            @if(session()->has('error'))
+                <div class="alert alert-danger">{{session('error')}}</div>
+            @endif
+
+            @if(session()->has('sucess'))
+                <div class="alert alert-sucess">{{session('sucess')}}</div>
+            @endif
+            </div>
           <!--User info-->
           <!--3 ROWS-->
             <div class="row"> 
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="firstname">First Name</label>
-                  <input type="text" id="firstname" name="firstname" required>
+                  <input type="text" id="firstname" name="firstname" >
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                     <label for="middlename">Middle Name</label>
-                    <input type="text" id="middlename" name="middlename" required>
+                    <input type="text" id="middlename" name="middlename" >
                 </div>
               </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <label for="lastname">Last Name</label>
-                    <input type="text" id="lastname" name="lastname" required>
+                    <input type="text" id="lastname" name="lastname" >
                   </div>
                 </div>
             </div>
@@ -244,13 +263,13 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="phone">Contact Number</label>
-                  <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required>
+                  <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" >
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="bday">Date of Birth</label>
-                  <input type="date" id="bday" name="bday" required>
+                  <input type="date" id="bday" name="bday" >
                 </div>
               </div>
               <div class="col-md-4">
@@ -275,19 +294,19 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <label for="house-number">House Number</label>
-                    <input type="tel" id="house-number" name="house-number" pattern="[0-9]{4}" required>
+                    <input type="tel" id="house-number" name="house-number" pattern="[0-9]{4}" >
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <label for="street">Street Name</label>
-                    <input type="text" id="street" name="street" required>
+                    <input type="text" id="street" name="street" >
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <label for="sitio">Sitio</label>
-                    <input type="text" id="sitio" name="sitio" required>
+                    <input type="text" id="sitio" name="sitio" >
                   </div>
                 </div>
             </div>
@@ -295,19 +314,19 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="brgy">Barangay</label>
-                  <input type="text" id="brgy" name="brgy" required>
+                  <input type="text" id="brgy" name="brgy" >
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="city">City</label>
-                    <input type="text" id="city" name="city" required>
+                    <input type="text" id="city" name="city" >
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="zip">Zip Code</label>
-                    <input type="text" id="zip" name="zip" required>
+                    <input type="text" id="zip" name="zip" >
                 </div>
               </div>
             </div>
@@ -317,7 +336,7 @@
               <div class="col-6">
                 <div class="form-group">
                   <label for="id">Type of ID</label>
-                  <input type="text" id="id" name="id" required>
+                  <input type="text" id="id" name="id" >
                 </div>
               </div>
               <div class="col-6">
@@ -334,13 +353,13 @@
             <div class="col-6">
               <div class="form-group">
                 <label for="username">Username</label>
-                  <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" >
               </div>
             </div>
             <div class="col-6">
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" >
               </div>
             </div>
           </div>
@@ -348,17 +367,17 @@
             <div class="col-6">
               <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" >
               </div>
             </div>
             <div class="col-6">
               <div class="form-group">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
+                <input type="password" id="password" name="password_confirmation">
               </div>
             </div>
             <div class="terms-and-conditions">
-              <input type="checkbox" id="accept-terms" name="accept-terms" required> 
+              <input type="checkbox" id="accept-terms" name="accept-terms" > 
               <label for="accept-terms" style="display: inline-block;">I have read and agree to the <a href="#">terms and policies</a></label>
             </div>
           <button type="submit">Sign Up</button>

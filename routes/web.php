@@ -32,8 +32,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/login', [LoginController::class, 'loginPost'])->name('login.post');
 //Signup Route
-Route::get('/signup', function () {
-    return view('signup');
-})->name('signup');
+Route::get('/signup', [LoginController::class, 'signup'])->name('signup');
+Route::post('/signup', [LoginController::class, 'signupPost'])->name('signup.post');
 //Logout Route
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

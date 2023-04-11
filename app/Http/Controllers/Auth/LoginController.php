@@ -24,7 +24,7 @@ class LoginController extends Controller
         if(Auth::attempt($credentials)){
             return redirect()->intended(route('welcome'));
         }
-        return redirect(route('home'))->with("error","Login details are not valid");
+        return redirect('/')->with("error","Login details are not valid");
     }
 
     function signupPost(Request $request){
@@ -33,6 +33,7 @@ class LoginController extends Controller
             'middlename' => 'required',
             'lastname' => 'required',
             'phone' => 'required',
+            'bday' => 'required',
             'username' => 'required',
             'email' => 'required',
             'password' => 'required|confirmed',
@@ -43,12 +44,17 @@ class LoginController extends Controller
         $data['middlename'] = $request->middlename;
         $data['lastname'] = $request->lastname;
         $data['phone'] = $request->phone;
+        $data['bday'] = $request->bday;
+        $data['gender'] = $request->gender;
+        $data['hnumber'] = $request->hnumber;
+        $data['street'] = $request->street;
+        $data['sitio'] = $request->sitio;
         $data['username'] = $request->username;
         $data['email'] = $request->email;
         $data['password'] = Hash::make($request->input('password'));
         $user = User::create($data);
         if($user){
-            return redirect(route('home'))->with("success","Registration successful. Please login to continue.");
+            return redirect('/')->with("success","Registration successful. Please login to continue.");
         } else {
 
         }   
@@ -56,6 +62,6 @@ class LoginController extends Controller
 
     function logout(){
         Auth::logout();
-        return redirect(route('home'))->with('status', 'You have been logged out successfully.');
+        return redirect('/')->with('status', 'You have been logged out successfully.');
     }
 }

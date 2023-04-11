@@ -172,7 +172,7 @@
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="{{ route('home')}}">Home</a></li>
+          <li><a class="nav-link scrollto " href="">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link   scrollto" href="#portfolio">Contacts</a></li>
@@ -275,58 +275,72 @@
               <div class="col-md-4">
                 <div class="gender">
                   <label>Gender</label>
-                    <div class="gender-option">
-                      <div class="form-check">                  
-                        <input class="form-check-input" type="radio" name="gender" id="male">
-                          <label class="form-check-label" for="male">Male</label>
-                      </div>
-                      <div class="form-check">                  
-                        <input class="form-check-input" type="radio" name="gender" id="female">
-                          <label class="form-check-label" for="female">Female</label>
-                      </div>
+                  <div class="gender-option">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                      <label class="form-check-label" for="male">Male</label>
                     </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                      <label class="form-check-label" for="female">Female</label>
+                    </div>
+                  </div>                  
                 </div>
               </div>
             </div>
             <div class="row">
-              <!--3 ROWS-->
               <!--ADDRESS-->
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label for="house-number">House Number</label>
-                    <input type="tel" id="house-number" name="house-number" pattern="[0-9]{4}" >
-                  </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="house-number">House Number</label>
+                  <input type="text" id="hnumber" name="hnumber">
                 </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label for="street">Street Name</label>
-                    <input type="text" id="street" name="street" >
-                  </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="street">Street Name</label>
+                  <select id="street" name="street" class="form-control">
+                    <option value="">Select a Street Name</option>
+                    <option value="1st street">1st</option>
+                    <option value="2nd street">2nd</option>
+                    <option value="3rd street">3rd</option>
+                    <option value="4th street">4th</option>
+                  </select>
                 </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label for="sitio">Sitio</label>
-                    <input type="text" id="sitio" name="sitio" >
-                  </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="sitio">Sitio</label>
+                  <select id="sitio" name="sitio" class="form-control">
+                    <option value="">Select a Sitio</option>
+                    <option value="sitio1">Sitio 1</option>
+                    <option value="sitio2">Sitio 2</option>
+                    <option value="sitio3">Sitio 3</option>
+                    <option value="sitio4">Sitio 4</option>
+                    <option value="sitio4">Sitio 5</option>
+                    <option value="sitio4">Sitio 6</option>
+                    <option value="sitio4">Sitio 7</option>
+                  </select>
                 </div>
-            </div>
+              </div>
+            </div>            
             <div class="row">
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="brgy">Barangay</label>
-                  <input type="text" id="brgy" name="brgy" >
+                  <input type="text" id="brgy" name="brgy" placeholder="East Rembo" disabled>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="city">City</label>
-                    <input type="text" id="city" name="city" >
+                  <input type="text" id="city" name="city" placeholder="Makati City" disabled>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="zip">Zip Code</label>
-                    <input type="text" id="zip" name="zip" >
+                    <input type="text" id="zip" name="zip" placeholder="1216" disabled>
                 </div>
               </div>
             </div>
@@ -377,11 +391,11 @@
               </div>
             </div>
             <div class="terms-and-conditions">
-              <input type="checkbox" id="accept-terms" name="accept-terms" > 
+              <input type="checkbox" id="accept-terms" name="accept-terms" required> 
               <label for="accept-terms" style="display: inline-block;">I have read and agree to the <a href="#">terms and policies</a></label>
             </div>
           <button type="submit">Sign Up</button>
-          <p style="text-align:center">Already have an account? <a href={{route('home')}}>Log in here</a></p>
+          <p style="text-align:center">Already have an account? <a href={{ url('/') }}>Log in here</a></p>
         </form>
       </div>
     </section>
@@ -390,7 +404,7 @@
 
   <!-- ======= Footer ======= -->
     
-  <footer id="footer">
+  @include('include.footer')
     <!-- 
         <div class="footer-newsletter">
           <div class="container">
@@ -472,8 +486,8 @@
         </div>
       </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  {{-- <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> --}}
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>

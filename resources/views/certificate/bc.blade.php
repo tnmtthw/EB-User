@@ -216,68 +216,80 @@ label {
   background:#024AA2;
 }
 
-h1 {
-  color: white;
-  text-shadow: 3px 0 6px #000000;
-  font-weight: 50;
-  font-size: 25px;
-}
-h3 {
-  color: white;
-  text-shadow: 3px 0 6px #000000;
-  font-weight: 50;
-  font-size: 40px;
-}
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  margin: 50px;
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #024AA2;
-  border-radius: 25px;
-  margin: 12px;
-}
-
-a {
-  color: white;
-}
-a:hover {
-  color: #6e99ff;
-}
 
 .services{
 	background: url('signup-bg.jpg');
-	background-repeat: no-repeat;
-	background-size: 1800px 600px;
+	background-size: 2000px 1800px;
+  background-repeat: no-repeat;
+
+}
+.table {
+  width: 65%;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.row {
+  padding: 20px;
+}
+
+.blue {
+  background-color: #024AA2;
+  color: #fff;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+h3 {
+  margin: 20px 0 10px;
+  font-size: 1.5em;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+input[type="checkbox"] {
+  width: 200px;
+  height: 25px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #024AA2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+
+}
+
+
+table
 
 </style>
 </head>
@@ -288,7 +300,7 @@ a:hover {
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-    <h1 class="logo me-auto" style="align-content: left;"><a href="index.php"><span>E</span>Barangay</a></h1>
+    <h1 class="logo me-auto" ><a href="index.php"><span>E</span>Barangay</a></h1>
     
 
       <nav id="navbar" class="navbar">
@@ -297,7 +309,7 @@ a:hover {
           <li><a href="#about">About</a></li>
      <li><a href="#services">Services</a></li>
            <li><a href="#contact">Contact</a></li>
-          <li><a  href="{{ route('logout')}}">Logout</a></li>
+          <li><a  href="#contact">News</a></li>
           <div class="container">
  		<a style="color: white"><span id='clock'></span></a>
 </div>
@@ -308,49 +320,94 @@ a:hover {
 
     </div>
   </header><!-- End Header -->
-
- <body  >
+<br>
 
   <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
+      <div class="table" data-aos="fade-up">
 
-        <div class="section-title">
-          <h3>Document Request</h3>
-        </div>
+  <div class="row blue" style="text-align: center;">
+    <h2>Barangay Business Clearance Application Form</h2>
+  </div>
+  <div class="row transparent">
+    <h3>I. Personal Information</h3>
+    <form>
+      <div>
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname">
 
-        <div class="row">
-          <div class="column" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card">
-              <h1><a href="{{ route('bc')}}">⧁Barangay Business Clearance</a></h1>
-            </div>
-          </div>
-          <div class="column" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card">
-              <h1><a href="{{ route('bca')}}">⧁Certificate of Indigency</a></h1>
-            </div>
-          </div>
-          <div class="column" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card">
-              <h1><a href="{{ route('bcaf')}}" >⧁Barangay Certification</a></h1>
-            </div>
-          </div>
-          <div class="column" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card">
-              <h1><a href="{{ route('bcr')}}" >⧁Certificate of Residency</a></h1>
-            </div>
-          </div>
-          <div class="column" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card">
-              <h1><a href="" >⧁Barangay Certificate for first time job</a></h1>
-            </div>
-          </div>
-          <div class="column" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card">
-              <h1><a href="" >⧁Barangay Contract of lease</a></h1>
-            </div>
-          </div>
-        </div>
+      <label for="middlename">Middle Name:</label>
+      <input type="text" id="middlename" name="middlename">
+
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname">
+
+      <label for="suffix">Suffix:</label>
+      <input type="text" id="suffix" name="suffix">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="contactnumber">Contact Number:</label>
+      <input type="text" id="contactnumber" name="contactnumber">
+
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday">
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age">
+
+      <label for="houseno">House No.:</label>
+      <input type="text" id="houseno" name="houseno">
+
+      <label for="street">Street:</label>
+      <input type="text" id="street" name="street">
+
+      <label for="barangay">Barangay:</label>
+      <input type="text" id="barangay" name="barangay">
+
+      <label for="sitio">Sitio:</label>
+      <input type="text" id="sitio" name="sitio">
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city">
+
+      <label for="province">Province:</label>
+      <input type="text" id="province" name="province">
+
+      <label for="zipcode">ZIP Code:</label>
+      <input type="text" id="zipcode" name="zipcode">
+
+      <label for="residency">Years of Residency:</label>
+      <input type="number" id="residency" name="residency">
+
+      <label for="validid">Valid ID:</label>
+      <input type="text" id="validid" name="validid">
+
+      <label for="proofidentity">Upload Proof of Identity:</label>
+      <input type="file" id="proofidentity" name="proofidentity">
+   </div>
+    </form>
+
+    <h3>II. Business Details</h3>
+    <form><div>
+      <label for="businessname">Business Name:</label>
+      <input type="text" id="businessname" name="businessname"><br>
+
+      <label for="businessaddress">Business Address:</label>
+      <input type="text" id="businessaddress" name="businessaddress"><br>
+
+      <label for="kindofbusiness">Kind of Business:</label>
+      <input type="text" id="kindofbusiness" name="kindofbusiness">  <br>
+</div>
+  <input type="checkbox" id="agreement" name="agreement" value="agree">
+  <label for="agreement">I agree to post my data and allow this website to use my information thereof requested.</label><br>
+  <p>Under RA10173, people whose personal information is collected, stored, and processed are called data subjects. Organizations who deal with your personal details, whereabouts, and preferences are duty bound to observe and respect your data privacy rights.</p><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+  
         
         
     </section>
@@ -365,43 +422,7 @@ a:hover {
 <!-- ======= Footer ======= -->
 @include('include.footer')
 </footer><!-- End Footer -->
-<!-- modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-title text-center">
-          <h4>Login</h4>
-        </div>
-        <div class="d-flex flex-column text-center">
-          <form>
-            <div class="form-group">
-            <label style="text-align:left; ";  for="username"></label>
-              <input type="email" class="form-control" id="email1"placeholder="Username">
-            </div>
-            <div class="form-group">
-            <label style="text-align:left"; for="password"></label>
-              <input type="password" class="form-control" id="password1" placeholder="Password">
-            </div>
-            <div class="form-group text-right">
-  <a href="#forgotPasswordModal" data-toggle="modal" data-dismiss="modal">Forgot Password?</a>
-</div>
-            <button type="button" class="btn btn-info btn-block btn-round">Login</button>
-          </form>
-          
-      
-      <div class="modal-footer d-flex justify-content-center">
-        <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
-      </div>
-  </div>
-</div>
-        </div>
-        </div>
+
 
 
         

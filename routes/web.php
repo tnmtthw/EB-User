@@ -37,6 +37,10 @@ Route::middleware(['auth'])->group(function () {
         return view('welcome');
     })->name('welcome');
 
+    Route::get('/request', function () {
+        return view('request');
+    })->name('request');
+
     Route::get('/bc', function () {
         return view('bc');
     })->name('bc');

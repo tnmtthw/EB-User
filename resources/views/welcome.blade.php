@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>E-Barangay</title>
+  <title>Home</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -28,383 +28,242 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-
-  <!-- Bootstrap CSS -->
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
-<!-- Font Awesome CSS -->
-<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
-<!-- jQuery -->
-<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
-<!-- Popper JS -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
-<!-- Bootstrap JS -->
-<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<style>
-/* <!-- span logo style  --> */
-
-#hero {
-  width: 100%;
-  height: 80vh;
-  background-color: #024AA2;
-  /* background-image: url('assets/img/logo.png'); */
-
-}
-#header{
-  background-color:#024AA2;
-    padding: 2px;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-}
-
-/* Styles for the mobile version of the navbar */
-.navbar-mobile {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(40, 58, 90, 0.9);
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Media query for screens smaller than 768px */
-@media screen and (max-width: 767px) {
-  .navbar {
-    display: none;
-    color: blue;
-  }
-  .navbar-mobile {
-    display: flex;
-  }
-}
-.fixed-top .logo span{
-      display: inline;
-      font-size:30px;
-      color:darkblue;
-      color:yellow;
-}
-.container button{
-  color:white;
-  background-color:transparent;
-
-
-}
-
-#header .logo {
-  font-size: 30px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform:none;
-}
-
-/* <!-- span --> */
-.container1 {
-  padding: 2rem 0rem;
-}
-
-
-.modal-header .close {
-  margin-top: -1.5rem;
-}
-
-.form-title {
-  margin: -2rem 0rem 2rem;
-}
-
-.btn-round {
-  border-radius: 3rem;
-}
-
-.delimiter {
-  padding: 1rem;
-}
-
-.social-buttons .btn {
-  margin: 0 0.5rem 1rem;
-}
-
-.signup-section {
-  padding: 0.3rem 0rem;
-}
-/* Styling for the input fields */
-.form-control {
-  border-radius: 10px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-}
-
-/* Styling for the label */
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-/* Styling for the form title */
-.form-title h4 {
-  margin-bottom: 20px;
-}
-
-/* Styling for the login button */
-.btn-info {
-  background-color: #47b2e4;
-  border-color: #47b2e4;
-}
-.text-info {
-    color: #47b2e4!important;
-}
-.text-info:hover {
-    color: #47b2e4!important;
-}
-/* Styling for the sign up link */
-.signup-section a {
-  color: #47b2e4;
-}
-
-/* Set the width of the modal */
-.modal-dialog {
-  max-width: 500px;
-}
-
-/* Center the modal vertically */
-.modal-dialog-centered {
-  display: flex;
-  align-items: center;
-}
-
-/* Remove the border from the modal header */
-.modal-header {
-  border-bottom: none;
-}
-label {
-  display: block;
-  margin-bottom: 5px;
-  margin-left: 15px; /* add margin to the right */
-  width: 100px; /* set a fixed width */
-}
-
-/* Set the width and height of the modal */
-.modal-dialog {
-  max-width: 600px; /* increase the max-width */
-  width: 400px;
-  height: 400px; /* set a fixed height */
-}
-
-/* Center the modal vertically and horizontally */
-.modal-dialog-centered {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* add justify-content */
-}
-#header.header-scrolled,
-#header.header-inner-pages {
-  background:#024AA2;
-}
-
-h1 {
-  color: white;
-  text-shadow: 3px 0 6px #000000;
-  font-weight: 50;
-  font-size: 25px;
-}
-h3 {
-  color: white;
-  text-shadow: 3px 0 6px #000000;
-  font-weight: 50;
-  font-size: 40px;
-}
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  margin: 50px;
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #024AA2;
-  border-radius: 25px;
-  margin: 12px;
-}
-
-a {
-  color: white;
-}
-a:hover {
-  color: #6e99ff;
-}
-
-.services{
-	background: url('signup-bg.jpg');
-	background-repeat: no-repeat;
-	background-size: 1800px 600px;
-}
-
-
-</style>
+  <!-- =======================================================
+  * Template Name: Arsha
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <!-- =======================================================
+  * Template Name: Arsha
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
+<style>
+.navbar .dropdown ul {
+    background:white;
+}
+.container2{
+ 
+  margin-top:0px;
+}
+.icon-box{
+
+  border-radius:20px;
+}
+/* news */
+
+.blog-section {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  background-color: none;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.card2 {
+  margin-bottom:80px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card2:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+  #hero {
+    width: 100%;
+    height: 80vh;
+    background-color:white;
+}
+.section-bg {
+    background-color:#024AA2;
+}
+.styled-heading {
+  background-color:#024AA2;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align:center;  
+  color:white;
+  border-radius:8px;
+}
+.readmore-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color:#47b2e4;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+.readmore-btn:hover {
+  background-color: #79d4ff;
+  color:white;
+}
+
+  </style>
 
 <body>
+@include('include.navbar')
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center">
+ <!-- End Header -->
 
-    <h1 class="logo me-auto" style="align-content: left;"><a href="index.php"><span>E</span>Barangay</a></h1>
-    
+  <main id="main">
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a  href="index.php">Home</a></li>
-          <li><a href="#about">About</a></li>
-     <li><a href="#services">Services</a></li>
-           <li><a href="#contact">Contact</a></li>
-          <li><a  href="{{ route('logout')}}">Logout</a></li>
-          <div class="container">
- 		<a style="color: white"><span id='clock'></span></a>
-</div>
-          
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+    <section style="background-color:#024AA2;"; id="hero" class="d-flex align-items-center">
 
-    </div>
-  </header><!-- End Header -->
-
- <body  >
-
-  <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h3>Document Request</h3>
-        </div>
-
-        <div class="row">
-          <div class="column" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card">
-              <h1><a href="{{ route('bc')}}">⧁Barangay Business Clearance</a></h1>
-            </div>
-          </div>
-          <div class="column" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card">
-              <h1><a href="{{ route('bca')}}">⧁Certificate of Indigency</a></h1>
-            </div>
-          </div>
-          <div class="column" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card">
-              <h1><a href="{{ route('bcaf')}}" >⧁Barangay Certification</a></h1>
-            </div>
-          </div>
-          <div class="column" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card">
-              <h1><a href="{{ route('bcr')}}" >⧁Certificate of Residency</a></h1>
-            </div>
-          </div>
-          <div class="column" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card">
-              <h1><a href="" >⧁Barangay Certificate for first time job</a></h1>
-            </div>
-          </div>
-          <div class="column" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card">
-              <h1><a href="" >⧁Barangay Contract of lease</a></h1>
-            </div>
-          </div>
-        </div>
-        
-        
-    </section>
-    </body><!-- End Services Section -->
-
- 
-
-    <!-- ======= Portfolio Section ======= -->
-   
-  </main><!-- End #main -->
-
-<!-- ======= Footer ======= -->
-@include('include.footer')
-</footer><!-- End Footer -->
-<!-- modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-title text-center">
-          <h4>Login</h4>
-        </div>
-        <div class="d-flex flex-column text-center">
-          <form>
-            <div class="form-group">
-            <label style="text-align:left; ";  for="username"></label>
-              <input type="email" class="form-control" id="email1"placeholder="Username">
-            </div>
-            <div class="form-group">
-            <label style="text-align:left"; for="password"></label>
-              <input type="password" class="form-control" id="password1" placeholder="Password">
-            </div>
-            <div class="form-group text-right">
-  <a href="#forgotPasswordModal" data-toggle="modal" data-dismiss="modal">Forgot Password?</a>
-</div>
-            <button type="button" class="btn btn-info btn-block btn-round">Login</button>
-          </form>
-          
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+      <!-- <h1>E-Barangay </h1>
+      <h1>Services</h1> -->
+      <div class="d-flex justify-content-center justify-content-lg-start">
+        <!-- <a href="#about" class="btn-get-started scrollto">  </a> -->
       
-      <div class="modal-footer d-flex justify-content-center">
-        <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
       </div>
+    </div>
+    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+      <img src="assets/img/hero2.png" class="img-fluid animated" alt="">
+    </div>
   </div>
 </div>
-        </div>
-        </div>
 
+</section>
+ 
+<section  style=" background-color: #024AA2"; id="services" class="services section-bg">
 
+<div   class="container2" data-aos="fade-up">
+
+  <!-- <div class="section-title">
+    <h2>Services</h2>
+    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+  </div> -->
+  
+  <div class="row">
+    <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+      <div class="icon-box">
+        <div class="icon"><i class="bx bx-calendar-event"></i></div>
+        <h4><a href="">Schedule Appointment</a></h4>
+        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+      <div class="icon-box">
+      <div class="icon"><i class="bx bx-folder-open"></i></div>
+        <h4><a href="{{ route('request')}}">Request Documents</a></h4>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+      <div class="icon-box">
+      <div class="icon"><i class="bx bx-tv"></i></div>
+        <h4><a href="">Read News</a></h4>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+      <div class="icon-box">
         
+      <div class="icon"><i class="bx bx-navigation"></i></div>
+        <h4><a href="">Send complaints</a></h4>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+    <section class="blog-section">
+  <div class="container">
+    <div class="header">
+      <h2>News and Announcements</h2>
+    </div>
+    <div class="row">
+      <div class="col-12 ">
+        <div class="card2">
+        <h2 class="styled-heading">Clean Up Drive</h2>
+          <h5>Title description, Dec 7, 2017</h5>
+          <img src="assets/img/news.png" alt="A beautiful landscape" width="200" height="200">
+  
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+             quis nostrud exercitation ullamco.      <a href="#" class="readmore-btn">Read more</a></p>
+
+        </div>
+      </div>
+      <div class="col-12 ">
+        <div class="card2">
+          <h2>TITLE HEADING</h2>
+          <h5>Title description, Sep 2, 2017</h5>
+          <div class="fakeimg" style="height:200px;">Image</div>
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing 
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+            veniam, quis nostrud exercitation ullamco.  <a href="#" class="readmore-btn">Read more</a></p>
+        </div>
+      </div>
+   <br>
+   <br>
+      <div class="col-12 ">
+        <div class="card2">
+          <h2>TITLE HEADING</h2>
+          <h5>Title description, Sep 2, 2017</h5>
+          <div class="fakeimg" style="height:200px;">Image</div>
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco.  <a href="#" class="readmore-btn">Read more</a></p>
+        </div>
+      </div>
+
+      <div class="col-12 ">
+        <div class="card2">
+          <h2>TITLE HEADING</h2>
+          <h5>Title description, Sep 2, 2017</h5>
+          <div class="fakeimg" style="height:200px;">Image</div>
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+             quis nostrud exercitation ullamco.  <a href="#" class="readmore-btn">Read more</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+@include('include.footer')
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -420,30 +279,3 @@ a:hover {
 </body>
 
 </html>
-<script>
-
-	var dt = new Date();
-var hours = dt.getHours();
-var minutes = dt.getMinutes();
-var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-var timeString = hours + ':' + minutes + '' + ampm;
-document.getElementById('clock').innerHTML = dt.toDateString() + ' ' + timeString;
-
-function clock() {
-    var dt = new Date();
-    var hours = dt.getHours();
-    var minutes = dt.getMinutes();
-    var ampm = hours >= 12 ? 'pm' : 'am';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    var timeString = hours + ':' + minutes + '' + ampm;
-    clockElement.textContent = dt.toDateString() + ' ' + timeString;
-}
-
-setInterval(clock, 1000);
-
-
-
-  </script>

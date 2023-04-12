@@ -352,7 +352,7 @@ label[for="agree"] {
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-    <h1 class="logo me-auto" ><a href="index.php"><span>E</span>Barangay</a></h1>
+    <h1 class="logo me-auto" ><a href=""><span>E</span>Barangay</a></h1>
     
 
       <nav id="navbar" class="navbar">

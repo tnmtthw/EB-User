@@ -13,24 +13,25 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('firstname');
-            $table->string('middlename');
-            $table->string('lastname');
-            $table->string('phone');
-            $table->date('bday'); 
-            $table->string('gender');
-            $table->string('house_number');
-            $table->string('street');
-            $table->string('sitio');
-            $table->string('brgy');
-            $table->string('city');
-            $table->string('zip');
-            $table->string('username')->unique();
-            $table->string('email')->unique();
+            $table->string('firstname')->nullable();
+            $table->string('middlename')->nullable();
+            $table->string('lastname')->nullable();
+            $table->string('phone')->nullable();
+            $table->date('bday')->nullable(); 
+            $table->string('gender')->nullable();
+            $table->string('house_number')->nullable();
+            $table->string('street')->nullable();
+            $table->string('sitio')->nullable();
+            $table->string('brgy')->nullable();
+            $table->string('city')->nullable();
+            $table->string('zip')->nullable();
+            $table->string('path')->nullable();
+            $table->string('username')->unique()->nullable();
+            $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->rememberToken();
-            $table->timestamps();
+            $table->timestamps();            
         });
     }
 

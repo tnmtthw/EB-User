@@ -41,12 +41,13 @@ class LoginController extends Controller
             'brgy' => 'required',
             'city' => 'required',
             'zip' => 'required',
+            'image' => 'required',
             'username' => 'required',
             'email' => 'required',
             'password' => 'required|confirmed',
  
         ]);
-
+        
         $data['firstname'] = $request->firstname;
         $data['middlename'] = $request->middlename;
         $data['lastname'] = $request->lastname;
@@ -59,6 +60,7 @@ class LoginController extends Controller
         $data['brgy'] = $request->brgy;
         $data['city'] = $request->city;
         $data['zip'] = $request->zip;
+        $data['image'] = $request->file('image')->store('public/images');
         $data['username'] = $request->username;
         $data['email'] = $request->email;
         $data['password'] = Hash::make($request->input('password'));

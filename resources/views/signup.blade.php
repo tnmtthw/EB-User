@@ -215,7 +215,7 @@
 
     <section class="inner-page">
       <div class="container">
-        <form class="signup-form" action="{{route('signup.post')}}" method="POST">
+        <form class="signup-form" action="{{route('signup.post')}}" method="POST" enctype="multipart/form-data">
           @csrf
           <h3>Signup</h3>
           <h4>Personal Details</h4>
@@ -353,13 +353,13 @@
               <div class="col-6">
                 <div class="form-group">
                   <label for="id">Type of ID</label>
-                  <input type="text" id="id" name="id" >
+                  <input type="text" id="id" name="id" placeholder="Sitio Clearance" disabled> 
                 </div>
               </div>
               <div class="col-6">
                 <div class="form-group">
                   <label for="img">Valid ID</label>
-                  <input type="file" id="img" name="img" accept="image/*">
+                  <input type="file" name="image">
                 </div>
               </div>
             </div>

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('phone');
             $table->date('bday'); 
             $table->string('gender');
-            $table->string('hnumber');
+            $table->string('house_number');
             $table->string('street');
             $table->string('sitio');
             $table->string('brgy');

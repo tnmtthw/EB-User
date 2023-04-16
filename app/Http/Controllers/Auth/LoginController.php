@@ -34,6 +34,13 @@ class LoginController extends Controller
             'lastname' => 'required',
             'phone' => 'required',
             'bday' => 'required',
+            'gender' => 'required',
+            'house_number' => 'required',
+            'street' => 'required',
+            'sitio' => 'required',
+            'brgy' => 'required',
+            'city' => 'required',
+            'zip' => 'required',
             'username' => 'required',
             'email' => 'required',
             'password' => 'required|confirmed',
@@ -46,7 +53,7 @@ class LoginController extends Controller
         $data['phone'] = $request->phone;
         $data['bday'] = $request->bday;
         $data['gender'] = $request->gender;
-        $data['hnumber'] = $request->hnumber;
+        $data['house_number'] = $request->house_number;
         $data['street'] = $request->street;
         $data['sitio'] = $request->sitio;
         $data['brgy'] = $request->brgy;

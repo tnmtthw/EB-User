@@ -23,7 +23,7 @@ class User extends Authenticatable
         'lastname',
         'bday',
         'gender',
-        'hnumber',
+        'house_number',
         'street',
         'sitio',
         'brgy',

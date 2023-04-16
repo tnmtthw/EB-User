@@ -292,8 +292,8 @@
               <!--ADDRESS-->
               <div class="col-md-4">
                 <div class="form-group">
-                  <label for="house-number">House Number</label>
-                  <input type="text" name="hnumber">
+                  <label for="house_number">House Number</label>
+                  <input type="text" name="house_number">
                 </div>
               </div>
               <div class="col-md-4">

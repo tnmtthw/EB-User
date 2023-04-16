@@ -49,6 +49,9 @@ class LoginController extends Controller
         $data['hnumber'] = $request->hnumber;
         $data['street'] = $request->street;
         $data['sitio'] = $request->sitio;
+        $data['brgy'] = $request->brgy;
+        $data['city'] = $request->city;
+        $data['zip'] = $request->zip;
         $data['username'] = $request->username;
         $data['email'] = $request->email;
         $data['password'] = Hash::make($request->input('password'));

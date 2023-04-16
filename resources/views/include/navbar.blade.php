@@ -324,7 +324,9 @@ p {
 
           <!-- <li class="dropdown"><a href="#"><img src="path_to_user_profile_image" alt="&nbsp;User name"></a> -->
             <ul>
-              <li><a href="#">Profile</a></li>
+              @if(Auth::check())
+                <li><a href="#">{{ Auth::user()->firstname }}</a></li>
+              @endif
               <li><a href="#">Documents</a></li>
               <li><a href="#">Drop Down 1</a></li>
               <li><a href="{{ route('logout')}}">Log out</a></li>  

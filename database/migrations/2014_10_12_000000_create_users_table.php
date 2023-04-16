@@ -22,6 +22,9 @@ return new class extends Migration
             $table->string('hnumber');
             $table->string('street');
             $table->string('sitio');
+            $table->string('brgy');
+            $table->string('city');
+            $table->string('zip');
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

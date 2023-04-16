@@ -293,18 +293,21 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="house-number">House Number</label>
-                  <input type="text" id="hnumber" name="hnumber">
+                  <input type="text" name="hnumber">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
+                  @php
+                    $filePath = public_path('streets.txt');
+                    $streets = file($filePath, FILE_IGNORE_NEW_LINES);
+                  @endphp
                   <label for="street">Street Name</label>
                   <select id="street" name="street" class="form-control">
-                    <option value="">Select a Street Name</option>
-                    <option value="1st street">1st</option>
-                    <option value="2nd street">2nd</option>
-                    <option value="3rd street">3rd</option>
-                    <option value="4th street">4th</option>
+                    <option value="">Select a street</option>
+                    @foreach($streets as $street)
+                        <option value="{{ $street }}">{{ $street }}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>
@@ -313,13 +316,13 @@
                   <label for="sitio">Sitio</label>
                   <select id="sitio" name="sitio" class="form-control">
                     <option value="">Select a Sitio</option>
-                    <option value="sitio1">Sitio 1</option>
-                    <option value="sitio2">Sitio 2</option>
-                    <option value="sitio3">Sitio 3</option>
-                    <option value="sitio4">Sitio 4</option>
-                    <option value="sitio4">Sitio 5</option>
-                    <option value="sitio4">Sitio 6</option>
-                    <option value="sitio4">Sitio 7</option>
+                    <option value="Sitio1">Sitio 1</option>
+                    <option value="Sitio2">Sitio 2</option>
+                    <option value="Sitio3">Sitio 3</option>
+                    <option value="Sitio4">Sitio 4</option>
+                    <option value="Sitio4">Sitio 5</option>
+                    <option value="Sitio4">Sitio 6</option>
+                    <option value="Sitio4">Sitio 7</option>
                   </select>
                 </div>
               </div>
@@ -328,19 +331,19 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="brgy">Barangay</label>
-                  <input type="text" id="brgy" name="brgy" placeholder="East Rembo" disabled>
+                  <input type="text" name="brgy" placeholder="East Rembo">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="city">City</label>
-                  <input type="text" id="city" name="city" placeholder="Makati City" disabled>
+                  <input type="text" name="city" placeholder="Makati City">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="zip">Zip Code</label>
-                    <input type="text" id="zip" name="zip" placeholder="1216" disabled>
+                    <input type="number" name="zip" placeholder="1216">
                 </div>
               </div>
             </div>

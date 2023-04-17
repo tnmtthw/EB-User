@@ -59,7 +59,7 @@
     max-width: 800px;
     height: auto;
     margin: 0 auto;
-    padding: 15px 15px;
+    padding: 0px 0px;
     background-color:white;
     border-radius: 10px;
   }
@@ -159,6 +159,31 @@
   .terms-and-conditions label[for="accept-terms"] {
     display: inline-block;
   }
+  .mt-5 {
+    margin-top: 0rem!important;
+}
+
+form {
+  background: linear-gradient(to top left, rgba(224, 238, 254, 1), transparent);
+}
+#header{
+
+  padding-top:6px;
+  padding-bottom:8px;
+}
+button[type="submit"] {
+    display: block;
+    width: 30%;
+    margin: auto;
+    margin-top:20px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #024AA2;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
 
 </style>
 <body>
@@ -167,16 +192,16 @@
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">EBarangay</a></h1>
+      <h4 class="logo me-auto"><a href="index.html">EBarangay</a></h4>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto " href="">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#about">Contact us</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link   scrollto" href="#portfolio">Contacts</a></li>
-          <li><a class="nav-link scrollto" href="#team">News</a></li>
+          <li><a class="nav-link   scrollto" href="#portfolio">About</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#team">News</a></li> -->
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul> -->
               <!-- <li><a href="#">Drop Down 1</a></li>
@@ -213,11 +238,13 @@
     </section> -->
     <!-- End Breadcrumbs -->
 
-    <section class="inner-page">
+    <section class="inner-page" >
       <div class="container">
         <form class="signup-form" action="{{route('signup.post')}}" method="POST" enctype="multipart/form-data">
           @csrf
-          <h3>Signup</h3>
+         
+          <h2 style="background-color: #024AA2;color:white; text-align: center;font-size:20px;height: 40px; width:800px;padding-top:7px;
+           border-top-left-radius: 15px; border-top-right-radius: 15px;">SIGN UP FORM</h2>
           <h4>Personal Details</h4>
           <div class="container">
             <div class="mt-5">
@@ -352,13 +379,14 @@
               <!--mas better sa type of ID naka drop down-->
               <div class="col-6">
                 <div class="form-group">
-                  <label for="id">Type of ID</label>
+                  <!-- <label for="id">Type of ID</label>
                   <input type="text" id="id" name="id" placeholder="Sitio Clearance" disabled> 
-                </div>
+                </div> -->
               </div>
-              <div class="col-6">
+              <div class="col-9">
                 <div class="form-group">
-                  <label for="img">Valid ID</label>
+                  
+                <span style="color: #024AA2;font-weight: bold;">Please upload image of your Sitio Clearance for resident verification.</span> <label for="img">Upload here </label>
                   <input type="file" name="image">
                 </div>
               </div>
@@ -393,12 +421,19 @@
                 <input type="password" id="password" name="password_confirmation">
               </div>
             </div>
+          
             <div class="terms-and-conditions">
+          
+            <br>
               <input type="checkbox" id="accept-terms" name="accept-terms" required> 
+          
               <label for="accept-terms" style="display: inline-block;">I have read and agree to the <a href="#">terms and policies</a></label>
             </div>
-          <button type="submit">Sign Up</button>
-          <p style="text-align:center">Already have an account? <a href={{ url('/') }}>Log in here</a></p>
+            <br>
+            <br>
+          <button type="submit">SUBMIT</button>
+     
+          <p style="text-align:center">Already have an account?  <a href={{ url('/') }}><u style="color;skyblue;">Sign in here</u></a></p>
         </form>
       </div>
     </section>
@@ -408,86 +443,7 @@
   <!-- ======= Footer ======= -->
     
   @include('include.footer')
-    <!-- 
-        <div class="footer-newsletter">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-6">
-                <h4>Join Our Newsletter</h4>
-                <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                <form action="" method="post">
-                  <input type="email" name="email"><input type="submit" value="Subscribe">
-                </form>
-              </div>
-            </div>
-          </div>
-        </div> -->
-    
-        <div class="footer-top">
-          <div class="container">
-            <div class="row">
-    
-              <div class="col-lg-3 col-md-6 footer-contact">
-                <h3 style="text-transform:none;">E-Barangay</h3>
-                <p>
-                  109 7th Ave,<br>
-                  Makati, 1216<br>
-                  Metro Manila <br><br>
-                  <strong>Phone:</strong> (02) 7728 1588 <br>
-                  <strong>Email:</strong> info@example.com<br>
-                </p>
-              </div>
-    
-              <div class="col-lg-3 col-md-6 footer-links">
-                <h4>Useful Links</h4>
-                <ul>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                </ul>
-              </div>
-    
-              <div class="col-lg-3 col-md-6 footer-links">
-                <h4>Our Services</h4>
-                <ul>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Doument Request</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Appointment Schedule</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Send Complaints</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">News</a></li>
-                  <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
-                </ul>
-              </div>
-    
-              <div class="col-lg-3 col-md-6 footer-links">
-                <h4>Our Social Networks</h4>
-                <p>Visit us on Our Social Media Platform</p>
-                <div class="social-links mt-3">
-                  <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
-                  <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                  <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                  <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                  <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
-                </div>
-              </div>
-    
-            </div>
-          </div>
-        </div>
-        <div class="container footer-bottom clearfix">
-          <div class="copyright">
-            &copy; Copyright <strong><span>E-Barangay</span></strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-            Designed by <a href="https://bootstrapmade.com/">Moonlight</a>
-          </div>
-        </div>
-      </footer><!-- End Footer -->
+<!-- End Footer -->
 
   {{-- <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> --}}

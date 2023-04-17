@@ -148,7 +148,10 @@
   border-radius: 10px;
   background-color:white;
 }
+#hero {
 
+  height:800px;
+}
   </style>
 
 <body>
@@ -160,7 +163,11 @@
  
  <main id="main">
 
-<section style="background: linear-gradient(to bottom, #2DB0F4, #024AA2, #024AA2);" id="hero" class="d-flex align-items-center">
+ <section style="background-image: url('assets/img/bg2.png'); background-size: cover; background-attachment:;" id="hero" class="d-flex align-items-center">
+  <!-- Add content here -->
+
+
+
 
 <div class="container">
 <div class="row">
@@ -226,15 +233,11 @@
     <h2 style="padding-top: 0px; padding-left: 40px;">Organizational Chart</h2>
     <div class="box2" style="height: 250px; width: 270px; background-color: white; margin-top: 20px; margin-left: 50px;">
     <!-- Add content for the second box here -->
-    </div>
-    <!-- <div class="flexbox" style="display: flex; flex-wrap: wrap; margin-top: 20px; margin-left: 50px;">
-      <div class="box3" style="height: 150px; width: 150px; background-color: white; margin-right: 20px; border-radius: 10px;"></div>
-      <div class="box3" style="height: 150px; width: 150px; background-color: white; margin-right: 20px; border-radius: 10px;"></div>
-      <div class="box3" style="height: 150px; width: 150px; background-color: white; margin-right: 20px; border-radius: 10px;"></div>
-    </div> -->
-  </div>  
 </div>
 
+  </div>
+  
+</div>
 
 
   </main><!-- End #main -->

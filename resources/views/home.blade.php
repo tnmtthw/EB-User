@@ -227,14 +227,14 @@ label {
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#about">Contact Us</a></li>
      <li><a class="nav-link scrollto" href="#services">Services</a></li>
               
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#contact">About</a></li>
           <div class="container">
   <button type="button" class="getstarted scrollto" data-toggle="modal" data-target="#loginModal">
-  Get Started
+  Sign in
   </button>  
 </div>
           

@@ -245,7 +245,7 @@ button[type="submit"] {
          
           <h2 style="background-color: #024AA2;color:white; text-align: center;font-size:20px;height: 40px; width:800px;padding-top:7px;
            border-top-left-radius: 15px; border-top-right-radius: 15px;">SIGN UP FORM</h2>
-          <h4>Personal Details</h4>
+          <h4  style="color: #024AA2;">Personal Details</h4>
           <div class="container">
             <div class="mt-5">
             @if($errors->any())
@@ -393,7 +393,7 @@ button[type="submit"] {
             </div>
         <!--personal info end-->
         <!--Log in info -->
-          <h4>Log in information</h4>
+          <h4  style="color: #024AA2;">Log in information</h4>
           <div class="row">
             <div class="col-6">
               <div class="form-group">

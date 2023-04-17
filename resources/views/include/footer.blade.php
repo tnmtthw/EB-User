@@ -1,12 +1,22 @@
+<style>
+  .footer-top {
+    background: linear-gradient(95.28deg, #092F5E -1.27%, #2F2F2F -1.27%, #2F2F2F 25.52%, #1A3E6D 119.15%);
+}
+ul {
+  list-style-type: none;
+}
+  </style>
+
+
 <footer id="footer">
     
     
-    <div class="footer-top">
+    <div style=" background: linear-gradient(95.28deg, #092F5E -1.27%, #FFFFFF -1.27%, #FFFFFF 25.52%, #43ABE0 119.15%);";class="footer-top ">
       <div class="container">
-        <div class="row">
+        <div class="row"style="padding-top: 25px; padding-bottom:40px;">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3 style="text-transform:none;">E-Barangay</h3>
+            <h2 style="text-transform:none; color:#024AA2; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);"><b><span style="color:#FAFF00";>E</span>Barangay</b></h2>
             <p>
               109 7th Ave,<br>
               Makati, 1216<br>
@@ -15,9 +25,10 @@
               <strong>Email:</strong> info@example.com<br>
             </p>
           </div>
+        
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4  style="color:#024AA2;">Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
@@ -28,7 +39,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4 style="color:#024AA2";>Our Services</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Doument Request</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Appointment Schedule</a></li>
@@ -39,7 +50,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
+            <h4 style="color:#024AA2";>Our Social Networks</h4>
             <p>Visit us on Our Social Media Platform</p>
             <div class="social-links mt-3">
               <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
@@ -62,7 +73,8 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        Designed by <a href="https://bootstrapmade.com/">Moonlight</a>
+        Designed by <a href="">Moonlight</a>
+        <!-- https://bootstrapmade.com/ -->
       </div>
     </div>
   </footer><!-- End Footer -->

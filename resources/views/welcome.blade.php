@@ -121,6 +121,34 @@
   color:white;
 }
 
+.button {
+  background-color: rgba(2, 74, 162, 1);
+  border-radius: 20px;
+  color: #fff;
+  padding-top: 0px;
+  padding: 10px 0px;
+  text-align: center;
+}.inner {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 1600px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 250px;
+  border-bottom-left-radius: 250px;
+  border-bottom-right-radius: 50px;
+  height: 700px;
+  background: linear-gradient(105.18deg, #43ABE0 38.2%, #024AA2 80.02%, rgba(67, 171, 224, 0) 104.19%);
+
+}
+.box2 {
+  border-radius: 10px;
+  background-color:white;
+}
+
   </style>
 
 <body>
@@ -129,29 +157,29 @@
   <!-- ======= Header ======= -->
  <!-- End Header -->
 
-  <main id="main">
+ 
+ <main id="main">
 
-    <section style="background-color:#024AA2;"; id="hero" class="d-flex align-items-center">
+<section style="background: linear-gradient(to bottom, #2DB0F4, #024AA2, #024AA2);" id="hero" class="d-flex align-items-center">
 
 <div class="container">
-  <div class="row">
-    <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-      <!-- <h1>E-Barangay </h1>
-      <h1>Services</h1> -->
-      <div class="d-flex justify-content-center justify-content-lg-start">
-        <!-- <a href="#about" class="btn-get-started scrollto">  </a> -->
-      
-      </div>
-    </div>
-    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-      <img src="assets/img/hero2.png" class="img-fluid animated" alt="">
-    </div>
+<div class="row">
+<div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+  <!-- <h1>E-Barangay </h1>
+  <h1>Services</h1> -->
+  <div class="d-flex justify-content-center justify-content-lg-start">
+    <!-- <a href="#about" class="btn-get-started scrollto">  </a> -->
+  
   </div>
+</div>
+<div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+  <img src="assets/img/image1.png" class="img-fluid animated" alt="">
+</div>
+</div>
 </div>
 
 </section>
- 
-<section  style=" background-color: #024AA2"; id="services" class="services section-bg">
+<section  style=" background: linear-gradient(rgba(67, 171, 224, 0.22), rgba(67, 171, 224, 0.22));"; id="services" class="services section-bg">
 
 <div   class="container2" data-aos="fade-up">
 
@@ -161,65 +189,53 @@
   </div> -->
   
   <div class="row">
-    <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+    <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
       <div class="icon-box">
-        <div class="icon"><i class="bx bx-calendar-event"></i></div>
-        <h4><a href="">Schedule Appointment</a></h4>
-        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+      <div class="button">Request Documents</div>
+        <img src="assets/img/image2.png" style="height:250px;width: 380px;" >
+       <!--  <h4><a href=""></a></h4>
+        <p></p> -->
       </div>
     </div>
 
-    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+    <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
       <div class="icon-box">
-      <div class="icon"><i class="bx bx-folder-open"></i></div>
-        <h4><a href="{{ route('request')}}">Request Documents</a></h4>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+       <div class="button">Request Documents</div>
+        <img src="assets/img/image3.png" style="height:250px;width: 380px;" >
       </div>
     </div>
 
-    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+    <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
       <div class="icon-box">
-      <div class="icon"><i class="bx bx-tv"></i></div>
-        <h4><a href="">Read News</a></h4>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+      <div class="button">Request Documents</div>
+        <img src="assets/img/image4.png" style="height:250px;width: 380px;" >
       </div>
     </div>
 
-    <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-      <div class="icon-box">
-        
-      <div class="icon"><i class="bx bx-navigation"></i></div>
-        <h4><a href="">Send complaints</a></h4>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-      </div>
-    </div>
-
+   
   </div>
 
 </div>
-
 </section>
 
-    <section class="blog-section">
-  <div class="container">
-    <div class="header">
-      <h2>News and Announcements</h2>
+<div class="inner">
+  <div class="box">
+    <h1 style="padding-top: 20px; padding-left: 40px;">
+      <span style="color: rgba(250, 255, 0, 1)">Barangay East Rembo</span> Officials
+    </h1>
+    <h2 style="padding-top: 0px; padding-left: 40px;">Organizational Chart</h2>
+    <div class="box2" style="height: 250px; width: 270px; background-color: white; margin-top: 20px; margin-left: 50px;">
+    <!-- Add content for the second box here -->
     </div>
-    <div class="row">
-      <div class="col-12 ">
-        <div class="card2">
-        <h2 class="styled-heading">Clean Up Drive</h2>
-          <h5>Title description, Dec 7, 2017</h5>
-          <img src="assets/img/news.png" alt="A beautiful landscape" width="200" height="200">
-  
-          <p>Some text..</p>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-             quis nostrud exercitation ullamco.      <a href="#" class="readmore-btn">Read more</a></p>
+    <!-- <div class="flexbox" style="display: flex; flex-wrap: wrap; margin-top: 20px; margin-left: 50px;">
+      <div class="box3" style="height: 150px; width: 150px; background-color: white; margin-right: 20px; border-radius: 10px;"></div>
+      <div class="box3" style="height: 150px; width: 150px; background-color: white; margin-right: 20px; border-radius: 10px;"></div>
+      <div class="box3" style="height: 150px; width: 150px; background-color: white; margin-right: 20px; border-radius: 10px;"></div>
+    </div> -->
+  </div>  
+</div>
 
-        </div>
-      </div>
-</section>
+
 
   </main><!-- End #main -->
 

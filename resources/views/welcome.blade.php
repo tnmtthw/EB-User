@@ -198,23 +198,23 @@
   <div class="row">
     <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
       <div class="icon-box">
-      <div class="button">Request Documents</div>
-        <img src="assets/img/image2.png" style="height:250px;width: 380px;" >
-       <!--  <h4><a href=""></a></h4>
-        <p></p> -->
+        <a href="{{ route('request') }}">
+          <div class="button">Request Documents</div>
+          <img src="assets/img/image2.png" style="height:250px;width: 380px;" >
+        </a>
       </div>
     </div>
 
     <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
       <div class="icon-box">
-       <div class="button">Request Documents</div>
+       <div class="button">Schedule Appointment</div>
         <img src="assets/img/image3.png" style="height:250px;width: 380px;" >
       </div>
     </div>
 
     <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
       <div class="icon-box">
-      <div class="button">Request Documents</div>
+      <div class="button">Send Complaints</div>
         <img src="assets/img/image4.png" style="height:250px;width: 380px;" >
       </div>
     </div>

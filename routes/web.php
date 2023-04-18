@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\DocuRequestController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -57,6 +58,10 @@ Route::middleware(['auth'])->group(function () {
         return view('bcr');
     })->name('bcr');
 
+    Route::get('/bcf', function () {
+        return view('bcf');
+    })->name('bcf');
+
     // Route::get('/certificate/bc', function () {
     //     return view('certificate.bc');
     // })->name('certificate.bc');
@@ -84,3 +89,5 @@ Route::get('/signup', [LoginController::class, 'signup'])->name('signup');
 Route::post('/signup', [LoginController::class, 'signupPost'])->name('signup.post');
 //Logout Route
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+//Document Request Route
+Route::post('/docuRequest', [DocuRequestController::class, 'docuRequest'])->name('docuRequest');

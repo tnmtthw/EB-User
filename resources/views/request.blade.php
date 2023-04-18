@@ -347,7 +347,7 @@ a:hover {
           </div>
           <div class="column" data-aos="zoom-in" data-aos-delay="100">
             <div class="card">
-              <h1><a href="" >⧁Barangay Contract of lease</a></h1>
+              <h1><a href="{{ route('bcf') }}" >⧁Barangay Clearance Form</a></h1>
             </div>
           </div>
         </div>

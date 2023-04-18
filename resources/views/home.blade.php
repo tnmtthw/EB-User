@@ -57,6 +57,10 @@
   background-size: cover;
 
 }
+#services {
+    background: radial-gradient(#9cc9ed 55%, #d6edf8 90%);
+}
+
 #header{
   background-color:transparent;
 }
@@ -248,29 +252,51 @@ label {
 .icon-box{
   border-radius:25px;
 }
+#about {
+   background:  linear-gradient(
+    to right,
+    #fefefe 10%,
+    #9cc9ed 50%,
+    #fefefe 90%
+    
+  );
+}
+.container1{
+  border-radius: 25px; 
+  background-color: white;
+  width: 1110px;
+  height: 470px;
+}
+.container1{
+  height:550px;
+  
+}
+.container1 img{
+ margin-left:20px;
+  
+}
 </style>
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
+<header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
-
-    <h1 class="logo me-auto"><a href="index.php"><span>E</span>Barangay</a></h1>
+    <img src="assets/img/logo3.png">
+    <h1 class="logo me-auto"><a href="index.php">EBarangay</a></h1>
     
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Contact Us</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
      <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
               
           </li>
-          <li><a class="nav-link scrollto" href="#contact">About</a></li>
           <div class="container">
   <button type="button" class="getstarted scrollto" data-toggle="modal" data-target="#loginModal">
-  Sign in
+  Sign In
   </button>  
 </div>
           
@@ -287,7 +313,7 @@ label {
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-        <h1>EBarangay</h1>
+        <!-- <h1>EBarangay</h1> -->
          <h1> East Rembo</h1>
           <h2>Connecting Communities, Empowering Lives Welcome to E-Barangay!</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
@@ -304,9 +330,9 @@ label {
   </section><!-- End Hero -->
 
   <main id="main">
-  <section  style=" background: linear-gradient(rgba(67, 171, 224, 0.22), rgba(67, 171, 224, 0.22));padding-left:60px;"; id="services" class="services section-bg">
+  <section  style="padding-left:60px;"; id="services" class="services section-bg">
 
-<div  class="container2" data-aos="fade-up">
+<div class="container2" data-aos="fade-up">
 
   <!-- <div class="section-title">
     <h2>Services</h2>
@@ -315,7 +341,7 @@ label {
   
   <div class="row">
     
-  <div class="section-title">
+  <div   class="section-title">
           <h2>Services</h2>
         </div>
 
@@ -330,14 +356,14 @@ label {
 
     <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
       <div class="icon-box">
-       <div class="button">Request Documents</div>
+       <div class="button">Schedule Appointment</div>
         <img src="assets/img/image3.png" style="height:250px;width: 380px;" >
       </div>
     </div>
 
     <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
       <div class="icon-box">
-      <div class="button">Request Documents</div>
+      <div class="button">Send Complaints</div>
         <img src="assets/img/image4.png" style="height:250px;width: 380px;" >
       </div>
     </div>
@@ -357,8 +383,8 @@ label {
             <img src="assets/img/image6.png" class="img-fluid" >
 
           </div>
-         <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-            <h1 id="yellow" style="font-weight: bold; text-shadow: 3px 0 6px #888888; color: #024AA2;"><span>E</span> Barangay</h1>
+         <div class="col-lg-6 pt-4 pt-lg-0 content text-justify" data-aos="fade-left" data-aos-delay="100">
+            <h1 id="yellow" style="font-weight: bold; text-shadow: 3px 0 6px #888888; color: #024AA2;"><span style="color:yellow";>E</span> Barangay</h1>
             <p1 style="color: #024AA2;">Say goodbye to document request hassle and hello to convenience with E Barangay - your one-stop shop for barangay services!"
             </p1> <br>
             <br>
@@ -405,7 +431,7 @@ label {
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
             <h3 style="font-size: 4em; color: #024AA2;">
               <strong>Clean Up Drive</strong></h3>
-            <p>
+            <p class="text-justify" style="padding-right:20px;padding-left:20px;padding-bottom:20px;"  >
               It is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use.
             </p>
             <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
@@ -419,28 +445,28 @@ label {
 
      <div class="container-fluid" data-aos="fade-up">
 
-        <div class="row">
+     <div class="row">
 
-          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
-            <div class="content">
-              <h3 style="font-size: 4em;color: #024AA2;"><strong>BAYANIHAN</strong></h3>
-              <br>
-              <p>It is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use.</p>
-               <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
-            </div>
+  <div class="content text-justify">
+    <h3 style="font-size: 4em;color: #024AA2;"><strong>BAYANIHAN</strong></h3>
+    <br>
+    <p>It is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use.</p>
+     <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
+  </div>
 
-           
+ 
 
-          </div>
+</div>
 
-        <div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/image9.png"  class="img-fluid">
-          </div>
+<div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
+  <img src="assets/img/bayan.png"  class="img-fluid">
+</div>
 
-        </div>
+</div>
 
-      </div>
+</div>
     </section><!-- End Why Us Section -->
 
     <!-- ======= Portfolio Section ======= -->

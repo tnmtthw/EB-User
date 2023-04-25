@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
@@ -15,13 +16,30 @@ class UserFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
         return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
+            'firstname' => $this->faker->firstName,
+            'middlename' =>$this->faker->firstNameMale,
+            'lastname' => $this->faker->lastName,
+            'phone' => $this->faker->numerify('+63 (9##) ###-####'),
+            'bday' => $this->faker->dateTimeBetween('-50 years', '-20 years')->format('Y-m-d'),
+            'gender' => $this->faker->randomElement(['Male', 'Female']),
+            'house_number' => $this->faker->buildingNumber,
+            'street' => function () {
+                $streets = File::get(public_path('streets.txt'));
+                $streetsArray = explode("\n", $streets);
+                return $this->faker->randomElement($streetsArray);
+            },
+            'sitio' => $this->faker->randomElement(['Sitio 1', 'Sitio 2', 'Sitio 3', 'Sitio 4', 'Sitio 5', 'Sitio 6', 'Sitio 7']),
+            'brgy' => 'East Rembo',
+            'city' => 'Makati City',
+            'zip' => '1216',
+            'image' => $this->faker->imageUrl(),
+            'username' => $this->faker->userName,
+            'email' => $this->faker->unique()->safeEmail,
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => bcrypt('password'), // or use $faker->password to generate random passwords
             'remember_token' => Str::random(10),
         ];
     }

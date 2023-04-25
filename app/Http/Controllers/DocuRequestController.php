@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Models\DocuRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\File;
 
 class DocuRequestController extends Controller
 {
@@ -22,10 +25,10 @@ class DocuRequestController extends Controller
         $data->howner = $request->input('howner');
         $data->rhowner = $request->input('rhowner');
         $data->roa = $request->input('roa');
-        $data->signature = $request->input('signature');
+        $data->signature = $request->file('signature')->store('public/images');
         $data->user_id = auth()->user()->id;
         $data->save();
     
-        return redirect()->back()->with('success', 'DocuRequest submitted successfully.');
+        return redirect('/')->with("success","Registration successful. Please login to continue.");
     }
 }

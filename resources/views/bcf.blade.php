@@ -54,7 +54,7 @@
 	</style>
 </head>
 <body>
-	<form action="{{ route('docuRequest') }}" method="POST">
+	<form action="{{ route('docuRequest') }}" method="POST" enctype="multipart/form-data">
 	@csrf
 		<div class="row">
 			<label class="label" for="firstname">First Name:</label>

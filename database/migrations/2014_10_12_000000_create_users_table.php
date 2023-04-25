@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('brgy')->nullable();
             $table->string('city')->nullable();
             $table->string('zip')->nullable();
-            $table->string('path')->nullable();
+            $table->string('image')->nullable();
             $table->string('username')->unique()->nullable();
             $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();

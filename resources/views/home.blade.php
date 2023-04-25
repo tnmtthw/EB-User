@@ -50,11 +50,17 @@
 
 #hero {
   width: 100%;
-  height: 80vh;
-  background-color: #024AA2;
-  /* background-image: url('assets/img/logo.png'); */
+  height:200px;
+  /* background-color: #024AA2; */
+  background-image: url('assets/img/bgg1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
+#services {
+    background: radial-gradient(#9cc9ed 55%, #d6edf8 90%);
+}
+
 #header{
   background-color:transparent;
 }
@@ -212,29 +218,85 @@ label {
 #header.header-inner-pages {
   background:#024AA2;
 }
+.box {
+  width: 1600px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 250px;
+  border-bottom-left-radius: 250px;
+  border-bottom-right-radius: 50px;
+  height: 700px;
+  background: linear-gradient(105.18deg, #43ABE0 38.2%, #024AA2 80.02%, rgba(67, 171, 224, 0) 104.19%);
+
+}
+.box2 {
+  border-radius: 10px;
+  background-color:white;
+}
+#hero {
+
+  height:800px;
+}
+.button {
+  background-color: rgba(2, 74, 162, 1);
+  border-radius: 20px;
+  color: #fff;
+  padding-top: 0px;
+  padding: 10px 0px;
+  text-align: center;
+}.inner {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-box{
+  border-radius:25px;
+}
+#about {
+   background:  linear-gradient(
+    to right,
+    #fefefe 10%,
+    #9cc9ed 50%,
+    #fefefe 90%
+    
+  );
+}
+.container1{
+  border-radius: 25px; 
+  background-color: white;
+  width: 1110px;
+  height: 470px;
+}
+.container1{
+  height:550px;
+  
+}
+.container1 img{
+ margin-left:20px;
+  
+}
 </style>
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
+<header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
-
-    <h1 class="logo me-auto"><a href="index.php"><span>E</span>Barangay</a></h1>
+    <img src="assets/img/logo3.png">
+    <h1 class="logo me-auto"><a href="index.php">EBarangay</a></h1>
     
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Contact Us</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
      <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
               
           </li>
-          <li><a class="nav-link scrollto" href="#contact">About</a></li>
           <div class="container">
   <button type="button" class="getstarted scrollto" data-toggle="modal" data-target="#loginModal">
-  Sign in
+  Sign In
   </button>  
 </div>
           
@@ -251,15 +313,16 @@ label {
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-        <h1>Barangay East Rembo</h1>
-          <h2>Connecting Communities, Empowering Lives  Welcome to E-Barangay!</h2>
+        <!-- <h1>EBarangay</h1> -->
+         <h1> East Rembo</h1>
+          <h2>Connecting Communities, Empowering Lives Welcome to E-Barangay!</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
           
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero.png" class="img-fluid animated" alt="">
+          <img src="assets/img/logoo2.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -267,36 +330,71 @@ label {
   </section><!-- End Hero -->
 
   <main id="main">
+  <section  style="padding-left:60px;"; id="services" class="services section-bg">
+
+<div class="container2" data-aos="fade-up">
+
+  <!-- <div class="section-title">
+    <h2>Services</h2>
+    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+  </div> -->
+  
+  <div class="row">
+    
+  <div   class="section-title">
+          <h2>Services</h2>
+        </div>
+
+    <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+      <div class="icon-box">
+      <div class="button">Request Documents</div>
+        <img src="assets/img/image2.png" style="height:250px;width: 380px;" >
+       <!--  <h4><a href=""></a></h4>
+        <p></p> -->
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+      <div class="icon-box">
+       <div class="button">Schedule Appointment</div>
+        <img src="assets/img/image3.png" style="height:250px;width: 380px;" >
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+      <div class="icon-box">
+      <div class="button">Send Complaints</div>
+        <img src="assets/img/image4.png" style="height:250px;width: 380px;" >
+      </div>
+    </div>
+
+   
+  </div>
+
+</div>
+</section>
 
   
-    <section id="about" class="about">
+<section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>About Us</h2>
-        </div>
-
         <div class="row content">
-          <div class="col-lg-6">
-            <p>
-            E-Barangay is a convenient platform that provides a range of services to help you stay connected with your community. From requesting essential documents to scheduling appointments, filing complaints, and accessing important announcements - all can be done online, making your life simpler and hassle-free. Stay informed and engaged with E-Barangay.
-            </p>
-          
+        <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/image6.png" class="img-fluid" >
+
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-            E-Barangay is a convenient platform that provides a range of services to help you stay connected with your community. From requesting essential documents to scheduling appointments, filing complaints, and accessing important announcements - all can be done online, making your life simpler and hassle-free. Stay informed and engaged with E-Barangay.
+         <div class="col-lg-6 pt-4 pt-lg-0 content text-justify" data-aos="fade-left" data-aos-delay="100">
+            <h1 id="yellow" style="font-weight: bold; text-shadow: 3px 0 6px #888888; color: #024AA2;"><span style="color:yellow";>E</span> Barangay</h1>
+            <p1 style="color: #024AA2;">Say goodbye to document request hassle and hello to convenience with E Barangay - your one-stop shop for barangay services!"
+            </p1> <br>
+            <br>
+            <p style="font-weight: 150px;">
+            E Barangay is a web application designed to simplify the process of requesting documents and scheduling appointments in the barangay for East Rembo residents. With the use of this platform, residents can easily submit their requests for barangay documents such as clearances, permits, certificates, and other necessary papers without the need for physical visits to the barangay hall.  <br>The web application aims to make the process of document request more efficient and hassle-free for the residents of East Rembo. By eliminating the need to queue up in the barangay office or submit paper documents, residents can save time and effort while obtaining the necessary documents they need.
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Register Now</a>
           </div>
         </div>
-
-      </div>
-    </section>
-    <!-- End About Us Section -->
-
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us section-bg">
+    
       <div class="container-fluid" data-aos="fade-up">
 
         <div class="row">
@@ -304,99 +402,40 @@ label {
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
             <div class="content">
-              <h3>Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h3>
+              <h3 style="font-size: 4em;color: #024AA2;"><strong>NEWS AND<br> ANNOUNCEMENTS</strong></h3>
               <br>
-              <!-- <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p> -->
+             
             </div>
 
-            <div class="accordion-list">
-              <ul>
-                <li>
-                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
-                    <p>
-                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                    </p>
-                  </div>
-                </li>
-
-              </ul>
-            </div>
+           
 
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+        <div class="col-lg-4 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/image7.png"  style="
+            width: 150%;, height: 200; ">
+          </div>
+
         </div>
 
       </div>
-    </section><!-- End Why Us Section -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills">
-      <div class="container" data-aos="fade-up">
+    <section id="clean" class="clean">
+      <div class="container1" data-aos="fade-up" >
 
-        <div class="row">
+        <div class="row" >
           <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/skills.png" class="img-fluid" alt="">
+            <img src="assets/img/image8.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            <h3 style="font-size: 4em; color: #024AA2;">
+              <strong>Clean Up Drive</strong></h3>
+            <p class="text-justify" style="padding-right:20px;padding-left:20px;padding-bottom:20px;"  >
+              It is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use.
             </p>
+            <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
 
-            <div class="skills-content">
-
-              <div class="progress">
-                <span class="skill">HTML <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">CSS <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">JavaScript <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">Photoshop <i class="val">55%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-            </div>
 
           </div>
         </div>
@@ -404,74 +443,38 @@ label {
       </div>
     </section><!-- End Skills Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
+     <div class="container-fluid" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
+     <div class="row">
 
-        <div class="row">
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
+<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
+  <div class="content text-justify">
+    <h3 style="font-size: 4em;color: #024AA2;"><strong>BAYANIHAN</strong></h3>
+    <br>
+    <p>It is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use.</p>
+     <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
+  </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
+ 
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
+</div>
 
-        </div>
+<div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
+  <img src="assets/img/bayan.png"  class="img-fluid">
+</div>
 
-      </div>
-    </section><!-- End Services Section -->
+</div>
 
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="row">
-          <div class="col-lg-9 text-center text-lg-start">
-            <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
+</div>
+    </section><!-- End Why Us Section -->
 
     <!-- ======= Portfolio Section ======= -->
    
   </main><!-- End #main -->
 
+  <!-- ======= Footer ======= -->
+  
 <!-- ======= Footer ======= -->
 @include('include.footer')
 </footer><!-- End Footer -->

@@ -28,6 +28,8 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('username')->unique()->nullable();
             $table->string('email')->unique()->nullable();
+            $table->string('active_status')->nullable();
+            $table->string('account_status')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
             $table->rememberToken();

@@ -38,6 +38,8 @@ class UserFactory extends Factory
             'image' => $this->faker->imageUrl(),
             'username' => $this->faker->userName,
             'email' => $this->faker->unique()->safeEmail,
+            'active_status' => $this->faker->randomElement(['0', '1']),
+            'account_status' => $this->faker->randomElement(['0', '1']),
             'email_verified_at' => now(),
             'password' => bcrypt('password'), // or use $faker->password to generate random passwords
             'remember_token' => Str::random(10),

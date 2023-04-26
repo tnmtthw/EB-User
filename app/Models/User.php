@@ -33,6 +33,8 @@ class User extends Authenticatable
         'phone',
         'username',
         'email',
+        'active_status',
+        'account_status',
         'password',
     ];
 

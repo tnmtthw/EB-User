@@ -242,7 +242,8 @@ button[type="submit"] {
       <div class="container">
         <form class="signup-form" action="{{route('signup.post')}}" method="POST" enctype="multipart/form-data">
           @csrf
-         
+          <input type="text" id="active_status" name="active_status" value="1" hidden>
+          <input type="text" id="account_status" name="account_status" value="0"hidden> 
           <h2 style="background-color: #024AA2;color:white; text-align: center;font-size:20px;height: 40px; width:800px;padding-top:7px;
            border-top-left-radius: 15px; border-top-right-radius: 15px;">SIGN UP FORM</h2>
           <h4  style="color: #024AA2;">Personal Details</h4>

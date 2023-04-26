@@ -29,21 +29,6 @@ class LoginController extends Controller
 
     function signupPost(Request $request){
         $request->validate([
-            'firstname' => 'required',
-            'middlename' => 'required',
-            'lastname' => 'required',
-            'phone' => 'required',
-            'bday' => 'required',
-            'gender' => 'required',
-            'house_number' => 'required',
-            'street' => 'required',
-            'sitio' => 'required',
-            'brgy' => 'required',
-            'city' => 'required',
-            'zip' => 'required',
-            'image' => 'required',
-            'username' => 'required',
-            'email' => 'required',
             'password' => 'required|confirmed',
  
         ]);
@@ -63,6 +48,8 @@ class LoginController extends Controller
         $data['image'] = $request->file('image')->store('public/images');
         $data['username'] = $request->username;
         $data['email'] = $request->email;
+        $data['active_status'] = $request->active_status;
+        $data['account_status'] = $request->account_status;
         $data['password'] = Hash::make($request->input('password'));
         $user = User::create($data);
         if($user){

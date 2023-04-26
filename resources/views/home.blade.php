@@ -36,13 +36,13 @@
 <!-- jQuery -->
 <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
 <!-- Popper JS -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js'></script>
 <!-- Bootstrap JS -->
 <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <style>
@@ -295,10 +295,8 @@ label {
               
           </li>
           <div class="container">
-  <button type="button" class="getstarted scrollto" data-toggle="modal" data-target="#loginModal">
-  Sign In
-  </button>  
-</div>
+            <button type="button" class="getstarted scrollto" data-toggle="modal" data-target="#loginModal">Sign In</button>  
+          </div>
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -480,95 +478,6 @@ label {
 </footer><!-- End Footer -->
 <!-- modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-header border-bottom-0">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">×</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="form-title text-center">
-        <h4>Login</h4>
-      </div>
-      <div class="d-flex flex-column text-center">
-        {{-- LOGIN ERROR MSG START HERE --}}
-        <div class="mt-5">
-        @if($errors->any())
-        <div class="col-12">
-            @foreach($errors->all() as $error)
-                <div class="alert alert-danger">{{$error}}</div>
-            @endforeach
-        </div>
-          @endif
-          @if(session()->has('error'))
-              <div class="alert alert-danger">{{session('error')}}</div>
-          @endif
-          @if(session()->has('sucess'))
-              <div class="alert alert-sucess">{{session('sucess')}}</div>
-          @endif
-        </div>
-        {{-- LOGIN ERROR MSG END HERE --}}
-        {{-- LOGIN START HERE --}}
-        <form action="{{route('login.post')}}" method="POST">
-          @csrf
-          <div class="mb-3">
-              <label class="form-label">Username</label>
-              <input type="text" class="form-control" name="username">
-          </div>
-          <div class="mb-3">
-              <label class="form-label">Password</label>
-              <input type="password" class="form-control" name="password">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-      {{-- LOGIN END HERE --}}   
-    <div class="modal-footer d-flex justify-content-center">
-      <div class="signup-section">Not a member yet? <a href="{{ route('signup')}}" class="text-info"> Sign Up</a>.</div>
-    </div>
-</div>
-</div>
-</div>
-</div>
-
-
-        
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
-<script>
- var modal = document.getElementById('loginModal');
-
-// get the close button element inside the modal
-var closeButton = modal.querySelector('.close');
-
-// add a click event listener to the close button
-closeButton.addEventListener('click', function() {
-  // close the modal
-  modal.style.display = 'none';
-});
-
-// add a click event listener to the modal backdrop
-modal.addEventListener('click', function(event) {
-  // if the click happened outside the modal content, close the modal
-  if (event.target == modal) {
-    modal.style.display = 'none';
-  }
-});
-
-<div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header border-bottom-0">
@@ -578,20 +487,74 @@ modal.addEventListener('click', function(event) {
       </div>
       <div class="modal-body">
         <div class="form-title text-center">
-          <h4>Forgot Password</h4>
+          <h4>Login</h4>
         </div>
         <div class="d-flex flex-column text-center">
-          <form>
-            <div class="form-group">
-              <input type="email" class="form-control" id="email2" placeholder="Your email address...">
+          {{-- LOGIN START HERE --}}
+          @if (session('errorMessage'))
+          <div class="alert alert-danger" role="alert" id="errorMessage">
+            {{ session('errorMessage') }}
+          </div>
+          @endif        
+          <form action="{{route('login.post')}}" method="POST">
+            @csrf
+            <div class="mb-3">
+              <label class="form-label">Username</label>
+              <input type="text" class="form-control" name="username" required>
             </div>
-            <button type="button" class="btn btn-info btn-block btn-round">Reset Password</button>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </form>
+          {{-- LOGIN END HERE --}}
+          <div class="modal-footer d-flex justify-content-center">
+            <div class="signup-section">Not a member yet? <a href="{{ route('signup')}}" class="text-info"> Sign Up</a>.</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Vendor JS Files -->
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
 
-  </script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+<script>
+  $(document).ready(function(){
+    var errorMessage = "{{ session('errorMessage') }}";
+    if(errorMessage !== ''){
+        $('#errorMessage').html(errorMessage);
+        $('#loginModal').modal('show');
+    }
+  });
+  
+  var modal = document.getElementById('loginModal');
+ 
+  // get the close button element inside the modal
+  var closeButton = modal.querySelector('.close');
+ 
+  // add a click event listener to the close button
+  closeButton.addEventListener('click', function() {
+    // close the modal
+    modal.style.display = 'none';
+  });
+ 
+  // add a click event listener to the modal backdrop
+  modal.addEventListener('click', function(event) {
+    // if the click happened outside the modal content, close the modal
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>

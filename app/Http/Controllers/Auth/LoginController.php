@@ -19,13 +19,25 @@ class LoginController extends Controller
             'username' => 'required',
             'password' => 'required',
         ]);
+    
+        $user = User::where('username', $request->username)->first();
+    
+        if($user) {
+            if ($user->account_status == 0) {
+                return redirect()->route('home')->with('errorMessage', 'Account not yet approved!');
 
-        $credentials = $request->only('username','password');
-        if(Auth::attempt($credentials)){
-            return redirect()->intended(route('welcome'));
+            }
+            $credentials = $request->only('username','password');
+            if(Auth::attempt($credentials)){
+                return redirect()->intended(route('welcome'));
+            } else {
+                return redirect()->route('home')->with('errorMessage', 'Username or password is incorrect!');
+            }
+        } else {
+            return redirect()->route('home')->with('errorMessage', 'Username or password is incorrect!');
         }
-        return redirect('/')->with("error","Login details are not valid");
     }
+     
 
     function signupPost(Request $request){
         $request->validate([

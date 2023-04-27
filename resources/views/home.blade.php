@@ -119,7 +119,7 @@
 
 /* <!-- span --> */
 .container1 {
-  padding: 2rem 0rem;
+  padding: 2rem 4rem;
 }
 
 
@@ -191,11 +191,10 @@ label {
 }
 
 /* Remove the border from the modal header */
-.modal-header {
-  border-bottom: none;
-}
+
 label {
   display: block;
+  color:white;
   margin-bottom: 5px;
   margin-left: 15px; /* add margin to the right */
   width: 100px; /* set a fixed width */
@@ -216,22 +215,9 @@ label {
 }
 #header.header-scrolled,
 #header.header-inner-pages {
-  background:#024AA2;
+  background: rgba(2, 74, 162, 0.8);
 }
-.box {
-  width: 1600px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 250px;
-  border-bottom-left-radius: 250px;
-  border-bottom-right-radius: 50px;
-  height: 700px;
-  background: linear-gradient(105.18deg, #43ABE0 38.2%, #024AA2 80.02%, rgba(67, 171, 224, 0) 104.19%);
 
-}
-.box2 {
-  border-radius: 10px;
-  background-color:white;
-}
 #hero {
 
   height:800px;
@@ -240,7 +226,9 @@ label {
   background-color: rgba(2, 74, 162, 1);
   border-radius: 20px;
   color: #fff;
-  padding-top: 0px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 10px 0px;
   text-align: center;
 }.inner {
@@ -261,20 +249,141 @@ label {
     
   );
 }
-.container1{
-  border-radius: 25px; 
+
+
+/* services */
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom:70px;
+  
+}
+
+.box1 {
+  width: 500px;
+  height:400px;
+  margin: 20px;
+  border: none;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+ 
+}
+
+.box1 button {
+  display: block;
+
+  margin: 10px auto;
+}
+
+.box1 img {
+  padding-top:50px;
+  width: 60%;
+  height: auto;
+}
+.serviceheader {
+  text-transform:Uppercase;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #012970;
+  background-color: none;
+  padding: 20px;
+ 
+}
+/* hero image */
+.hero-img img {
+  width: 500px;
+  height: auto;
+  margin-left:110px;
+
+  
+}
+.container-fluid1 {
+  width:100%;
   background-color: white;
-  width: 1110px;
-  height: 470px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom:50px;
+
 }
-.container1{
-  height:550px;
+
+
+/* Login modal styles */
+
+#loginModal .modal-content {
+  border-radius: 25px;
   
+  background: linear-gradient(125.74deg, #43ABE0 29.08%, #E0EEFE 109.38%, rgba(79, 106, 139, 0.715791) 140.83%, rgba(255, 255, 255, 0) 158.99%);
 }
-.container1 img{
- margin-left:20px;
+
+#loginModal .modal-header {
+  border-bottom: 0;
+  text-align:center;
+}
+
+#loginModal .form-title {
+  background-color: rgba(2, 74, 162, 1);
+  color: #fff;
+  border-radius: 25px 25px 0 0;
+  padding: 15px;
+}
+
+#loginModal input.form-control {
+  border-radius: 25px;
   
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
+
+#loginModal .btn-primary {
+  background: linear-gradient(0deg, #024AA2, #024AA2), linear-gradient(0deg, #43ABE0, #43ABE0);
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px 30px;
+  margin-top: 15px;
+}
+
+#loginModal .signup-section {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+#loginModal .signup-section a {
+  color: #43ABE0;
+  text-decoration: underline;
+}
+.modal-footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 2rem; 
+     border-top: none;
+}
+
+.modal-header {
+    display: -ms-flexbox;
+    /* display:center; */
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+</style>
+
+
 </style>
 </head>
 
@@ -326,55 +435,27 @@ label {
     </div>
 
   </section><!-- End Hero -->
-
-  <main id="main">
-  <section  style="padding-left:60px;"; id="services" class="services section-bg">
-
-<div class="container2" data-aos="fade-up">
-
-  <!-- <div class="section-title">
-    <h2>Services</h2>
-    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-  </div> -->
-  
-  <div class="row">
+  <header class="serviceheader"> Services </header>
+  <div class="section " data-aos="fade-up" >
     
-  <div   class="section-title">
-          <h2>Services</h2>
-        </div>
-
-    <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-      <div class="icon-box">
-      <div class="button">Request Documents</div>
-        <img src="assets/img/image2.png" style="height:250px;width: 380px;" >
-       <!--  <h4><a href=""></a></h4>
-        <p></p> -->
-      </div>
-    </div>
-
-    <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-      <div class="icon-box">
-       <div class="button">Schedule Appointment</div>
-        <img src="assets/img/image3.png" style="height:250px;width: 380px;" >
-      </div>
-    </div>
-
-    <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-      <div class="icon-box">
-      <div class="button">Send Complaints</div>
-        <img src="assets/img/image4.png" style="height:250px;width: 380px;" >
-      </div>
-    </div>
-
-   
+  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+    
+  <div class="button">Request Documents</div>
+ <img src="assets/img/image2.png" style="height:250px;width: 380px;" >
   </div>
-
+  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+  <div class="button">Schedule Appointment</div>
+  <img src="assets/img/image3.png" style="height:250px;width: 380px;" >
+  </div>
+  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+  <div class="button">Send Complaints</div>
+<img src="assets/img/image4.png" style="height:250px;width: 380px;" >
+  </div>
 </div>
-</section>
+<section id="about" class="about" >
+<div class="container" data-aos="fade-up" >
+  <!-- content goes here -->
 
-  
-<section id="about" class="about">
-      <div class="container" data-aos="fade-up">
 
         <div class="row content">
         <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
@@ -419,27 +500,31 @@ label {
       </div>
 
     <!-- ======= Skills Section ======= -->
-    <section id="clean" class="clean">
-      <div class="container1" data-aos="fade-up" >
+    <div class="container-fluid1 bg-white shadow">
+ 
+  <section id="clean" class="clean">
+    <div class="container1" data-aos="fade-up" >
 
-        <div class="row" >
-          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/image8.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-            <h3 style="font-size: 4em; color: #024AA2;">
-              <strong>Clean Up Drive</strong></h3>
-            <p class="text-justify" style="padding-right:20px;padding-left:20px;padding-bottom:20px;"  >
-              It is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use.
-            </p>
-            <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
-
-
-          </div>
+      <div class="row" >
+        <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+          <img src="assets/img/image8.png" class="img-fluid" alt="">
         </div>
-
+        <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+          <h3 style="font-size: 4em; color: #024AA2;">
+            <strong>Clean Up Drive</strong>
+          </h3>
+          <p class="text-justify" style="padding-right:20px;padding-left:20px;padding-bottom:20px;">
+            It is the program wherein each barangay would participate in cleaning their environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use. It is the program wherein each barangay would participate in cleaning their environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use. It is the program wherein each barangay would participate in cleaning their environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use.
+          </p>
+          <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
+        </div>
       </div>
-    </section><!-- End Skills Section -->
+
+    </div>
+  </section>
+</div>
+
+<!-- End Skills Section -->
 
      <div class="container-fluid" data-aos="fade-up">
 
@@ -480,15 +565,18 @@ label {
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    
+      <div class="modal-header "
+       
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
+        
       </div>
+      <div class="title" style="text-align:center ; font-size: 28px; font-weight:bold; color:rgba(2, 74, 162, 1);
+"> LOG IN </div>
       <div class="modal-body">
-        <div class="form-title text-center">
-          <h4>Login</h4>
-        </div>
+        
         <div class="d-flex flex-column text-center">
           {{-- LOGIN START HERE --}}
           @if (session('errorMessage'))
@@ -500,17 +588,19 @@ label {
             @csrf
             <div class="mb-3">
               <label class="form-label">Username</label>
-              <input type="text" class="form-control" name="username" required>
+              <input type="text" class="form-control shadow" name="username" required>
             </div>
             <div class="mb-3">
               <label class="form-label">Password</label>
-              <input type="password" class="form-control" name="password" required>
+              <input type="password" class="form-control shadow" name="password" required>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
           {{-- LOGIN END HERE --}}
           <div class="modal-footer d-flex justify-content-center">
             <div class="signup-section">Not a member yet? <a href="{{ route('signup')}}" class="text-info"> Sign Up</a>.</div>
+
+            <a href="" style="text-decoration:underline";> Forgot Passowrd </a>
           </div>
         </div>
       </div>
@@ -557,4 +647,6 @@ label {
       modal.style.display = 'none';
     }
   });
+
+ 
 </script>

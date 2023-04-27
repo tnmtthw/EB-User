@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class LoginController extends Controller
 {
@@ -57,10 +58,11 @@ class LoginController extends Controller
         $data['brgy'] = $request->brgy;
         $data['city'] = $request->city;
         $data['zip'] = $request->zip;
-        $image = $request->file('image');
-        $imageName = time().'.'.$image->extension();
-        $image->storeAs('public/images', $imageName);
-        $data['image'] = 'images/'.$imageName;        
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $path = Storage::disk('s3')->put('/images/sitio_clearance', $image);
+            $data['image'] = $path;
+        }        
         $data['username'] = $request->username;
         $data['email'] = $request->email;
         $data['active_status'] = $request->active_status;

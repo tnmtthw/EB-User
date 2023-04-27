@@ -25,7 +25,7 @@ class DocuRequestController extends Controller
         $data->howner = $request->input('howner');
         $data->rhowner = $request->input('rhowner');
         $data->roa = $request->input('roa');
-        $data->signature = $request->file('signature')->store('public/images');
+        $data->signature = $request->file('signature')->store('/images');
         $data->user_id = auth()->user()->id;
         $data->save();
     

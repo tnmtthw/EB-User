@@ -30,6 +30,7 @@ class User extends Authenticatable
         'city',
         'zip',
         'image',
+        'imageName',
         'phone',
         'username',
         'email',

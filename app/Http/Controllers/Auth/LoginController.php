@@ -57,7 +57,10 @@ class LoginController extends Controller
         $data['brgy'] = $request->brgy;
         $data['city'] = $request->city;
         $data['zip'] = $request->zip;
-        $data['image'] = $request->file('image')->store('public/images');
+        $image = $request->file('image');
+        $imageName = time().'.'.$image->extension();
+        $image->storeAs('public/images', $imageName);
+        $data['image'] = 'images/'.$imageName;        
         $data['username'] = $request->username;
         $data['email'] = $request->email;
         $data['active_status'] = $request->active_status;

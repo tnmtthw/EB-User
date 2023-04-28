@@ -169,7 +169,7 @@ label {
   border-color: #47b2e4;
 }
 .text-info {
-    color: #47b2e4!important;
+    color:#00A9FF !important;
 }
 .text-info:hover {
     color: #47b2e4!important;
@@ -394,8 +394,13 @@ label {
   padding-top:20px;
   font-size:35px;
   font-weight:bold;
+  color:
   text-transform: Uppercase;
   padding-bottom:20px;
+}
+.signup-section a {
+  color:#00A9FF;
+  font-size:20px;
 }
 </style>
 
@@ -619,9 +624,9 @@ label {
           </form>
           {{-- LOGIN END HERE --}}
           <div class="modal-footer d-flex justify-content-center">
-            <div class="signup-section">Not a member yet? <a href="{{ route('signup')}}" class="text-info"> Sign Up</a>.</div>
+            <div class="signup-section" style="font-size:20px;color:white";>Not a member yet? <a href="{{ route('signup')}}" class="text-info" > Sign Up</a>.</div>
 
-            <a href="" style="text-decoration:underline";> Forgot Passowrd </a>
+            <a href="" style="text-decoration:underline;font-size:20px"; class="text-info"> Forgot Passowrd </a>
           </div>
         </div>
       </div>

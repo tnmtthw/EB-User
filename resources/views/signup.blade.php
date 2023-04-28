@@ -66,6 +66,7 @@
     padding: 0px 0px;
     background-color:white;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   }
 
   .signup-form header{
@@ -104,9 +105,9 @@
     width: 100%;
     padding: 8px;
     font-size: 12px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid gray;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
 
   input:hover {
@@ -152,7 +153,11 @@
   }
 
   a {   
-    color:#4663ac;
+    color:#43ABE0;
+    text-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  a:hover{
+    color:#024AA2;
   }
 
   .terms-and-conditions input[type="checkbox"] {

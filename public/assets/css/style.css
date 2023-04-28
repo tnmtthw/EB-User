@@ -386,7 +386,7 @@ h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 48px;
+  font-size: 60px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
@@ -395,7 +395,7 @@ h6 {
 #hero h2 {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 50px;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 #hero .btn-get-started {
@@ -503,7 +503,8 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding-top :50px;
+  padding-bottom: 50px;
   overflow: hidden;
 }
 
@@ -513,7 +514,7 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .section-title h2 {

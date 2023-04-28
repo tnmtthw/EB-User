@@ -54,10 +54,14 @@
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   }
-
+.container{
+  padding-left:50px;
+  padding-right:50px;
+}
   .signup-form {
     max-width: 800px;
     height: auto;
+    width: 800px;
     margin: 0 auto;
     padding: 0px 0px;
     background-color:white;
@@ -68,6 +72,8 @@
     text-align: left;
     font-weight: bold;
     font-size: 25px;
+
+    
   }
 
   h3 {
@@ -77,8 +83,9 @@
   }
 
   h4 {
-    padding: 10px;
-    text-align: left;
+    padding-top:20px;
+    padding-left:50px;
+    padding-right:50px;
   }
 
   .form-group {

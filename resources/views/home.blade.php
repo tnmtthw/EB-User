@@ -227,13 +227,8 @@ label {
   border-radius: 20px;
   color: #fff;
   margin-top: 20px;
-<<<<<<< HEAD
   margin-left: 30px;
   margin-right: 30px;
-=======
-  margin-left: 20px;
-  margin-right: 20px;
->>>>>>> af6f1c5eeeb4c899d31e9037ef40ad91a3b6f16e
   padding: 10px 0px;
   text-align: center;
 }.inner {
@@ -273,17 +268,10 @@ label {
 }
 
 .box1 {
-<<<<<<< HEAD
   width: 400px;
   height:300px;
   margin: 20px;
-  border: none;s
-=======
-  width: 500px;
-  height:400px;
-  margin: 20px;
   border: none;
->>>>>>> af6f1c5eeeb4c899d31e9037ef40ad91a3b6f16e
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
@@ -296,17 +284,11 @@ label {
   margin: 10px auto;
 }
 
-<<<<<<< HEAD
 
 .box1 img {
   padding-top:20px; 
   padding-bottom:20px;
   width: 40px;
-=======
-.box1 img {
-  padding-top:50px;
-  width: 60%;
->>>>>>> af6f1c5eeeb4c899d31e9037ef40ad91a3b6f16e
   height: auto;
 }
 .serviceheader {
@@ -406,6 +388,15 @@ label {
     border-top-left-radius: 0.3rem;
     border-top-right-radius: 0.3rem;
 }
+
+.header1{
+  text-align:center;
+  padding-top:20px;
+  font-size:35px;
+  font-weight:bold;
+  text-transform: Uppercase;
+  padding-bottom:20px;
+}
 </style>
 
 
@@ -460,7 +451,10 @@ label {
     </div>
 
   </section><!-- End Hero -->
-  <header class="serviceheader"> Services </header>
+  <div class="header1">
+  Services
+
+</div>
   <div class="section " data-aos="fade-up" >
     
   <div class="box1" data-aos="zoom-in" data-aos-delay="100">
@@ -591,12 +585,10 @@ label {
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
     
-<<<<<<< HEAD
+
       <div class="modal-header ">
-=======
-      <div class="modal-header "
->>>>>>> af6f1c5eeeb4c899d31e9037ef40ad91a3b6f16e
-       
+
+  
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>

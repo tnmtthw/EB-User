@@ -317,16 +317,19 @@ label {
 #loginModal .modal-content {
   border-radius: 25px;
   
-  background: linear-gradient(125.74deg, #43ABE0 29.08%, #E0EEFE 109.38%, rgba(79, 106, 139, 0.715791) 140.83%, rgba(255, 255, 255, 0) 158.99%);
-}
+  background: linear-gradient(0deg, rgba(24, 89, 169, 0.5), rgba(24, 89, 169, 0.5));
 
+
+
+
+}
 #loginModal .modal-header {
   border-bottom: 0;
   text-align:center;
+  
 }
 
 #loginModal .form-title {
-  background-color: rgba(2, 74, 162, 1);
   color: #fff;
   border-radius: 25px 25px 0 0;
   padding: 15px;
@@ -334,14 +337,14 @@ label {
 
 #loginModal input.form-control {
   border-radius: 25px;
-  
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  
 }
 
 #loginModal .btn-primary {
   background: linear-gradient(0deg, #024AA2, #024AA2), linear-gradient(0deg, #43ABE0, #43ABE0);
   border-radius: 25px;
-  border: none;
+  border: solid 1px rgba(67, 171, 224, 1);
   font-size: 16px;
   font-weight: 500;
   color: #fff;
@@ -351,7 +354,8 @@ label {
 
 #loginModal .signup-section {
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 15px;
+  color:#00A9FF:
 }
 
 #loginModal .signup-section a {
@@ -380,6 +384,21 @@ label {
     border-bottom: 1px solid #e9ecef;
     border-top-left-radius: 0.3rem;
     border-top-right-radius: 0.3rem;
+}
+.signup{
+  color:white;
+  font-size:16px;
+}
+.sign{
+  text-decoration:underline;
+  color:#00A9FF;
+  font-size:16px;
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}.forgot{
+  margin-top:30px;
+  color:#00A9FF;
+  font-size:16px;
 }
 </style>
 
@@ -556,14 +575,14 @@ label {
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
     
-      <div class="modal-header "
+      <div class="modal-header ">
        
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
         
       </div>
-      <div class="title" style="text-align:center ; font-size: 28px; font-weight:bold; color:rgba(2, 74, 162, 1);
+      <div class="title" style="text-align:center ; font-size: 28px; font-weight:bold; color:white;
 "> LOG IN </div>
       <div class="modal-body">
         
@@ -588,9 +607,9 @@ label {
           </form>
           {{-- LOGIN END HERE --}}
           <div class="modal-footer d-flex justify-content-center">
-            <div class="signup-section">Not a member yet? <a href="{{ route('signup')}}" class="text-info"> Sign Up</a>.</div>
+            <div class="signup">Not a member yet? <a href="{{ route('signup')}}" class="sign"> Sign Up</a></div>
 
-            <a href="" style="text-decoration:underline";> Forgot Passowrd </a>
+            <a href="" class="forgot" style="text-decoration:underline";> Forgot Passowrd </a>
           </div>
         </div>
       </div>

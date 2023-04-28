@@ -5,6 +5,18 @@
 ul {
   list-style-type: none;
 }
+li a, li i {
+      margin-bottom:20px;
+      color: black;
+    }
+    .social-links i {
+      font-size: 34px;
+      color:#024AA2;
+    }
+    .fa-sharp.fa-solid.fa-caret-right {
+  color: #024AA2;
+  margin-right:6px;
+}
   </style>
 
 
@@ -28,26 +40,27 @@ ul {
         
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4  style="color:#024AA2;">Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
+  <h4 style="color:#024AA2;">Useful Links</h4>
+  <ul style="display:block;">
+    <li><i class="fa-sharp fa-solid fa-caret-right"></i><a href="#">Home</a></li>
+    <li><i class="fa-sharp fa-solid fa-caret-right"></i><a href="#">About us</a></li>
+    <li><i class="fa-sharp fa-solid fa-caret-right"></i><a href="#">Services</a></li>
+    <li><i class="fa-sharp fa-solid fa-caret-right"></i><a href="#">Terms of service</a></li>
+    <li><i class="fa-sharp fa-solid fa-caret-right"></i><a href="#">Privacy policy</a></li>
+  </ul>
+</div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4 style="color:#024AA2";>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Doument Request</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Appointment Schedule</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Send Complaints</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">News</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
-            </ul>
-          </div>
+<div class="col-lg-3 col-md-6 footer-links">
+  <h4 style="color:#024AA2;">Our Services</h4>
+  <ul>
+    <li><i class="fa-sharp fa-solid fa-caret-right"></i><a href="#">Document Request</a></li>
+    <li><i class="fa-sharp fa-solid fa-caret-right"></i><a href="#">Appointment Schedule</a></li>
+    <li><i class="fa-sharp fa-solid fa-caret-right"></i><a href="#">Send Complaints</a></li>
+    <li><i class="fa-sharp fa-solid fa-caret-right"></i><a href="#">News</a></li>
+    <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
+  </ul>
+</div>
+
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4 style="color:#024AA2";>Our Social Networks</h4>

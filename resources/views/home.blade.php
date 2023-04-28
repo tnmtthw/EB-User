@@ -169,7 +169,7 @@ label {
   border-color: #47b2e4;
 }
 .text-info {
-    color:#00A9FF !important;
+    color: #47b2e4!important;
 }
 .text-info:hover {
     color: #47b2e4!important;
@@ -227,8 +227,8 @@ label {
   border-radius: 20px;
   color: #fff;
   margin-top: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 10px 0px;
   text-align: center;
 }.inner {
@@ -240,11 +240,6 @@ label {
 .icon-box{
   border-radius:25px;
 }
-
-.button:hover {
-  background-color:#43ABE0;
-}
-
 #about {
    background:  linear-gradient(
     to right,
@@ -268,8 +263,8 @@ label {
 }
 
 .box1 {
-  width: 400px;
-  height:300px;
+  width: 500px;
+  height:400px;
   margin: 20px;
   border: none;
   text-align: center;
@@ -284,11 +279,9 @@ label {
   margin: 10px auto;
 }
 
-
 .box1 img {
-  padding-top:20px; 
-  padding-bottom:20px;
-  width: 40px;
+  padding-top:50px;
+  width: 60%;
   height: auto;
 }
 .serviceheader {
@@ -388,20 +381,6 @@ label {
     border-top-left-radius: 0.3rem;
     border-top-right-radius: 0.3rem;
 }
-
-.header1{
-  text-align:center;
-  padding-top:20px;
-  font-size:35px;
-  font-weight:bold;
-  color:
-  text-transform: Uppercase;
-  padding-bottom:20px;
-}
-.signup-section a {
-  color:#00A9FF;
-  font-size:20px;
-}
 </style>
 
 
@@ -456,10 +435,7 @@ label {
     </div>
 
   </section><!-- End Hero -->
-  <div class="header1">
-  Services
-
-</div>
+  <header class="serviceheader"> Services </header>
   <div class="section " data-aos="fade-up" >
     
   <div class="box1" data-aos="zoom-in" data-aos-delay="100">
@@ -492,7 +468,7 @@ label {
             </p1> <br>
             <br>
             <p style="font-weight: 150px;">
-            E Barangay is a web application designed to simplify the process of requesting documents and scheduling appointments in the barangay for East Rembo residents. With the use of this platform, residents can easily submit their requests for barangay documents such as clearances, permits, certificates, and other necessary papers without the need for physical visits to the barangay hall.<br>The web application aims to make the process of document request more efficient and hassle-free for the residents of East Rembo. By eliminating the need to queue up in the barangay office or submit paper documents, residents can save time and effort while obtaining the necessary documents they need.
+            E Barangay is a web application designed to simplify the process of requesting documents and scheduling appointments in the barangay for East Rembo residents. With the use of this platform, residents can easily submit their requests for barangay documents such as clearances, permits, certificates, and other necessary papers without the need for physical visits to the barangay hall.  <br>The web application aims to make the process of document request more efficient and hassle-free for the residents of East Rembo. By eliminating the need to queue up in the barangay office or submit paper documents, residents can save time and effort while obtaining the necessary documents they need.
             </p>
             <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Register Now</a>
           </div>
@@ -523,57 +499,47 @@ label {
 
       </div>
 
-    <!-- ======= Skills Section ======= -->
-    <div class="container-fluid1 bg-white shadow">
- 
-  <section id="clean" class="clean">
-    <div class="container1" data-aos="fade-up" >
+<!-- ======= Skills Section ======= -->
 
-      <div class="row" >
-        <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-          <img src="assets/img/image8.png" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-          <h3 style="font-size: 4em; color: #024AA2;">
-            <strong>Clean Up Drive</strong>
-          </h3>
-          <p class="text-justify" style="padding-right:20px;padding-left:20px;padding-bottom:20px;">
-            It is the program wherein each barangay would participate in cleaning their environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use. It is the program wherein each barangay would participate in cleaning their environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use. It is the program wherein each barangay would participate in cleaning their environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use.
-          </p>
-          <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
-        </div>
+@foreach ($announcement as $ann)
+    @if ($ann->id == 0)
+      <div class="container-fluid1 bg-white shadow">
+        <section id="clean" class="clean">
+          <div class="container1" data-aos="fade-up">
+            <div class="row" >
+              <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                <img src="{{ Storage::disk('s3')->url($ann->image) }}" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+                <h3 style="font-size: 4em; color: #024AA2;">
+                  <strong>{{ $ann->title }}</strong>
+                </h3>
+                <p class="text-justify" style="padding-right:20px;padding-left:20px;padding-bottom:20px;">{{ $ann->body }}</p>
+                <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-
+  @else ($ann->id == 1)
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+          <div class="content text-justify">
+            <h3 style="font-size: 4em;color: #024AA2;"><strong>{{ $ann->title }}</strong></h3>
+            <br>
+            <p>{{ $ann->body }}</p>
+            <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
+          </div>
     </div>
-  </section>
-</div>
+    <div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
+      <img src="{{ Storage::disk('s3')->url($ann->image) }}" class="img-fluid">
+    </div>
+      </div>
+    </div>
+  @endif
+@endforeach
 
-<!-- End Skills Section -->
-
-     <div class="container-fluid" data-aos="fade-up">
-
-     <div class="row">
-
-<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-
-  <div class="content text-justify">
-    <h3 style="font-size: 4em;color: #024AA2;"><strong>BAYANIHAN</strong></h3>
-    <br>
-    <p>It is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future useIt is the program wherein each barangay would participate in cleaningtheir environment, this would be done weekly and at the end of the month, the barangay that observed cleanliness in their community would be recognized and would earn a point for future use.</p>
-     <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
-  </div>
-
- 
-
-</div>
-
-<div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
-  <img src="assets/img/bayan.png"  class="img-fluid">
-</div>
-
-</div>
-
-</div>
     </section><!-- End Why Us Section -->
 
     <!-- ======= Portfolio Section ======= -->
@@ -590,10 +556,8 @@ label {
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
     
-
-      <div class="modal-header ">
-
-  
+      <div class="modal-header "
+       
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
@@ -624,9 +588,9 @@ label {
           </form>
           {{-- LOGIN END HERE --}}
           <div class="modal-footer d-flex justify-content-center">
-            <div class="signup-section" style="font-size:20px;color:white";>Not a member yet? <a href="{{ route('signup')}}" class="text-info" > Sign Up</a>.</div>
+            <div class="signup-section">Not a member yet? <a href="{{ route('signup')}}" class="text-info"> Sign Up</a>.</div>
 
-            <a href="" style="text-decoration:underline;font-size:20px"; class="text-info"> Forgot Passowrd </a>
+            <a href="" style="text-decoration:underline";> Forgot Passowrd </a>
           </div>
         </div>
       </div>

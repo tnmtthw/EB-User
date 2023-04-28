@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DocuRequestController;
+use App\Models\Announcement;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -20,17 +21,24 @@ Route::get('/', function () {
     if (Auth::check()) {
         return redirect()->route('welcome');
     } else {
-        return view('home');
-    }
-});
-
-Route::get('home', function () {
-    if (Auth::check()) {
-        return redirect()->route('welcome');
-    } else {
-        return view('home');
+        $announcement = announcement::all();
+        return view('home', compact('announcement'));
     }
 })->name('home');
+
+// Route::get('home', function () {
+//     if (Auth::check()) {
+//         return redirect()->route('welcome');
+//     } else {
+//         return view('home');
+//     }
+// })->name('home');
+
+// Route::get('/home', function () {
+//     $announcement = announcement::all();
+//     return view('home', compact('announcement'));
+// })->name('home');
+  
 
 Route::middleware(['auth'])->group(function () {
     // protected routes here

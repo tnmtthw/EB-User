@@ -26,7 +26,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style1.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Arsha
@@ -44,26 +44,20 @@
   ======================================================== -->
 </head>
 <style>
+
   .row{
     padding-bottom:200px;
   }
 .navbar .dropdown ul {
     background:white;
 }
-.container2{
- 
-  margin-top:0px;
-}
+
 .icon-box{
 
   border-radius:20px;
 }
 /* news */
 
-.blog-section {
-  background-color: #f9f9f9;
-  padding: 50px 0;
-}
 
 .container {
   max-width: 1000px;
@@ -76,7 +70,7 @@
   background-color: none;
   color: black;
   text-align: center;
-  padding: 10px;
+
   border-radius: 5px;
 }
 
@@ -132,7 +126,7 @@
   background-color: rgba(2, 74, 162, 1);
   border-radius: 20px;
   color: #fff;
-  padding-top: 0px;
+ 
   padding: 10px 0px;
   text-align: center;
 }.inner {
@@ -143,7 +137,7 @@
 }
 
 #hero {
-  margin-top:0px;
+
   height:920px;
  
 }
@@ -169,7 +163,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom:70px;
+  /* margin-bottom:70px; */
   
 }
 
@@ -237,6 +231,107 @@
   background-color: #0466c8;
 }
 
+/* HERO */
+#hero1 {
+  background-image: url("assets/img/bg4.png");
+  background-size: cover;
+  background-position: center;
+  height:900px;
+
+}
+
+.hero1 {
+  width: 100%;
+  height: 100vh;
+  /* background: url(assets/img/bg3.png) top center no-repeat; */
+  background-size: cover;
+}
+
+.hero1 h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #012970;
+}
+
+.hero1 h2 {
+  color: #444444;
+  margin: 15px 0 0 0;
+  font-size: 26px;
+}
+
+.hero1 .btn-get-started {
+  margin-top: 30px;
+  line-height: 0;
+  padding: 15px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #4154f1;
+  box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+}
+
+.hero1 .btn-get-started span {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.hero1 .btn-get-started i {
+  margin-left: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.hero1 .btn-get-started:hover i {
+  transform: translateX(5px);
+}
+
+.hero1 .hero-img {
+  text-align: right;
+}
+
+@media (min-width: 1024px) {
+  .hero1 {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero1 {
+    height: auto;
+    padding: 120px 0 60px 0;
+  }
+
+  .hero1 .hero-img {
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .hero1 .hero-img img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero1 {
+    text-align: center;
+  }
+
+  .hero1 h1 {
+    font-size: 32px;
+  }
+
+  .hero1 h2 {
+    font-size: 24px;
+  }
+
+  .hero1 .hero-img img {
+    width: 100%;
+  }
+}
+
 
 </style>
 
@@ -244,55 +339,59 @@
 
 @include('include.navbar')
 
+<section id="hero1" class="hero d-flex align-items-center">
 
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <!-- <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap</h2> -->
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <!-- <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Get Started</span>
+                <i class="bi bi-arrow-right"></i> -->
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <!-- <img src="assets/img/image1.png"class="img-fluid" alt=""> -->
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
 
  
 
-  <div class="hero">
- <section style="background-image: url('assets/img/bg3.png'); background-size: cover;" id="hero" class="d-flex align-items-center">
-  <!-- Add content here -->
-
-<div class="container">
-<div class="row">
-<div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-  <!-- <h1>E-Barangay </h1>
-  <h1>Services</h1> -->
-  <div class="d-flex justify-content-center justify-content-lg-start">
-    <!-- <a href="#about" class="btn-get-started scrollto">  </a> -->
   
-   </div>
-</div>
-<div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-      <img src="assets/img/image1.png" class="img-fluid animated" alt="">
-</div>
-
-</section>
-<section  style=" background: linear-gradient(rgba(67, 171, 224, 0.22), rgba(67, 171, 224, 0.22));"; id="services" class="services section-bg">
+<section  class="service1" style=" background: linear-gradient(rgba(67, 171, 224, 0.22), rgba(67, 171, 224, 0.22));" >
 
 <header class="serviceheader"> Services </header>
-        <div class="section " data-aos="fade-up" >
-        <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-        <a href="{{ route('request') }}" class="button button-request">Request Documents</a>
+        <div class="section" data-aos="fade-up" >
+              <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+                <a href="{{ route('request') }}" class="button button-request">Request Documents</a>
 
-  <img src="assets/img/image2.png" style="height:250px;width: 300px;" >
-</div>
+              <img src="assets/img/image2.png" style="height:250px;width: 300px;" >
+            </div>
 
   <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-  <div class="button">Schedule Appointment</div>
-  <img src="assets/img/image3.png" style="height:250px;width: 300px;" >
-  </div>
-  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-  <div class="button">Send Complaints</div>
-<img src="assets/img/image4.png" style="height:250px;width: 300px;" >
-  </div>
+        <div class="button">Schedule Appointment</div>
+          <img src="assets/img/image3.png" style="height:250px;width: 300px;" >
+        </div>
+    <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+     <div class="button">Send Complaints</div>
+          <img src="assets/img/image4.png" style="height:250px;width: 300px;" >
+    </div>
 </div>
 </div>
 </section>
-<!-- End #main -->
 
-  <!-- ======= Footer ======= -->
+
 @include('include.footer')
-  
+
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

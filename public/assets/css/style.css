@@ -122,6 +122,7 @@ h6 {
 
 #header .logo a {
   color: #fff;
+  font-size:30px;
 }
 
 #header .logo img {
@@ -155,9 +156,10 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
+  /* padding: 8px 0 10px 20px; */
   font-size: 15px;
-  font-weight: 500;
+  padding-left: 40px;;
+  /* font-weight: 500; */
   color: #fff;
   white-space: nowrap;
   transition: 0.3s;

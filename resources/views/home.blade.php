@@ -227,11 +227,16 @@ label {
   border-radius: 20px;
   color: #fff;
   margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
   padding: 10px 0px;
   text-align: center;
-}.inner {
+}
+
+.button:hover{
+  background-color:#43ABE0;
+}
+.inner {
   height: 800px;
   display: flex;
   justify-content: center;
@@ -263,8 +268,8 @@ label {
 }
 
 .box1 {
-  width: 500px;
-  height:400px;
+  width: 400px;
+  height:350px;
   margin: 20px;
   border: none;
   text-align: center;
@@ -281,7 +286,7 @@ label {
 
 .box1 img {
   padding-top:50px;
-  width: 60%;
+  width: 30px;
   height: auto;
 }
 .serviceheader {
@@ -317,8 +322,8 @@ label {
 #loginModal .modal-content {
   border-radius: 25px;
   
-  background: linear-gradient(0deg, rgba(24, 89, 169, 0.5), rgba(24, 89, 169, 0.5));
-
+  background: linear-gradient(0deg, rgba(24, 89, 169, 0.5), rgba(24, 89, 169, 0.7));
+   /* background:rgba(2, 74, 162, 0.8); */
 
 
 
@@ -400,6 +405,10 @@ label {
   color:#00A9FF;
   font-size:16px;
 }
+/* .row img{
+  height:824px;
+  width:900px;
+} */
 </style>
 
 
@@ -460,15 +469,15 @@ label {
   <div class="box1" data-aos="zoom-in" data-aos-delay="100">
     
   <div class="button">Request Documents</div>
- <img src="assets/img/image2.png" style="height:250px;width: 380px;" >
+ <img src="assets/img/image2.png" style="height:250px;width: 300px;" >
   </div>
   <div class="box1" data-aos="zoom-in" data-aos-delay="100">
   <div class="button">Schedule Appointment</div>
-  <img src="assets/img/image3.png" style="height:250px;width: 380px;" >
+  <img src="assets/img/image3.png" style="height:250px;width: 300px;" >
   </div>
   <div class="box1" data-aos="zoom-in" data-aos-delay="100">
   <div class="button">Send Complaints</div>
-<img src="assets/img/image4.png" style="height:250px;width: 380px;" >
+<img src="assets/img/image4.png" style="height:250px;width: 300px;" >
   </div>
 </div>
 <section id="about" class="about" >
@@ -476,7 +485,7 @@ label {
   <!-- content goes here -->
 
 
-        <div class="row content">
+        <div class="row">
         <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
             <img src="assets/img/image6.png" class="img-fluid" >
 

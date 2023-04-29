@@ -145,7 +145,7 @@ p {
 }
 
 .fixed-top {
-  background: #024AA2;
+  background: none;
   
 }
 .container3 {
@@ -163,7 +163,7 @@ p {
 }
 
 #header.header-scrolled, #header.header-inner-pages{
-  background: #024AA2;
+  background: rgba(2, 74, 162, 0.8);
 }
 .nav-link i {
   font-size: 24px; /* Change the font size to the desired size */
@@ -179,14 +179,19 @@ p {
 
 .navbar-mobile a i{
   font-size:30px;
+
 }
 .navbar a i, .navbar a:focus i {
+  margin-top:15px;
+  color:white;
     font-size: 25px;
     line-height: 0;
     margin-left: 10px;
     margin-right: 0px;
 }
-
+.navbar a:hover i {
+      color: #43ABE0; /* Change this to the desired hover color */
+    }
 .navbar .dropdown ul {
  
   background: white;  

@@ -44,6 +44,9 @@
   ======================================================== -->
 </head>
 <style>
+  .row{
+    padding-bottom:200px;
+  }
 .navbar .dropdown ul {
     background:white;
 }
@@ -65,7 +68,8 @@
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 15px;
+  
+
 }
 
 .header {
@@ -91,9 +95,12 @@
 
   #hero {
     width: 100%;
-    height: 80vh;
-    background-color:white;
+    height: 90vh;
+    background-color:#2DB0F4;
+   
+
 }
+
 .section-bg {
     background-color:#024AA2;
 }
@@ -134,40 +141,116 @@
   justify-content: center;
   align-items: center;
 }
-.box {
-  width: 1600px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 250px;
-  border-bottom-left-radius: 250px;
-  border-bottom-right-radius: 50px;
-  height: 700px;
-  background: linear-gradient(105.18deg, #43ABE0 38.2%, #024AA2 80.02%, rgba(67, 171, 224, 0) 104.19%);
 
-}
-.box2 {
-  border-radius: 10px;
-  background-color:white;
-}
 #hero {
-
-  height:800px;
+  margin-top:0px;
+  height:920px;
+ 
 }
-  </style>
+
+/* services */
+
+.button {
+  background-color: rgba(2, 74, 162, 1);
+  border-radius: 20px;
+  color: #fff;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.button:hover{
+  background-color:#43ABE0;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom:70px;
+  
+}
+
+.box1 {
+  width: 400px;
+  height:350px;
+  margin: 20px;
+  border: none;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  background:white;
+ 
+}
+
+
+.box1 img {
+  padding-top:50px;
+  width: 30px;
+  height: auto;
+}
+.serviceheader {
+  text-transform:Uppercase;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #012970;
+  background-color: none;
+  padding: 20px;
+ 
+}
+/* hero image */
+.hero-img img {
+  width: 500px;
+  height: auto;
+  margin-left:110px;
+
+  
+}
+.container-fluid1 {
+  width:100%;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom:50px;
+
+}
+.hero{
+  margin-top:0px;
+  padding-top:0px;
+}
+
+.button-request {
+  background-color: #024AA2;
+  border-radius: 25px;
+  color: #fff;
+  padding: 10px 94px;
+  
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.button-request:hover {
+  background-color: #0466c8;
+}
+
+
+</style>
 
 <body>
+
 @include('include.navbar')
 
-  <!-- ======= Header ======= -->
- <!-- End Header -->
+
 
  
- <main id="main">
 
- <section style="background-image: url('assets/img/bg2.png'); background-size: cover; background-attachment:;" id="hero" class="d-flex align-items-center">
+  <div class="hero">
+ <section style="background-image: url('assets/img/bg3.png'); background-size: cover;" id="hero" class="d-flex align-items-center">
   <!-- Add content here -->
-
-
-
 
 <div class="container">
 <div class="row">
@@ -177,70 +260,35 @@
   <div class="d-flex justify-content-center justify-content-lg-start">
     <!-- <a href="#about" class="btn-get-started scrollto">  </a> -->
   
-  </div>
+   </div>
 </div>
 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-  <img src="assets/img/image1.png" class="img-fluid animated" alt="">
-</div>
-</div>
+      <img src="assets/img/image1.png" class="img-fluid animated" alt="">
 </div>
 
 </section>
 <section  style=" background: linear-gradient(rgba(67, 171, 224, 0.22), rgba(67, 171, 224, 0.22));"; id="services" class="services section-bg">
 
-<div   class="container2" data-aos="fade-up">
+<header class="serviceheader"> Services </header>
+        <div class="section " data-aos="fade-up" >
+        <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+        <a href="{{ route('request') }}" class="button button-request">Request Documents</a>
 
-  <!-- <div class="section-title">
-    <h2>Services</h2>
-    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-  </div> -->
-  
-  <div class="row">
-    <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-      <div class="icon-box">
-        <a href="{{ route('request') }}">
-          <div class="button">Request Documents</div>
-          <img src="assets/img/image2.png" style="height:250px;width: 380px;" >
-        </a>
-      </div>
-    </div>
+  <img src="assets/img/image2.png" style="height:250px;width: 300px;" >
+</div>
 
-    <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-      <div class="icon-box">
-       <div class="button">Schedule Appointment</div>
-        <img src="assets/img/image3.png" style="height:250px;width: 380px;" >
-      </div>
-    </div>
-
-    <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-      <div class="icon-box">
-      <div class="button">Send Complaints</div>
-        <img src="assets/img/image4.png" style="height:250px;width: 380px;" >
-      </div>
-    </div>
-
-   
+  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+  <div class="button">Schedule Appointment</div>
+  <img src="assets/img/image3.png" style="height:250px;width: 300px;" >
   </div>
-
+  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+  <div class="button">Send Complaints</div>
+<img src="assets/img/image4.png" style="height:250px;width: 300px;" >
+  </div>
+</div>
 </div>
 </section>
-
-<div class="inner">
-  <div class="box">
-    <h1 style="padding-top: 20px; padding-left: 40px;">
-      <span style="color: rgba(250, 255, 0, 1)">Barangay East Rembo</span> Officials
-    </h1>
-    <h2 style="padding-top: 0px; padding-left: 40px;">Organizational Chart</h2>
-    <div class="box2" style="height: 250px; width: 270px; background-color: white; margin-top: 20px; margin-left: 50px;">
-    <!-- Add content for the second box here -->
-</div>
-
-  </div>
-  
-</div>
-
-
-  </main><!-- End #main -->
+<!-- End #main -->
 
   <!-- ======= Footer ======= -->
 @include('include.footer')

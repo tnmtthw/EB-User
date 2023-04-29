@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\DocuRequest;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\UploadedFile;
-use Illuminate\Support\File;
+use Illuminate\Support\Facades\Storage;
+
 
 class DocuRequestController extends Controller
 {
@@ -25,7 +24,11 @@ class DocuRequestController extends Controller
         $data->howner = $request->input('howner');
         $data->rhowner = $request->input('rhowner');
         $data->roa = $request->input('roa');
-        $data->signature = $request->file('signature')->store('/images');
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $path = Storage::disk('s3')->put('/images/signature', $image);
+            $data['image'] = $path;
+        }   
         $data->user_id = auth()->user()->id;
         $data->save();
     

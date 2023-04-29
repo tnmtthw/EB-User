@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('howner')->nullable();
             $table->string('rhowner')->nullable();
             $table->string('roa')->nullable();
-            $table->string('signature')->nullable();
+            $table->string('image')->nullable();
             $table->enum('status', ['Pending', 'Approved'])->default('Pending');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

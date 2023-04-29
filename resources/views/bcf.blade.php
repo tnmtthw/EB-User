@@ -118,8 +118,8 @@
 			<textarea id="reason" name="roa" rows="4" cols="50"></textarea>
 		  </div>		  
 		<div class="row">
-			<label class="label" for="signature">Signature</label>
-			<input type="file" name="signature">	
+			<label for="img">Signature </label>
+            <input type="file" name="image">
 		</div>	
 		<div class="row">
 			<button type="submit">Submit</button>

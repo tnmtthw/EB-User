@@ -64,7 +64,7 @@ end HEADER */
   background-color:white;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
   height: 100%;
-  padding: 60px 30px;
+  padding: 20px 20px;
   text-align: center;
   transition: 0.3s;
   border-radius: 25px;
@@ -226,8 +226,15 @@ c;
   background: linear-gradient(91.17deg, #81CEF4 49%, rgba(255, 253, 253, 0) 131.26%);
   padding-bottom:20px;
   border-radius:25px;
+ 
 
 }
+.section-header h2{
+  font-size:25px;
+  text-transform:uppercase;
+}
+
+  
 #services{
   background: linear-gradient(119.71deg, #E0EEFE 56.4%, #B3E3FC 99.67%, rgba(255, 255, 255, 0) 106.48%, #60B7E6 111.13%, #7BC3EB 111.14%);
 
@@ -238,7 +245,7 @@ c;
 }
  /* BUTTON */
  .read-more-btn {
-  width:250px;
+  width:180px;
   display: block;
   margin-top: auto;
   background-color:#024AA2;
@@ -246,7 +253,7 @@ c;
   border:none;
   color: white;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 12px;
   /* font-weight: bold; */
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
@@ -301,12 +308,12 @@ c;
 
         <header class="section-header">
           <br>
-          <h2>Please Select the type of Document you want to Request</h2>
+          <h2>Please select the type of document you want to request</h2>
           <!-- <p>Veritatis et dolores facere numquam et praesentium</p> -->
         </header>
 
         <div class="row gy-4">
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div class="service-box red">
                 <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
                   <img src="assets/img/clearance.png" style="max-width: 100%; max-height: 100%; height:185px; width:192px;">
@@ -317,7 +324,7 @@ c;
             </div>
 
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-box red">
             <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
                     <img src="assets/img/ID3.png" style="max-width: 100%; max-height: 100%;">
@@ -327,7 +334,7 @@ c;
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-box red">
             <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
                     <img src="assets/img/permit.png" style="max-width: 100%; max-height: 100%;">
@@ -337,7 +344,7 @@ c;
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-box red">
             <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
                     <img src="assets/img/doc2.png" style="max-width: 100%; max-height: 100%;">
@@ -347,7 +354,7 @@ c;
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
             <div class="service-box red">
             <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
                     <img src="assets/img/doc3.png" style="max-width: 100%; max-height: 100%;height:200px; width:192px;">
@@ -357,7 +364,7 @@ c;
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
             <div class="service-box red">
             <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
                     <img src="assets//img/ID1.png" style="max-width: 100%; max-height: 100%;">
@@ -366,7 +373,25 @@ c;
                   <button class="read-more-btn"><span style="text-align: center;">INDEGENCY ID</span></i></button>
             </div>
           </div>
-
+          
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-box red">
+            <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+                    <img src="assets//img/ID4.png" style="max-width: 100%; max-height: 100%;height:215px; width:192px;">
+                  </div>
+           
+                  <button class="read-more-btn"><span style="text-align: center;">INDEGENCY ID</span></i></button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-box red">
+            <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
+                    <img src="assets//img/ID1.png" style="max-width: 100%; max-height: 100%;">
+                  </div>
+           
+                  <button class="read-more-btn"><span style="text-align: center;">INDEGENCY ID</span></i></button>
+            </div>
+          </div>
         </div>
 
       </div>

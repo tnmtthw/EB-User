@@ -245,6 +245,7 @@ input[type="text"],
 input[type="email"],
 input[type="number"]
  {
+  padding: 10px;
   max-width: 240px;
   width: 240px;
   height: 40px;
@@ -255,6 +256,7 @@ input[type="number"]
 }
 
  input[type="text1"]{
+	padding: 10px;
   width: 100%;
   height: 40px;
   margin-bottom: 10px;
@@ -264,6 +266,7 @@ input[type="number"]
 }
 
 input[type="text3"]{
+	padding: 10px;
   width: 75%;
   height: 40px;
   margin-bottom: 10px;
@@ -273,6 +276,7 @@ input[type="text3"]{
 }
 
 input[type="date"]{
+	padding: 10px;
   width: 100%;
   height: 40px;
   margin-bottom: 10px;
@@ -360,7 +364,7 @@ label[for="agree"] {
   border: none;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  padding: 5px;
+  padding: 10px;
 }
 
 .row3 {

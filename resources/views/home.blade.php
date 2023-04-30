@@ -496,7 +496,7 @@ label {
             </p1> <br>
             <br>
             <p style="font-weight: 150px;">
-            E Barangay is a web application designed to simplify the process of requesting documents and scheduling appointments in the barangay for East Rembo residents. With the use of this platform, residents can easily submit their requests for barangay documents such as clearances, permits, certificates, and other necessary papers without the need for physical visits to the barangay hall.  <br>The web application aims to make the process of document request more efficient and hassle-free for the residents of East Rembo. By eliminating the need to queue up in the barangay office or submit paper documents, residents can save time and effort while obtaining the necessary documents they need.
+            E Barangay is a web application designed to simplify the process of requesting documents and scheduling appointments in the barangay for East Rembo residents. With the use of this platform, residents can easily submit their requests for barangay documents such as clearances, permits, certificates, and other necessary papers without the need for physical visits to the barangay hall.<br>The web application aims to make the process of document request more efficient and hassle-free for the residents of East Rembo. By eliminating the need to queue up in the barangay office or submit paper documents, residents can save time and effort while obtaining the necessary documents they need.
             </p>
             <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Register Now</a>
           </div>

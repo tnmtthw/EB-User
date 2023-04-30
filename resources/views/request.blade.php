@@ -282,19 +282,7 @@ c;
     <h1 class="logo me-auto" style="align-content: left;"><a href="index.php">EBarangay</a></h1>
     
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a  href="{{ url('/') }}">Home</a></li>
-                <li><a href="">Dashboard</a></li>
-        
-          <!-- <li><a  href="{{ route('logout')}}">Logout</a></li> -->
-          <div class="container1">
- 		<a style="color: white"><span id='clock'></span></a>
-</div>
-          
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+    @include('include.navbar-inside')
 
     </div>
   </header><!-- End Header -->
@@ -324,7 +312,7 @@ c;
                   <img src="assets/img/clearance.png" style="max-width: 100%; max-height: 100%; height:185px; width:192px;">
                 </div>
         
-              <a href="{{ route('bc')}}"><button class="read-more-btn"><span style="text-align: center;">BRANGAY CLEARANCE</span></i></button></a>
+              <a href="{{ route('bcf')}}"><button class="read-more-btn"><span style="text-align: center;">BRANGAY CLEARANCE</span></i></button></a>
               </div>
             </div>
 
@@ -453,30 +441,3 @@ c;
 </body>
 
 </html>
-<script>
-
-	var dt = new Date();
-var hours = dt.getHours();
-var minutes = dt.getMinutes();
-var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-var timeString = hours + ':' + minutes + '' + ampm;
-document.getElementById('clock').innerHTML = dt.toDateString() + ' ' + timeString;
-
-function clock() {
-    var dt = new Date();
-    var hours = dt.getHours();
-    var minutes = dt.getMinutes();
-    var ampm = hours >= 12 ? 'pm' : 'am';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    var timeString = hours + ':' + minutes + '' + ampm;
-    clockElement.textContent = dt.toDateString() + ' ' + timeString;
-}
-
-setInterval(clock, 1000);
-
-
-
-  </script>

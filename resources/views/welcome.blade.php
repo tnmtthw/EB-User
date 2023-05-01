@@ -370,6 +370,7 @@
 
 <header class="serviceheader"> Services </header>
         <div class="section" data-aos="fade-up" >
+
               <div class="box1" data-aos="zoom-in" data-aos-delay="100">
                 <a href="{{ route('request') }}" class="button button-request">Request Documents</a>
 
@@ -377,13 +378,17 @@
             </div>
 
   <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-        <div class="button">Schedule Appointment</div>
+  <a href="{{ route('bcf')}}" class="button button-request" style="font-size: 15px;">Schedule Appointment</a>
+
           <img src="assets/img/image3.png" style="height:250px;width: 300px;" >
         </div>
+
     <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-     <div class="button">Send Complaints</div>
+    <a href="{{ route('bcf')}}" class="button button-request">Send Complaint</a>
+
           <img src="assets/img/image4.png" style="height:250px;width: 300px;" >
     </div>
+    
 </div>
 </div>
 </section>

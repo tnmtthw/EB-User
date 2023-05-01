@@ -197,8 +197,8 @@ label {
 
 
 .services{
-	background: url('signup-bg.jpg');
-	background-size: 2000px 1800px;
+  background: url('signup-bg.jpg');
+  background-size: 2000px 1800px;
   background-repeat: no-repeat;
 
     }
@@ -250,7 +250,7 @@ input[type="text"],
 input[type="email"],
 input[type="file"]
  {
- max-width: 240px;
+  max-width: 240px;
   width: 240px;
   height: 40px;
   margin-bottom: 10px;
@@ -288,15 +288,28 @@ input[type="datetime-local"]{
 
 
 input[type="tel"] {
+  position: relative;
   display: inline-block;
-  width: 100%;
+  width: 30%;
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  padding: 5px;
+  padding: 5px 5px 5px 40px;
+  background-color: #f2f2f2;
 }
+
+input[type="tel"]::before {
+  content: "+63";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(50%);
+  font-size: 14px;
+  color: #999;
+}
+
 
 
 
@@ -418,21 +431,9 @@ select#app_type {
   border-radius: 5px;
   color: #666; /* Set text color */
   font-size: 16px;
-  height: 40px;
+  height: 30px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
   padding: 5px 30px 5px 10px; /* Set padding to create space for arrow */
-}
-
-select#id_type:focus {
-  outline: none; /* Remove focus outline */
-}
-
-select#id_type option {
-  color: #666; /* Set option text color */
-}
-
-input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-  filter: invert(25%) sepia(94%) saturate(2771%) hue-rotate(191deg) brightness(92%) contrast(93%);
 }
 
 #submit-button {
@@ -460,20 +461,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     <h1 class="logo me-auto" ><a href="index.php"><span>E</span>Barangay</a></h1>
     
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a  href="index.php">Home</a></li>
-          <li><a href="#about">About</a></li>
-     <li><a href="#services">Services</a></li>
-           <li><a href="#contact">Contact</a></li>
-          <li><a  href="#contact">News</a></li>
-          <div class="container">
- 		<a style="color: white"><span id='clock'></span></a>
-</div>
-          
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+    @include('include.navbar-inside')
 
     </div>
   </header><!-- End Header -->
@@ -483,7 +471,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     <section id="services" class="services section-bg">
       <div class="container3" data-aos="fade-up">
   <div class="row1" style="text-align: center;">
-    <h1>APPOINTMENT FORM</h1>
+    <h1>COMPLAINT FORM</h1>
   </div>
   <div class="row2">
     <div class="personal-info">
@@ -512,27 +500,15 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
             <label for="contact">Contact Number</label><br>
             <input type="tel" id="contact" name="contact" pattern="[+]63[0-9]{10}" maxlength="11"  placeholder="Enter your phone number">
           </div>
-        <div class="col">
-           <label for="sdt">Select Date and Time</label><br>
-          <input type="datetime-local" id="sdt" name="sdt"  placeholder="MM/DD/YY - 00:00AM" pattern="\d{2}\/\d{2}\/\d{2} - \d{2}:\d{2}(AM|PM)">
-        </div>
     </div>
-      <div class="col">
-          <label for="app_type">Select Type of Appointment</label><br>
-<select id="app_type" name="app_type" >
-  <option value="">For Document Pickup</option>
-  <option value="1">DOCUMENT PICKUP</option>
-  <option value="2">PAYMENT OF PERMIT</option>
-</select>
-        </div>
     <div class="row">
     <div class="col">
-
+        <label for="address">Address</label>
+        <input type="text1" id="address" name="address" placeholder="House number, Street, Sitio, Barangay, City">
       </div>
     </div>
-   
   
-        <label for="reason" style="color: #024AA2;">Reason for Appointment</label>
+        <label for="reason" style="color: #024AA2;">Complaint</label>
         <br>
         <br>
     <div class="row3">
@@ -541,10 +517,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
       </div>
     </div>
     <br>
-    <div class="row">
-    <div class="col">
-        <p style="color: #024AA2;"><strong>NOTE: </strong>"Please bring your appointment form on the day of your appointment. The appointment form will be available after the approval of your appointment. Additionally, please bring at least one valid ID."</p>      </div>
-    </div>
     <div class="row" >
       <div class="col">
         
@@ -569,19 +541,14 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
    
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <?php
-include('footer.php');
-?>
-  
-  </footer><!-- End Footer -->
+  @include('include.footer')
 
 
 <div id="popup-container" style="display:none;">
   <div id="popup">
-    <h3 style="color: #024AA2;"><strong>Note:</strong></h3>
-    <a style="color: #024AA2;"> Please wait for 1-3 days for Appointment Approval<br>"Please bring your appointment form on the day of your appointment. The appointment form will be available after the approval of your appointment. Additionally, please bring at least one valid ID."</a><br><br>
-    <a href="index.php" class="button"> DONE</a>
+    <h3><strong>Complaint Submitted!</strong></h3>
+    <a> The complaint is currently being processed. <br>Please be patient as we will respond to you as soon as possible.</a><br><br>
+    <a href="index.php" class="button" class="fa fa-home" >Back to Home</a>
   </div>
 
         
@@ -602,7 +569,7 @@ include('footer.php');
 </html>
 <script>
 
-	var dt = new Date();
+  var dt = new Date();
 var hours = dt.getHours();
 var minutes = dt.getMinutes();
 var ampm = hours >= 12 ? 'pm' : 'am';

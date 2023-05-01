@@ -60,6 +60,7 @@
     padding: 2px;
 }
 
+
 /* Media query for screens smaller than 768px */
 @media screen and (max-width: 767px) {
   .navbar {
@@ -460,20 +461,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     <h1 class="logo me-auto" ><a href="index.php"><span>E</span>Barangay</a></h1>
     
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a  href="index.php">Home</a></li>
-          <li><a href="#about">About</a></li>
-     <li><a href="#services">Services</a></li>
-           <li><a href="#contact">Contact</a></li>
-          <li><a  href="#contact">News</a></li>
-          <div class="container">
- 		<a style="color: white"><span id='clock'></span></a>
-</div>
-          
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+    @include('include.navbar-inside')
 
     </div>
   </header><!-- End Header -->
@@ -570,12 +558,8 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <?php
-include('footer.php');
-?>
+  @include('include.footer')
   
-  </footer><!-- End Footer -->
-
 
 <div id="popup-container" style="display:none;">
   <div id="popup">

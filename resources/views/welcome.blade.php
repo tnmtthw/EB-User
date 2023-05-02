@@ -220,7 +220,7 @@
   background-color: #024AA2;
   border-radius: 25px;
   color: #fff;
-  padding: 10px 94px;
+  padding: 10px 88px;
   
   text-decoration: none;
   display: inline-block;

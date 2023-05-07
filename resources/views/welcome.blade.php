@@ -376,15 +376,9 @@
 
               <img src="assets/img/image2.png" style="height:250px;width: 300px;" >
             </div>
-
-  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-  <a href="{{ route('bcf')}}" class="button button-request" style="font-size: 15px;">Schedule Appointment</a>
-
-          <img src="assets/img/image3.png" style="height:250px;width: 300px;" >
-        </div>
-
+            
     <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-    <a href="{{ route('bcf')}}" class="button button-request">Send Complaint</a>
+    <a href="{{ route('compform')}}" class="button button-request">Send Complaint</a>
 
           <img src="assets/img/image4.png" style="height:250px;width: 300px;" >
     </div>

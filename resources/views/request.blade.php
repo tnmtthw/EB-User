@@ -319,7 +319,7 @@ c;
                   <img src="assets/img/clearance.png" style="max-width: 100%; max-height: 100%; height:185px; width:192px;">
                 </div>
         
-              <a href="{{ route('bcf')}}"><button class="read-more-btn"><span style="text-align: center;">BRANGAY CLEARANCE</span></i></button></a>
+              <a href="{{ route('bcf')}}"><button class="read-more-btn"><span style="text-align: center;">BARANGAY CLEARANCE</span></i></button></a>
               </div>
             </div>
 
@@ -330,7 +330,7 @@ c;
                     <img src="assets/img/ID3.png" style="max-width: 100%; max-height: 100%;">
                   </div>
               
-                  <a href="{{ route('bca')}}"><button class="read-more-btn"><span style="text-align: center;">BRANGAY ID</span></i></button></a>
+                  <a href="{{ route('idform')}}"><button class="read-more-btn"><span style="text-align: center;">BARANGAY ID</span></i></button></a>
             </div>
           </div>
 

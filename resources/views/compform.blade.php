@@ -197,7 +197,7 @@ label {
 
 
 .services{
-  background: url('signup-bg.jpg');
+  background-image: url("assets/img/signup-bg.jpg");
   background-size: 2000px 1800px;
   background-repeat: no-repeat;
 
@@ -466,6 +466,7 @@ select#app_type {
     </div>
   </header><!-- End Header -->
 <br>
+<br>
 
   <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
@@ -541,14 +542,14 @@ select#app_type {
    
   </main><!-- End #main -->
 
-  @include('include.footer')
+ 
 
 
 <div id="popup-container" style="display:none;">
   <div id="popup">
     <h3><strong>Complaint Submitted!</strong></h3>
     <a> The complaint is currently being processed. <br>Please be patient as we will respond to you as soon as possible.</a><br><br>
-    <a href="index.php" class="button" class="fa fa-home" >Back to Home</a>
+    <a href="{{ route('welcome')}}" class="button" class="fa fa-home" >Back to Home</a>
   </div>
 
         

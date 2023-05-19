@@ -59,7 +59,27 @@
   background-color:#024AA2;
     padding: 2px;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
 
+/* Styles for the mobile version of the navbar */
+.navbar-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(40, 58, 90, 0.9);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Media query for screens smaller than 768px */
 @media screen and (max-width: 767px) {
@@ -198,7 +218,7 @@ label {
 
 
 .services{
-	background: url('signup-bg.jpg');
+	background-image: url("assets/img/signup-bg.jpg");
 	background-size: 2000px 1800px;
   background-repeat: no-repeat;
 
@@ -251,7 +271,7 @@ input[type="text"],
 input[type="email"],
 input[type="file"]
  {
- max-width: 240px;
+  max-width: 240px;
   width: 240px;
   height: 40px;
   margin-bottom: 10px;
@@ -278,17 +298,8 @@ input[type="text3"]{
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
-input[type="datetime-local"]{
-  width: 100%;
-  height: 40px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4); 
-}
-
-
-input[type="tel"] {
+input[type="tel"]{
+  position: relative;
   display: inline-block;
   width: 100%;
   height: 40px;
@@ -296,8 +307,20 @@ input[type="tel"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  padding: 5px;
+  padding: 5px 5px 5px 40px;
+  background-color: #f2f2f2;
 }
+
+input[type="tel"]::before {
+  content: "+63";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(50%);
+  font-size: 14px;
+  color: #999;
+}
+
 
 
 
@@ -312,15 +335,6 @@ input[type="submit"] {
   margin-left: 325px
 }
 
-input[type="checkbox"] {
-  vertical-align: middle;
-  margin-right: 10px;
-}
-
-label[for="agree"] {
-  display: inline-block;
-  padding-left: 5px;
-}
 #popup-container {
   position: fixed;
   top: 0;
@@ -408,7 +422,7 @@ label[for="agree"] {
   z-index: -1;
 }
 
-select#app_type {
+select#precinct {
   appearance: none; /* Remove default arrow */
   -webkit-appearance: none; /* Remove default arrow for Safari/Chrome */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%233F51B5' d='M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6l-6,-6L7.41,8.59z'/%3E%3C/svg%3E"); /* Set arrow image */
@@ -420,20 +434,10 @@ select#app_type {
   color: #666; /* Set text color */
   font-size: 16px;
   height: 40px;
+  max-width: 100%;
+  width: 200px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
   padding: 5px 30px 5px 10px; /* Set padding to create space for arrow */
-}
-
-select#id_type:focus {
-  outline: none; /* Remove focus outline */
-}
-
-select#id_type option {
-  color: #666; /* Set option text color */
-}
-
-input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-  filter: invert(25%) sepia(94%) saturate(2771%) hue-rotate(191deg) brightness(92%) contrast(93%);
 }
 
 #submit-button {
@@ -447,7 +451,18 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   background-color: #81CEF4;
   cursor: pointer;
 }
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(25%) sepia(94%) saturate(2771%) hue-rotate(191deg) brightness(92%) contrast(93%);
+}
 
+input[type="date"]{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4); 
+}
 
 </style>
 </head>
@@ -466,12 +481,13 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     </div>
   </header><!-- End Header -->
 <br>
+<br>
 
   <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
       <div class="container3" data-aos="fade-up">
   <div class="row1" style="text-align: center;">
-    <h1>APPOINTMENT FORM</h1>
+    <h1>COMPLAINT FORM</h1>
   </div>
   <div class="row2">
     <div class="personal-info">
@@ -499,40 +515,36 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
       <div class="col">
             <label for="contact">Contact Number</label><br>
             <input type="tel" id="contact" name="contact" pattern="[+]63[0-9]{10}" maxlength="11"  placeholder="Enter your phone number">
-          </div>
-        <div class="col">
-           <label for="sdt">Select Date and Time</label><br>
-          <input type="datetime-local" id="sdt" name="sdt"  placeholder="MM/DD/YY - 00:00AM" pattern="\d{2}\/\d{2}\/\d{2} - \d{2}:\d{2}(AM|PM)">
-        </div>
-    </div>
+                </div>
       <div class="col">
-          <label for="app_type">Select Type of Appointment</label><br>
-<select id="app_type" name="app_type" >
-  <option value="">For Document Pickup</option>
-  <option value="1">DOCUMENT PICKUP</option>
-  <option value="2">PAYMENT OF PERMIT</option>
+           <label for="birthday">Date of Birth</label><br>
+          <input type="date" id="birthday" name="birthday">
+          </div>
+          <div class="col">
+          <label for="precinct">Voter's Precinct</label><br>
+<select  name="precinct" id="precinct" placeholder="Select Precinct">
+<option value="1">0817A</option>
+<option value="2">0817B</option>
+<option value="3">0818A</option>
+<option value="4">0818B</option>
+<option value="5">0819A</option>
+<option value="6">0820A</option>
+<option value="7">0820B</option>
+<option value="8">0821A</option>
+<option value="9">0823A</option>
+<option value="10">0822A</option>
+<option value="11">0821B</option>
+
 </select>
         </div>
+    </div>
     <div class="row">
     <div class="col">
-
-      </div>
-    </div>
-   
-  
-        <label for="reason" style="color: #024AA2;">Reason for Appointment</label>
-        <br>
-        <br>
-    <div class="row3">
-    <div class="col">
-        <input type="text2" id="reason" name="reason" placeholder="Type here....">
+        <label for="pob">Place of Birth</label>
+        <input type="text1" id="pob" name="pob" placeholder="Enter Place of Birth">
       </div>
     </div>
     <br>
-    <div class="row">
-    <div class="col">
-        <p style="color: #024AA2;"><strong>NOTE: </strong>"Please bring your appointment form on the day of your appointment. The appointment form will be available after the approval of your appointment. Additionally, please bring at least one valid ID."</p>      </div>
-    </div>
     <div class="row" >
       <div class="col">
         
@@ -560,12 +572,14 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   <!-- ======= Footer ======= -->
   @include('include.footer')
   
+  </footer><!-- End Footer -->
+
 
 <div id="popup-container" style="display:none;">
   <div id="popup">
-    <h3 style="color: #024AA2;"><strong>Note:</strong></h3>
-    <a style="color: #024AA2;"> Please wait for 1-3 days for Appointment Approval<br>"Please bring your appointment form on the day of your appointment. The appointment form will be available after the approval of your appointment. Additionally, please bring at least one valid ID."</a><br><br>
-    <a href="index.php" class="button"> DONE</a>
+    <h3><strong>Your application for Barangay ID<br> has been submitted!</strong></h3>
+    <a> We are now processing your application.<br>Please wait for 3 to 7 working days</a><br><br>
+    <a href="{{ route('welcome')}}" class="button" class="fa fa-home" >Back to Home</a>
   </div>
 
         

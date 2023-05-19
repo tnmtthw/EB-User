@@ -29,8 +29,9 @@ class UserFactory extends Factory
             'street' => function () {
                 $streets = File::get(public_path('streets.txt'));
                 $streetsArray = explode("\n", $streets);
-                return $this->faker->randomElement($streetsArray);
-            },
+                $randomStreet = $this->faker->randomElement($streetsArray);
+                return trim($randomStreet);
+            },            
             'sitio' => $this->faker->randomElement(['Sitio 1', 'Sitio 2', 'Sitio 3', 'Sitio 4', 'Sitio 5', 'Sitio 6', 'Sitio 7']),
             'brgy' => 'East Rembo',
             'city' => 'Makati City',

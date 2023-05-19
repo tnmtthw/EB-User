@@ -70,6 +70,15 @@ Route::middleware(['auth'])->group(function () {
         return view('bcf');
     })->name('bcf');
 
+    Route::get('/compform', function () {
+        return view('compform');
+    })->name('compform');
+
+    Route::get('/idform', function () {
+        return view('idform');
+    })->name('idform');
+
+
     // Route::get('/certificate/bc', function () {
     //     return view('certificate.bc');
     // })->name('certificate.bc');

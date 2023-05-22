@@ -519,7 +519,7 @@ label {
           </div>
 
         <div class="col-lg-4 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/image7.png"  style="
+            <img src="assets/img/image7.png"  style="announcements
             width: 150%;, height: 200; ">
           </div>
 
@@ -529,8 +529,8 @@ label {
 
 <!-- ======= Skills Section ======= -->
 
-@foreach ($announcement as $ann)
-    @if ($ann->id == 0)
+@foreach ($announcements as $ann)
+  @if ($ann->id % 2 == 0)
       <div class="container-fluid1 bg-white shadow">
         <section id="clean" class="clean">
           <div class="container1" data-aos="fade-up">
@@ -549,7 +549,7 @@ label {
           </div>
         </section>
       </div>
-  @else ($ann->id == 1)
+  @else
     <div class="container-fluid" data-aos="fade-up">
       <div class="row">
         <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">

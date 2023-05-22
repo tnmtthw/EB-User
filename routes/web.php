@@ -21,8 +21,8 @@ Route::get('/', function () {
     if (Auth::check()) {
         return redirect()->route('welcome');
     } else {
-        $announcement = announcement::all();
-        return view('home', compact('announcement'));
+        $announcements = announcement::all();
+        return view('home', compact('announcements'));
     }
 })->name('home');
 

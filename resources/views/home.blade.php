@@ -415,14 +415,39 @@ label {
   color:#00A9FF;
   font-size:16px;
 }
-/* .row img{
-  height:824px;
-  width:900px;
-} */
 
 .container {
     max-width: 1300px;
 }
+.mission-title,
+.vision-title {
+  padding-top:20px;
+  padding-bottom:20px;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+  .mission-content,
+  .vision-content {
+    
+    color:#092F5E;
+    font-size:22px;
+    text-align: justify;
+    padding-left:80px;
+    padding-right:80px;
+  }
+  .mission-vision-container {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 491px;
+    width: 1261px;
+    border-radius: 25px;
+    position: relative;
+    background-color:white;
+
+  }
 </style>
 
 
@@ -526,6 +551,23 @@ label {
 
     @foreach ($announcements as $ann)
     @if ($ann->id % 2 == 0)
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="row"style="margin-bottom:100px;">
+        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
+          <div class="content text-justify">
+            <h3 style="font-size: 4em;color: #024AA2;"><strong>{{ $ann->title }}</strong></h3>
+            <br>
+            <p>{{ $ann->body }}</p>
+            <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
+          </div>
+        </div>
+        <div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
+          <img src="{{ Storage::disk('s3')->url($ann->image) }}" class="img-fluid1">
+        </div>
+      </div>
+    </div>
+   
+    @else
     <div class="container-fluid1 bg-white shadow">
       <section id="clean" class="clean">
         <div class="container1" data-aos="fade-up">
@@ -542,26 +584,49 @@ label {
         </div>
       </section>
     </div>
-    @else
-    <div class="container-fluid" data-aos="fade-up">
-      <div class="row"style="margin-bottom:100px;">
-        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
-          <div class="content text-justify">
-            <h3 style="font-size: 4em;color: #024AA2;"><strong>{{ $ann->title }}</strong></h3>
-            <br>
-            <p>{{ $ann->body }}</p>
-            <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
-          <img src="{{ Storage::disk('s3')->url($ann->image) }}" class="img-fluid1">
-        </div>
-      </div>
-    </div>
     @endif
     @endforeach
   </div>
+
+  <div class="container mission-vision-container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="mission">
+          <h2 class="mission-title" style="color: yellow;">Mission</h2>
+          <p class="mission-content">East Rembo intends to deliver excellent social services through a healthy, safe, and clean environment. Our mission is to continuously increase the preparedness of residents, enhance the accessibility and quality of health services, develop a peaceful and disciplined community, and create more business opportunities through livelihood programs.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="vision">
+          <h2 class="vision-title" style="color: blue;">Vision</h2>
+          <p class="vision-content">East Rembo envisions becoming one of the most resilient barangays in Makati City. Our vision is to have empowered, God-loving, and professional citizens living in a progressive economy, a disaster-resilient community, and an ecologically balanced environment. We strive for excellent public service and fair, transparent governance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+<!-- MISSION VISTION SECTION -->
+<!-- <section id="mission-vision" style="background: rgba(67, 171, 224, 0.22);">
+  <div class="container mission-vision-container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="mission">
+          <h2 class="mission-title" style="color: yellow;">Mission</h2>
+          <p class="mission-content">East Rembo intends to deliver excellent social services through a healthy, safe, and clean environment. Our mission is to continuously increase the preparedness of residents, enhance the accessibility and quality of health services, develop a peaceful and disciplined community, and create more business opportunities through livelihood programs.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="vision">
+          <h2 class="vision-title" style="color: blue;">Vision</h2>
+          <p class="vision-content">East Rembo envisions becoming one of the most resilient barangays in Makati City. Our vision is to have empowered, God-loving, and professional citizens living in a progressive economy, a disaster-resilient community, and an ecologically balanced environment. We strive for excellent public service and fair, transparent governance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
 <!-- End Why Us Section -->
 
     <!-- ======= Portfolio Section ======= -->

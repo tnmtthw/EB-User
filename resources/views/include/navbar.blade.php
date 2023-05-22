@@ -330,7 +330,7 @@ p {
           <!-- <li class="dropdown"><a href="#"><img src="path_to_user_profile_image" alt="&nbsp;User name"></a> -->
             <ul>
               @if(Auth::check())
-                <a href="#">{{ Auth::user()->firstname }}</a>
+                <a  href="{{ route('profile') }}">{{ Auth::user()->firstname }}</a>
               @endif
               <a href="{{ route('logout')}}">Log out</a>
               <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a> -->

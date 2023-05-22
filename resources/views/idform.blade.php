@@ -91,6 +91,7 @@
     display: flex;
   }
 }
+
 .fixed-top .logo span{
       display: inline;
       font-size:30px;
@@ -464,6 +465,18 @@ input[type="date"]{
   box-shadow: 0 2px 4px rgba(0,0,0,0.4); 
 }
 
+.custom-file-upload {
+	display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+#img {
+  display: none;
+}
 </style>
 </head>
 
@@ -487,7 +500,7 @@ input[type="date"]{
     <section id="services" class="services section-bg">
       <div class="container3" data-aos="fade-up">
   <div class="row1" style="text-align: center;">
-    <h1>COMPLAINT FORM</h1>
+    <h1>Barangay ID Form</h1>
   </div>
   <div class="row2">
     <div class="personal-info">
@@ -544,9 +557,17 @@ input[type="date"]{
         <input type="text1" id="pob" name="pob" placeholder="Enter Place of Birth">
       </div>
     </div>
+    <div class="row">
+    <div class="col">
+        <label for="img">Upload Photo</label><br>
+         <input type="file" id="photo" class="custom-file-upload" name="image">
+      </div>
+    </div>
     <br>
     <div class="row" >
       <div class="col">
+
+
         
   <input type="submit" id="submit-button" value="Submit">
       </div>

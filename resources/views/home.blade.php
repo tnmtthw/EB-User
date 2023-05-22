@@ -47,7 +47,17 @@
 
 <style>
 /* <!-- span logo style  --> */
-
+.resized-image {
+  max-width:1000px;
+  width: 500px; /* Adjust the width as desired */
+  height: 400px; /* Adjust the height as desired */
+}
+.img-fluid1{
+  margin-left:40px;
+  max-width:1000px;
+  width: 500px; /* Adjust the width as desired */
+  height: 500px; /* Adjust the height as desired */
+}
 #hero {
   width: 100%;
   height:200px;
@@ -409,6 +419,10 @@ label {
   height:824px;
   width:900px;
 } */
+
+.container {
+    max-width: 1300px;
+}
 </style>
 
 
@@ -444,131 +458,111 @@ label {
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+        <h1>East Rembo</h1>
+        <h2>Connecting Communities, Empowering Lives. Welcome to E-Barangay!</h2>
+        <div class="d-flex justify-content-center justify-content-lg-start">
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+        <img src="assets/img/logoo2.png" class="img-fluid animated" alt="">
+      </div>
+    </div>
+  </div>
+</section><!-- End Hero -->
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-        <!-- <h1>EBarangay</h1> -->
-         <h1> East Rembo</h1>
-          <h2>Connecting Communities, Empowering Lives Welcome to E-Barangay!</h2>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
-          
+<header class="serviceheader">Services</header>
+<div class="section" data-aos="fade-up">
+  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+    <div class="button">Request Documents</div>
+    <img src="assets/img/image2.png" style="height:250px;width:300px;">
+  </div>
+  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+    <div class="button">Schedule Appointment</div>
+    <img src="assets/img/image3.png" style="height:250px;width:300px;">
+  </div>
+  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+    <div class="button">Send Complaints</div>
+    <img src="assets/img/image4.png" style="height:250px;width:300px;">
+  </div>
+</div>
+
+<section id="about" class="about">
+  <div class="container" data-aos="fade-up">
+    <div class="row" style="margin-bottom:100px;">
+      <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+        <img src="assets/img/image6.png" class="img-fluid">
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0 content text-justify" data-aos="fade-left" data-aos-delay="100">
+        <h1 id="yellow" style="font-weight: bold; text-shadow: 3px 0 6px #888888; color: #024AA2;">
+          <span style="color: yellow;">E</span> Barangay
+        </h1>
+        <p1 style="color: #024AA2;">Say goodbye to document request hassle and hello to convenience with E Barangay - your one-stop shop for barangay services!</p1><br><br>
+        <p style="font-weight: 150px;">
+          E Barangay is a web application designed to simplify the process of requesting documents and scheduling appointments in the barangay for East Rembo residents. With the use of this platform, residents can easily submit their requests for barangay documents such as clearances, permits, certificates, and other necessary papers without the need for physical visits to the barangay hall.<br>
+          The web application aims to make the process of document request more efficient and hassle-free for the residents of East Rembo. By eliminating the need to queue up in the barangay office or submit paper documents, residents can save time and effort while obtaining the necessary documents they need.
+        </p>
+        <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Register Now</a>
+      </div>
+    </div>
+
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="row"style="margin-bottom:100px;">
+        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
+          <div class="content1">
+            <h3 style="font-size: 4em; color: #024AA2;font-weight: 600;"><strong>NEWS AND ANNOUNCEMENTS</strong></h3>
+            <br>
           </div>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/logoo2.png" class="img-fluid animated" alt="">
+        <div class="col-lg-4 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
+             <img src="assets/img/NewsImage.png" class="img-fluid resized-image">
         </div>
       </div>
     </div>
 
-  </section><!-- End Hero -->
-  <header class="serviceheader"> Services </header>
-  <div class="section " data-aos="fade-up" >
-    
-  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-    
-  <div class="button">Request Documents</div>
- <img src="assets/img/image2.png" style="height:250px;width: 300px;" >
-  </div>
-  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-  <div class="button">Schedule Appointment</div>
-  <img src="assets/img/image3.png" style="height:250px;width: 300px;" >
-  </div>
-  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-  <div class="button">Send Complaints</div>
-<img src="assets/img/image4.png" style="height:250px;width: 300px;" >
-  </div>
-</div>
-<section id="about" class="about" >
-<div class="container" data-aos="fade-up" >
-  <!-- content goes here -->
+    <!-- ======= Skills Section ======= -->
 
-
-        <div class="row">
-        <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/image6.png" class="img-fluid" >
-
-          </div>
-         <div class="col-lg-6 pt-4 pt-lg-0 content text-justify" data-aos="fade-left" data-aos-delay="100">
-            <h1 id="yellow" style="font-weight: bold; text-shadow: 3px 0 6px #888888; color: #024AA2;"><span style="color:yellow";>E</span> Barangay</h1>
-            <p1 style="color: #024AA2;">Say goodbye to document request hassle and hello to convenience with E Barangay - your one-stop shop for barangay services!"
-            </p1> <br>
-            <br>
-            <p style="font-weight: 150px;">
-            E Barangay is a web application designed to simplify the process of requesting documents and scheduling appointments in the barangay for East Rembo residents. With the use of this platform, residents can easily submit their requests for barangay documents such as clearances, permits, certificates, and other necessary papers without the need for physical visits to the barangay hall.<br>The web application aims to make the process of document request more efficient and hassle-free for the residents of East Rembo. By eliminating the need to queue up in the barangay office or submit paper documents, residents can save time and effort while obtaining the necessary documents they need.
-            </p>
-            <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Register Now</a>
-          </div>
-        </div>
-    
-      <div class="container-fluid" data-aos="fade-up">
-
-        <div class="row">
-
-          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-
-            <div class="content">
-              <h3 style="font-size: 4em;color: #024AA2;"><strong>NEWS AND<br> ANNOUNCEMENTS</strong></h3>
-              <br>
-             
+    @foreach ($announcements as $ann)
+    @if ($ann->id % 2 == 0)
+    <div class="container-fluid1 bg-white shadow">
+      <section id="clean" class="clean">
+        <div class="container1" data-aos="fade-up">
+          <div class="row">
+            <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+              <img src="{{ Storage::disk('s3')->url($ann->image) }}" class="img-fluid" alt="">
             </div>
-
-           
-
-          </div>
-
-        <div class="col-lg-4 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/image7.png"  style="announcements
-            width: 150%;, height: 200; ">
-          </div>
-
-        </div>
-
-      </div>
-
-<!-- ======= Skills Section ======= -->
-
-@foreach ($announcements as $ann)
-  @if ($ann->id % 2 == 0)
-      <div class="container-fluid1 bg-white shadow">
-        <section id="clean" class="clean">
-          <div class="container1" data-aos="fade-up">
-            <div class="row" >
-              <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-                <img src="{{ Storage::disk('s3')->url($ann->image) }}" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-                <h3 style="font-size: 4em; color: #024AA2;">
-                  <strong>{{ $ann->title }}</strong>
-                </h3>
-                <p class="text-justify" style="padding-right:20px;padding-left:20px;padding-bottom:20px;">{{ $ann->body }}</p>
-                <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
-              </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+              <h3 style="font-size: 4em; color: #024AA2;text-align:left;padding-left:15px;"><strong>{{ $ann->title }}</strong></h3>
+              <p class="text-justify" style="padding-right:20px;padding-left:20px;padding-bottom:20px;">{{ $ann->body }}</p>
+              <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
             </div>
           </div>
-        </section>
-      </div>
-  @else
+        </div>
+      </section>
+    </div>
+    @else
     <div class="container-fluid" data-aos="fade-up">
-      <div class="row">
-        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+      <div class="row"style="margin-bottom:100px;">
+        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
           <div class="content text-justify">
             <h3 style="font-size: 4em;color: #024AA2;"><strong>{{ $ann->title }}</strong></h3>
             <br>
             <p>{{ $ann->body }}</p>
             <a href="#" class="btn-learn-more" style="border-radius: 25px; color: #024AA2;">Read More</a>
           </div>
-    </div>
-    <div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
-      <img src="{{ Storage::disk('s3')->url($ann->image) }}" class="img-fluid">
-    </div>
+        </div>
+        <div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
+          <img src="{{ Storage::disk('s3')->url($ann->image) }}" class="img-fluid1">
+        </div>
       </div>
     </div>
-  @endif
-@endforeach
-
-    </section><!-- End Why Us Section -->
+    @endif
+    @endforeach
+  </div>
+</section>
+<!-- End Why Us Section -->
 
     <!-- ======= Portfolio Section ======= -->
    

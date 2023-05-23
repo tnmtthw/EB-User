@@ -51,7 +51,7 @@
   );
 }
 .container2 {
-  width: 85%;
+  width: 65%;
   margin: auto;
   border-radius: 15px;
   overflow: hidden;
@@ -119,7 +119,7 @@ h4{
     display: inline-block;
     height: 20px;
     width: 20px;
-    background-color: blue;
+    background-color: #0047FF;
     border-radius: 50%;
     margin-right: 5px;
   }
@@ -128,7 +128,7 @@ h4{
     display: inline-block;
     height: 20px;
     width: 20px;
-    background-color: green;
+    background-color: #32FF11;
     border-radius: 50%;
     margin-right: 5px;
   }
@@ -137,7 +137,7 @@ h4{
     display: inline-block;
     height: 20px;
     width: 20px;
-    background-color: red;
+    background-color: #FF1111;
     border-radius: 50%;
     margin-right: 5px;
   }

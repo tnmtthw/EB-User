@@ -55,12 +55,16 @@
  .fixed-top{
   background:#024AA2;
  }
+ .clockalign{
+  padding-top: 18px;
+ }
 /* 
 end HEADER */
 /* <!-- span logo style  --> */
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
 
 </style>
 </head>
@@ -81,7 +85,7 @@ end HEADER */
         
           <!-- <li><a  href="{{ route('logout')}}">Logout</a></li> -->
           <div class="container">
- 		<a style="color: white"><span id='clock'></span></a>
+ 		<a class="clockalign" style="color: white"><span id='clock'></span></a>
 </div>
           
         </ul>

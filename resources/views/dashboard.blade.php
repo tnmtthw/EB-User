@@ -121,7 +121,9 @@ h4{
     width: 20px;
     background-color: #0047FF;
     border-radius: 50%;
-    margin-right: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
   }
   
 .green-dot {
@@ -130,7 +132,9 @@ h4{
     width: 20px;
     background-color: #32FF11;
     border-radius: 50%;
-    margin-right: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
   }
   
 .red-dot {
@@ -139,7 +143,9 @@ h4{
     width: 20px;
     background-color: #FF1111;
     border-radius: 50%;
-    margin-right: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
   }
   
   .pagecontainer{
@@ -147,6 +153,7 @@ h4{
   margin: 0 auto;
   padding: 0 auto;
   padding-left: 10px;
+  padding-top: 15px;
   overflow: hidden;
 width: 800px;
 height: 90px;
@@ -160,15 +167,6 @@ border-radius: 15px;
   #page-container br{
     line-height: 0.5em;
   }
-  #profile-ul li:first-child a {
-      background-color: #024AA2;
-      border-radius: 25px;
-      color: white;
-      width: 200px;
-    }
-    #pages-container {
-      display: block;
-    }
 
     #all-page {
       display: block;
@@ -220,9 +218,54 @@ border-radius: 15px;
           Date Requested: April 21, 2023<br>
           Status: Cancelled</p></div>
     </div>
-      <div id="ongoing-page" class="page">Content for News Page</div>
-      <div id="completed-page" class="page">Content for Contact Page</div>
-      <div id="cancelled-page" class="page">Content for About Page</div>
+      <div id="ongoing-page" class="page">
+      <div class="pagecontainer">
+          <span class="green-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Barangay Clearance</strong></span> <br>
+          Date Requested: April 21, 2023<br>
+          Status: Completed</p></div>
+          <br>
+    <div class="pagecontainer">
+          <span class="green-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Certificate of Indigency</strong></span> <br>
+          Date Requested: April 21, 2023<br>
+          Status: Ongoing</p></div>
+    <br>
+    <div class="pagecontainer">
+          <span class="green-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Business Permit</strong></span> <br>
+          Date Requested: April 21, 2023<br>
+          Status: Cancelled</p></div>
+      </div>
+      <div id="completed-page" class="page">
+      <div class="pagecontainer">
+          <span class="blue-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Barangay Clearance</strong></span> <br>
+          Date Requested: April 21, 2023<br>
+          Status: Completed</p></div>
+          <br>
+    <div class="pagecontainer">
+          <span class="blue-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Certificate of Indigency</strong></span> <br>
+          Date Requested: April 21, 2023<br>
+          Status: Ongoing</p></div>
+    <br>
+    <div class="pagecontainer">
+          <span class="blue-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Business Permit</strong></span> <br>
+          Date Requested: April 21, 2023<br>
+          Status: Cancelled</p></div>
+      </div>
+      <div id="cancelled-page" class="page">
+      <div class="pagecontainer">
+          <span class="red-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Barangay Clearance</strong></span> <br>
+          Date Requested: April 21, 2023<br>
+          Status: Completed</p></div>
+          <br>
+    <div class="pagecontainer">
+          <span class="red-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Certificate of Indigency</strong></span> <br>
+          Date Requested: April 21, 2023<br>
+          Status: Ongoing</p></div>
+    <br>
+    <div class="pagecontainer">
+          <span class="red-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Business Permit</strong></span> <br>
+          Date Requested: April 21, 2023<br>
+          Status: Cancelled</p></div>
+      </div>
     </div>
   </div>
 </section><!-- End Section -->
@@ -261,27 +304,44 @@ border-radius: 15px;
 
 </html>
 <script>
-function showPage(pageId) {
-  // Hide all pages
-  var pages = document.querySelectorAll('.page');
-  for (var i = 0; i < pages.length; i++) {
-    pages[i].style.display = 'none';
-  }
+   document.addEventListener("DOMContentLoaded", function() {
+      // Set "All" as active by default
+      var allLink = document.querySelector('#profile-ul li:first-child a');
+      allLink.classList.add('active');
 
-  // Show selected page
-  var selectedPage = document.getElementById(pageId + '-page');
-  selectedPage.style.display = 'block';
+      // Function to handle page selection
+      function showPage(pageId) {
+        // Hide all pages
+        var pages = document.querySelectorAll('.page');
+        for (var i = 0; i < pages.length; i++) {
+          pages[i].style.display = 'none';
+        }
 
-  // Remove active class from all links
-  var links = document.querySelectorAll('#profile-ul li a');
-  for (var j = 0; j < links.length; j++) {
-    links[j].classList.remove('active');
-  }
+        // Show selected page
+        var selectedPage = document.getElementById(pageId + '-page');
+        selectedPage.style.display = 'block';
 
-  // Add active class to the selected link
-  var selectedLink = document.querySelector('#profile-ul li a[href="#' + pageId + '"]');
-  selectedLink.classList.add('active');
-}
+        // Remove active class from all links
+        var links = document.querySelectorAll('#profile-ul li a');
+        for (var j = 0; j < links.length; j++) {
+          links[j].classList.remove('active');
+        }
+
+        // Add active class to the selected link
+        var selectedLink = document.querySelector('#profile-ul li a[href="#' + pageId + '"]');
+        selectedLink.classList.add('active');
+      }
+
+      // Attach click event listener to the links
+      var links = document.querySelectorAll('#profile-ul li a');
+      for (var k = 0; k < links.length; k++) {
+        links[k].addEventListener('click', function(event) {
+          event.preventDefault();
+          var pageId = this.getAttribute('href').substring(1);
+          showPage(pageId);
+        });
+      }
+    });
 
 
   </script>

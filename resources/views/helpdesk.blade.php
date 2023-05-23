@@ -70,9 +70,7 @@
     
   );
 }
-#header{
-  background-color:transparent;
-}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -250,11 +248,9 @@ label {
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center">
+  
   @include('include.navbar-inside')
-    </div>
-  </header><!-- End Header -->
+
   
 <br>
 <br>

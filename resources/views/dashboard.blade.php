@@ -115,7 +115,64 @@ h4{
   display: none;
 }
 
+.blue-dot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+.green-dot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: green;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+.red-dot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .pagecontainer{
+    list-style-type: none;
+  margin: 0 auto;
+  padding: 0 auto;
+  padding-left: 10px;
+  overflow: hidden;
+width: 800px;
+height: 90px;
+display: flex;
+align-items: center;
+background: #fafafa;
+box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+  }
 
+  #page-container br{
+    line-height: 0.5em;
+  }
+  #profile-ul li:first-child a {
+      background-color: #024AA2;
+      border-radius: 25px;
+      color: white;
+      width: 200px;
+    }
+    #pages-container {
+      display: block;
+    }
+
+    #all-page {
+      display: block;
+    }
 </style>
 </head>
 
@@ -137,7 +194,7 @@ h4{
     <section id="profilebg" class="profilebg">
   <div class="container2" data-aos="fade-up">
     <div class="personal-info">
-    <h1 style="color:#024AA2;  text-align: center; "><strong>REQUESTS</strong></h1>
+    <h1 style="color:#024AA2; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); text-align: center; "><strong>REQUESTS</strong></h1>
       <ul id="profile-ul">
         <li><a href="#all" onclick="showPage('all')">All</a></li>
         <li><a href="#ongoing" onclick="showPage('ongoing')">Ongoing</a></li>
@@ -145,8 +202,24 @@ h4{
         <li><a href="#cancelled" onclick="showPage('cancelled')">Cancelled</a></li>
       </ul>
     </div>
+    <br>
     <div id="pages-container">
-      <div id="all-page" class="page">Content for Home Page</div>
+      <div id="all-page" class="page">
+        <div class="pagecontainer">
+          <span class="blue-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Barangay Clearance</strong></span> <br>
+          Date Requested: April 21, 2023<br>
+          Status: Completed</p></div>
+          <br>
+    <div class="pagecontainer">
+          <span class="green-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Certificate of Indigency</strong></span> <br>
+          Date Requested: April 21, 2023<br>
+          Status: Ongoing</p></div>
+    <br>
+    <div class="pagecontainer">
+          <span class="red-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Business Permit</strong></span> <br>
+          Date Requested: April 21, 2023<br>
+          Status: Cancelled</p></div>
+    </div>
       <div id="ongoing-page" class="page">Content for News Page</div>
       <div id="completed-page" class="page">Content for Contact Page</div>
       <div id="cancelled-page" class="page">Content for About Page</div>
@@ -167,6 +240,8 @@ h4{
 
   <!-- ======= Footer ======= -->
 
+   
+ @include('include.footer')
   
   </footer><!-- End Footer -->
     

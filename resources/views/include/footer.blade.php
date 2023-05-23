@@ -5,7 +5,7 @@
 ul {
   list-style-type: none;
 }
-li a, li i {
+#footer li a, li i {
       margin-bottom:20px;
       color: black;
     }
@@ -29,7 +29,7 @@ li a, li i {
         <div class="row"style="padding-top: 25px; padding-bottom:40px;">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h2 style="text-transform:none; color:#024AA2; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);"><b><span style="color:#FAFF00";>E</span>Barangay</b></h2>
+            <h2  style=" color:#024AA2; text-transform:none; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);" ><b><span style="color:#FAFF00";>E</span>Barangay</b></h2>
             <p>
               109 7th Ave,<br>
               Makati, 1216<br>

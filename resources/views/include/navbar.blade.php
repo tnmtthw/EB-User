@@ -320,7 +320,7 @@ p {
       <nav id="navbar" class="navbar">
         <ul>
           <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> -->
-          <li><a class="nav-link scrollto" href="#about">Dashboard</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('dashboard') }}">Dashboard</a></li>
           <li><a class="nav-link scrollto" href="#services"><i class="fas fa-bell fa-xl"></i></a></li>
           <li class="dropdown"><a href="#"><i class="fas fa-user-circle fa-5x"></i></a>
           

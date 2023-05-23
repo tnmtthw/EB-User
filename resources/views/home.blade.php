@@ -370,7 +370,7 @@ label {
 #loginModal .signup-section {
   margin-top: 15px;
   font-size: 15px;
-  color:#00A9FF:
+  color:#00A9FF;
 }
 
 #loginModal .signup-section a {

@@ -76,8 +76,8 @@ end HEADER */
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a  href="{{ url('/') }}">Home</a></li>
-                <li><a href="">Dashboard</a></li>
+          <li><a  href="{{ url('welcome') }}">Home</a></li>
+                <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
         
           <!-- <li><a  href="{{ route('logout')}}">Logout</a></li> -->
           <div class="container">

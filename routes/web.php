@@ -86,6 +86,9 @@ Route::middleware(['auth'])->group(function () {
         return view('profile');
     })->name('profile');
 
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
     
     // Route::get('/certificate/bc', function () {
     //     return view('certificate.bc');

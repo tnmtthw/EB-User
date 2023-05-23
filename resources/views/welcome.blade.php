@@ -114,7 +114,6 @@
   color: #fff;
   border-radius: 4px;
   transition: background-color 0.3s ease;
-  float: right;
 }
 
 .readmore-btn:hover {
@@ -333,6 +332,50 @@
 }
 
 
+.container-about{
+  border-radius: 25px; 
+  background-color: white;
+  width: 1500px;
+  height: 520px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.container-about2{
+  border-radius: 25px; 
+  background-color: white;
+  width: 1500px;
+  height: 480px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.container-about3{
+  border-radius: 25px; 
+  background-color: white;
+  width: 1500px;
+  height: 400px;
+  padding-left: 150px;
+  padding-right: 150px;
+  display: flex;
+}
+
+.column-left,
+.column-right {
+  flex: 1;
+}
+
+.column-left {
+  margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.container-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1400px;
+    
+  }
+
+
 </style>
 
 <body>
@@ -382,8 +425,62 @@
 
           <img src="assets/img/image4.png" style="height:250px;width: 300px;" >
     </div>
+
+    <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+    <a href="{{ route('helpdesk')}}" class="button button-request">Helpdesk</a>
+
+          <img src="assets/img/image4.png" style="height:250px;width: 300px;" >
+    </div>
     
+
+
 </div>
+
+<div class="container-info">
+  <div class="container-about">
+<div class="row">
+<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+  <div class="content">
+    <h3  style="font-size: 45px;color: #024AA2; "><strong> Barangay East Rembo</strong></h3>
+    <p style="color: #024AA2;">About Barangay East Rembo</p>
+    <br>
+    <p>  Barangay East Rembo has a land are of 48.11 hectares with a population
+     of 28.087 and a total household of 6,903. It has a 3-storey modern multi-purpose
+     barangay hall, two public daycare centers, an elementary school (ERES)
+     and a high school (THS). The barangay also has a covered court, health center, livelihood center, children’s park,
+     cemented roads, sufficient potable water supply and stable drainage system. 
+     Residents are mainly business owners, office employees, teachers, active and retired military personnel. 
+     As a self-sustaining community, the barangay also has its own talipapa, sari-sari stores, tire and auto supplies,
+     bakery, carinderia, garments, drug stores,
+     video & photo shops, computer rentals, barber shops, laundry shop and beauty parlors.</p>
+  </div>
+</div>
+<div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
+  <img src="assets/img/map.png"  class="img-fluid">
+</div>
+</div>
+
+    </div>    
+  </div>
+<br>
+<br>
+<br>
+
+  <div class="container-info">
+  <div class="container-about2">
+    <div class="row">
+      <div class="col-lg-5 align-items-stretch order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
+        <img src="assets/img/blogo.png" class="img-fluid">
+      </div>
+      <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-1 order-lg-2">
+        <div class="content">
+          <p style="color: #024AA2; text-align: center">HIstory of East Rembo</p>
+          <br>
+          <p>In 1954, the Philippine Armed Forces authorized the construction of settlements for enlisted men serving in the Fort Bonifacio. East Rembo was a self-sustaining community, with the military administration not providing any assistance. In 1986, President Corazon C. Aquino granted land titles to its occupants and the barrios geographical-political boundary was turned-over to the civilian administration of the Municipality of Makati. In 1982, Jose Alamis was elected as the Barangay Captain and celebrated its feast day every October in honor of Our Lady of Fatima. In 1992, Archbishop Cardinal Jaime Sin issued a decree declaring the venerable Lady of Sorrows as its Patron Saint and changing its feast day every 15th day of September.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </section>
 

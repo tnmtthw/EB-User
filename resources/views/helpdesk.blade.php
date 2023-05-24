@@ -192,7 +192,7 @@ label {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.accordion1 {
+.white-accordion  {
   background-color: white;
   cursor: pointer;
   padding: 18px;
@@ -211,7 +211,7 @@ label {
 .accordion:hover {
   background-color: #4D80BD; 
 }
-.accordion1:hover {
+.white-accordion :hover {
   background-color: #ccc; 
 }
 
@@ -223,7 +223,7 @@ label {
   border-radius: 10px;
 }
 
-.panel1 {
+.white {
   padding: 0 18px;
   display: none;
   background-color: #024AA2;
@@ -278,40 +278,39 @@ label {
         <div class="row content">
           <div  class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
           <img src="assets/img/faqs.png" style="margin-top: 90px;">
-      </div>
-      
-      <div class="col-md-8">
-        <button class="accordion">What are the requirements in requesting Barangay clearance?</button>
-<div class="panel">
-  <p>As for Barangay Clearance requirements, you are only required to fill up the form wherein that form will ask the time period of your residency in Barangay ______________. </p>
-</div>
-<br>
-<br>
-<button class="accordion accordion1">How long is the processing time for getting documents?</button>
-<div class="panel1">
-  <p>LMost of the documents can be process in a day but the estimated time for processing the documents is 1 day for the fastest to 3 days for the slowest.</p>
-</div>
-<br>
-<br>
-<button class="accordion">How to schedule appointment?</button>
-<div class="panel">
-  <p>Go to the "Home" page, look for the "Services" section, and click the "Schedule Appointment" button. The page will then redirect you to a form, and you can now start setting up appointments.</p>
-</div>
-<br>
-<br>
-<button class="accordion accordion1">How will I pay for the documents I requested?</button>
-<div class="panel1">
-  <p>After the document request has been approved, you can pay directly at the barangay hall on the same day you pick up the document. Note that the document will not be given if it has not yet been paid.</p>
-</div>
-<br>
-<br>
-<button class="accordion">Where can I track the document I requested?</button>
-<div class="panel">
-  <p>Go to "Dashboard", click "Request List," and there you can see a list of the documents you requested, where you can track them to see if your request has been processed or is ready for pick up.</p>
+           </div>
+           <div class="col-md-8">
+  <button class="accordion">What are the requirements in requesting Barangay clearance?</button>
+  <div class="panel">
+    <p>As for Barangay Clearance requirements, you are only required to fill up the form wherein that form will ask the time period of your residency in Barangay ______________. </p>
+  </div>
+  <br>
+  <br>
+  <button class="accordion white-accordion ">How long is the processing time for getting documents?</button>
+  <div class="white">
+    <p>Most of the documents can be processed in a day, but the estimated time for processing the documents is 1 day for the fastest to 3 days for the slowest.</p>
+  </div>
+  <br>
+  <br>
+  <button class="accordion ">How to schedule an appointment?</button>
+  <div class="panel">
+    <p>Go to the "Home" page, look for the "Services" section, and click the "Schedule Appointment" button. The page will then redirect you to a form, and you can now start setting up appointments.</p>
+  </div>
+  <br>
+  <br>
+  <button class="accordion white-accordion ">How will I pay for the documents I requested?</button>
+  <div class="white">
+    <p>After the document request has been approved, you can pay directly at the barangay hall on the same day you pick up the document. Note that the document will not be given if it has not yet been paid.</p>
+  </div>
+  <br>
+  <br>
+  <button class="accordion">Where can I track the document I requested?</button>
+  <div class="panel">
+    <p>Go to "Dashboard", click "Request List," and there you can see a list of the documents you requested, where you can track them to see if your request has been processed or is ready for pick up.</p>
+  </div>
 </div>
 
-  </div>
-    </div>
+        </div>
     <br>
     <br>
 
@@ -366,30 +365,27 @@ label {
 </html>
 <script>
 var accordions = document.getElementsByClassName("accordion");
-var i;
+  var i;
 
-for (i = 0; i < accordions.length; i++) {
-  accordions[i].addEventListener("click", function() {
-    var active = this.classList.contains("active");
-    
-    // Close all other accordions in the same group
-    var accordionGroup = this.classList[1];
-    var accordionsInGroup = document.getElementsByClassName(accordionGroup);
-    for (var j = 0; j < accordionsInGroup.length; j++) {
-      accordionsInGroup[j].nextElementSibling.style.display = "none";
-      accordionsInGroup[j].classList.remove("active");
-    }
-    
-    if (active) {
-      this.nextElementSibling.style.display = "none";
-      this.classList.remove("active");
-    } else {
-      this.nextElementSibling.style.display = "block";
-      this.classList.add("active");
-    }
-  });
-}
+  for (i = 0; i < accordions.length; i++) {
+    accordions[i].addEventListener("click", function() {
+      var isActive = this.classList.contains("active");
 
+      // Close all other accordions
+      for (var j = 0; j < accordions.length; j++) {
+        if (accordions[j] !== this) {
+          accordions[j].nextElementSibling.style.display = "none";
+          accordions[j].classList.remove("active");
+        }
+      }
 
-
+      if (isActive) {
+        this.nextElementSibling.style.display = "none";
+        this.classList.remove("active");
+      } else {
+        this.nextElementSibling.style.display = "block";
+        this.classList.add("active");
+      }
+    });
+  }
   </script>

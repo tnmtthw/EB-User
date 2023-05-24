@@ -102,7 +102,7 @@ border-radius: 20px;
     display: block;
     width: 350px;
     margin-left: 500px;
-    align: center;
+    text-align: center;
   }
 </style>
 </head>

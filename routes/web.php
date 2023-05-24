@@ -119,5 +119,3 @@ Route::post('/signup', [LoginController::class, 'signupPost'])->name('signup.pos
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 //Document Request Route
 Route::post('/docuRequest', [DocuRequestController::class, 'docuRequest'])->name('docuRequest');
-
-Route::post('/profile', [DocuRequestController::class, 'profile'])->name('profile');

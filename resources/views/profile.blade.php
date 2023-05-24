@@ -119,8 +119,6 @@ border-radius: 20px;
 <br>
 
     
-<form action="{{ route('profile') }}" method="POST" enctype="multipart/form-data">
-  @csrf
   <!-- ======= Header ======= -->
 
 

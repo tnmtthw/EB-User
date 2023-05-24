@@ -183,58 +183,20 @@ form {
   padding-top:6px;
   padding-bottom:8px;
 }
-
-#submit-button {
-  background-color: #024AA2;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  width: 100px;
-  margin: 0 auto;
+button[type="submit"] {
+    display: block;
+    width: 30%;
+    margin: auto;
+    margin-top:20px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #024AA2;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
 }
 
-#submit-button:hover {
-  background-color: #81CEF4;
-  cursor: pointer;
-}
-#popup-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#popup {
-  background-color: white;
-  padding: 20px;
-  border-radius: 50px;
-  text-align: center;
-}
-
-.button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 16px;
-        font-weight: bold;
-        text-align: center;
-        text-decoration: none;
-        background-color: #024AA2;
-        color: #fff;
-        border-radius: 50px;
-        border: none;
-        cursor: pointer;
-    }
-
-   .button:hover
-  {
-     background-color: #81CEF4;
-  }
 </style>
 <body>
 
@@ -482,7 +444,7 @@ form {
             </div>
             <br>
             <br>
-            <input type="submit" id="submit-button" value="Submit">
+          <button type="submit">SUBMIT</button>
      
           <p style="text-align:center">Already have an account?  <a href={{ url('/') }}><u style="color: skyblue;">Sign in here</u></a></p>
         </form>
@@ -491,18 +453,10 @@ form {
 
   </main><!-- End #main -->
 
-  
-
   <!-- ======= Footer ======= -->
     
   @include('include.footer')
 <!-- End Footer -->
-<div id="popup-container" style="display:none;">
-  <div id="popup">
-    <h3><strong>Thank you for Signing Up!</strong></h3>
-    <a>Your application is being reviewed.<br> Please wait for approval before logging in.</a><br><br>
-    <a href="{{ route('welcome')}}" class="button" class="fa fa-home" >Back to Home</a>
-  </div>
 
   {{-- <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> --}}
@@ -522,18 +476,3 @@ form {
 </body>
 
 </html>
-<script>
-  
-const submitButton = document.getElementById('submit-button');
-const popupContainer = document.getElementById('popup-container');
-const backHome = document.getElementById('back-home');
-
-submitButton.addEventListener('click', () => {
-  popupContainer.style.display = 'flex';
-});
-
-closeButton.addEventListener('click', () => {
-  popupContainer.style.display = 'none';
-});
-
-</script>

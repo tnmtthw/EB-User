@@ -242,6 +242,44 @@ label {
    font-size: 35px; 
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
+.chat-popup {
+  display: none;
+  position: fixed;
+  z-index: 9;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, #E0EEFE, #81CEF4);
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
 </style>
 </head>
 
@@ -326,7 +364,20 @@ label {
           <img src="assets/img/support.png" style="margin-top: 90px; padding-left: 150px;">
           <br>
           <br>
-          <button class="custom-button">click here!</button>
+
+          <button class="custom-button" onclick="openForm()" >click here!</button>
+
+          <div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
       </div>
 
 
@@ -364,6 +415,16 @@ label {
 
 </html>
 <script>
+ 
+ function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
+
 var accordions = document.getElementsByClassName("accordion");
   var i;
 

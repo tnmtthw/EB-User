@@ -448,6 +448,45 @@ label {
     background-color:white;
 
   }
+  #popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#popup {
+  background-color: #024AA2;
+  padding: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.check-circle {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  margin-bottom: 10px;
+  line-height: 80px;
+  font-size: 40px;
+  background-color: WHITE;
+}
+
+.check-mark {
+  vertical-align: center;
+  color: #024AA2
+  ;
+}
 </style>
 
 
@@ -656,6 +695,14 @@ label {
         
         <div class="d-flex flex-column text-center">
           {{-- LOGIN START HERE --}}
+          <div id="popup-container" style="display:none;">
+  <div id="popup">
+  <div class="check-circle">
+    <span class="check-mark">&#10004;</span>
+  </div><br>
+    <a>successfully logged In!</a><br><br>
+  </div>
+</div>
           @if (session('errorMessage'))
           <div class="alert alert-danger" role="alert" id="errorMessage">
             {{ session('errorMessage') }}
@@ -671,8 +718,9 @@ label {
               <label class="form-label">Password</label>
               <input type="password" class="form-control shadow" name="password" required>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
           </form>
+
           {{-- LOGIN END HERE --}}
           <div class="modal-footer d-flex justify-content-center">
             <div class="signup">Not a member yet? <a href="{{ route('signup')}}" class="sign"> Sign Up</a></div>
@@ -684,6 +732,8 @@ label {
     </div>
   </div>
 </div>
+
+
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/aos/aos.js"></script>
@@ -724,6 +774,13 @@ label {
       modal.style.display = 'none';
     }
   });
+
+const submitButton = document.getElementById('submit-button');
+const popupContainer = document.getElementById('popup-container');
+
+submitButton.addEventListener('click', () => {
+  popupContainer.style.display = 'flex';
+});
 
  
 </script>

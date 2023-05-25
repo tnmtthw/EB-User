@@ -324,7 +324,7 @@ p {
   text-align: center;
 }
 
-.button {
+.button1 {
   display: inline-block;
   padding: 10px 20px;
   width: 150px;
@@ -340,7 +340,7 @@ p {
   margin: 5px;
 }
 
-.button:hover {
+.button1:hover {
   background-color: #0477cc;
 }
 
@@ -380,9 +380,10 @@ p {
           <!-- Add the popup container -->
 <div id="popup-container" style="display: none;">
   <div id="popup">
-    <h3>Are you sure you want to log out?</h3>
-    <button class="button" onclick="logout()">Yes</button>
-    <button class="button" onclick="cancelLogout()">Cancel</button>
+    <h2><strong>Log Out</strong></h2>
+    <p><img src="assets/img/info.png" style="margin-right: 10px;" alt="Info Icon">Are you sure you want to log out?</p>
+    <button class="button1" onclick="logout()">Yes</button>
+    <button class="button1" onclick="cancelLogout()">Cancel</button>
   </div>
 </div>
           

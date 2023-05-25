@@ -318,31 +318,31 @@ label {
           <img src="assets/img/faqs.png" style="margin-top: 90px;">
            </div>
            <div class="col-md-8">
-  <button class="accordion">What are the requirements in requesting Barangay clearance?</button>
+  <button class="accordion"><img src="assets/img/yellow.png" style="margin-right: 10px;" alt="Info Icon">What are the requirements in requesting Barangay clearance?</button>
   <div class="panel">
     <p>As for Barangay Clearance requirements, you are only required to fill up the form wherein that form will ask the time period of your residency in Barangay ______________. </p>
   </div>
   <br>
   <br>
-  <button class="accordion white-accordion ">How long is the processing time for getting documents?</button>
+  <button class="accordion white-accordion"><img src="assets/img/blue.png" style="margin-right: 10px;" alt="Info Icon">How long is the processing time for getting documents?</button>
   <div class="white">
     <p>Most of the documents can be processed in a day, but the estimated time for processing the documents is 1 day for the fastest to 3 days for the slowest.</p>
   </div>
   <br>
   <br>
-  <button class="accordion ">How to schedule an appointment?</button>
+  <button class="accordion "><img src="assets/img/yellow.png" style="margin-right: 10px;" alt="Info Icon">How to schedule an appointment?</button>
   <div class="panel">
     <p>Go to the "Home" page, look for the "Services" section, and click the "Schedule Appointment" button. The page will then redirect you to a form, and you can now start setting up appointments.</p>
   </div>
   <br>
   <br>
-  <button class="accordion white-accordion ">How will I pay for the documents I requested?</button>
+  <button class="accordion white-accordion "><img src="assets/img/blue.png" style="margin-right: 10px;" alt="Info Icon">How will I pay for the documents I requested?</button>
   <div class="white">
     <p>After the document request has been approved, you can pay directly at the barangay hall on the same day you pick up the document. Note that the document will not be given if it has not yet been paid.</p>
   </div>
   <br>
   <br>
-  <button class="accordion">Where can I track the document I requested?</button>
+  <button class="accordion"><img src="assets/img/yellow.png" style="margin-right: 10px;" alt="Info Icon">Where can I track the document I requested?</button>
   <div class="panel">
     <p>Go to "Dashboard", click "Request List," and there you can see a list of the documents you requested, where you can track them to see if your request has been processed or is ready for pick up.</p>
   </div>

@@ -475,17 +475,15 @@ label {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: white;
   margin-bottom: 10px;
   line-height: 80px;
   font-size: 40px;
-  background-color: WHITE;
+  background-color: #024AA2;
 }
 
 .check-mark {
   vertical-align: center;
-  color: #024AA2
-  ;
+  color: #024AA2;
 }
 </style>
 
@@ -695,10 +693,11 @@ label {
         
         <div class="d-flex flex-column text-center">
           {{-- LOGIN START HERE --}}
+
           <div id="popup-container" style="display:none;">
   <div id="popup">
   <div class="check-circle">
-    <span class="check-mark">&#10004;</span>
+   <img src="assets/img/Vector.png" alt="Info Icon">
   </div><br>
     <a>successfully logged In!</a><br><br>
   </div>

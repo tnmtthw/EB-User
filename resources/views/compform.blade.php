@@ -542,7 +542,7 @@ select#app_type {
    
   </main><!-- End #main -->
 
- 
+  @include('include.footer')
 
 
 <div id="popup-container" style="display:none;">

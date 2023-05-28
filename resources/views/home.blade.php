@@ -449,56 +449,6 @@ label {
     background-color:white;
 
   }
-<<<<<<< HEAD
-  .clean img{
-
-    width: 520px;
-    height:520px;
-  }
-  .img-fluid1{
-    width: 470px;
-    height:520px;
-  }
-
-=======
-  #popup-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-#popup {
-  background-color: #024AA2;
-  padding: 20px;
-  padding-left: 100px;
-  padding-right: 100px;
-  border-radius: 50px;
-  text-align: center;
-}
-
-.check-circle {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  line-height: 80px;
-  font-size: 40px;
-  background-color: #024AA2;
-}
-
-.check-mark {
-  vertical-align: center;
-  color: #024AA2;
-}
->>>>>>> 5add1e5a5f36ca9ed44d947e404710c543a37cba
 </style>
 
 

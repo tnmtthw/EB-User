@@ -241,6 +241,7 @@ label {
   margin-right: 30px;
   padding: 10px 0px;
   text-align: center;
+ 
 }
 
 .button:hover{
@@ -448,6 +449,16 @@ label {
     background-color:white;
 
   }
+  .clean img{
+
+    width: 520px;
+    height:520px;
+  }
+  .img-fluid1{
+    width: 470px;
+    height:520px;
+  }
+
 </style>
 
 

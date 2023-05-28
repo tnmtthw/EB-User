@@ -245,41 +245,117 @@ label {
 .chat-popup {
   display: none;
   position: fixed;
-  z-index: 9;
-  left: 50%;
-  top: 50%;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 800px;
   transform: translate(-50%, -50%);
-  max-width: 400px;
+  height: 100%;
+  border-radius: 20px;
+}
+
+#container-msg {
+  max-width: 800px;
   width: 100%;
-  background-image: linear-gradient(to bottom right, #E0EEFE, #81CEF4);
+  background: linear-gradient(119.71deg, #E0EEFE 56.4%, #B3E3FC 99.67%, rgba(255, 255, 255, 0) 106.48%, #60B7E6 111.13%, #7BC3EB 111.14%);
+  border-radius: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+
 }
 
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: transparent;
-}
-
-/* Full-width textarea */
-.form-container textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+#chatbox {
+  width: 800;
+  height: 600px;
   border: none;
-  background: #f1f1f1;
-  resize: none;
-  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 20px;
+  padding: 10px;
+  overflow-y: visible; /* Update this line */
 }
 
-/* When the textarea gets focus, do something */
-.form-container textarea:focus {
-  background-color: #ddd;
-  outline: none;
+#message {
+ width: 550px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: none;
+  margin-top: 10px;
 }
+
+#sendbtn {
+  position: absolute;
+  padding-top: 670px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+#sendBtn::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-width: 2px 0 0 2px;
+  border-style: solid;
+  transform: rotate(45deg);
+  margin-right: 6px;
+}
+
+#closebtn {
+  position: absolute;
+  top: auto;
+  right: 50px;
+  cursor: pointer;
+}
+
+
+.message-box {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.user-message {
+  color: #092F5E;
+  background-color: white;
+  align-self: flex-end;
+  width: auto;
+  height: auto;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.admin-message {
+  color: #092F5E;
+  background-color: white;
+  align-self: flex-start;
+  width: auto;
+  height: auto;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.chat-heading {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #092F5E;
+  padding-left: 180px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 </style>
 </head>
 
@@ -368,22 +444,23 @@ label {
           <button class="custom-button" onclick="openForm()" >click here!</button>
 
           <div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Chat</h1>
-
-    <label for="msg"><b>Message</b></label>
-    <textarea placeholder="Type message.." name="msg" required></textarea>
-
-    <button type="submit" class="btn">Send</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+  <div id="container-msg">
+    <img src="assets/img/x.png" id="closebtn" alt="Close" onclick="closeForm()">
+    <div class="chat-heading">Chat Support</div>
+    <div id="chatbox"></div>
+    <input type="text" id="message" placeholder="Type your message...">
+    <img src="assets/img/s.png" id="sendbtn" alt="Send" />
+  </div>
 </div>
+
       </div>
 
 
     </div>
     </div>
-
+<br>
+<br>
+<br>
 
     </section><!-- End Why Us Section -->
 
@@ -449,4 +526,73 @@ var accordions = document.getElementsByClassName("accordion");
       }
     });
   }
+
+    // Function to create a new chat message
+    function createChatMessage(message, sender) {
+      const chatbox = document.getElementById('chatbox');
+      const messageElement = document.createElement('div');
+      messageElement.className = 'message-box';
+      const messageContent = document.createElement('p');
+      messageContent.innerHTML = `<strong>${sender}:</strong> ${message}`;
+      messageElement.appendChild(messageContent);
+
+      if (sender === 'You') {
+        messageElement.classList.add('user-message');
+      } else {
+        messageElement.classList.add('admin-message');
+      }
+      
+      chatbox.appendChild(messageElement);
+    }
+
+    // Get the send button element
+var sendButton = document.getElementById("sendbtn");
+
+// Function to handle sending the message
+function sendMessage() {
+  var messageInput = document.getElementById("message");
+  var message = messageInput.value;
+
+  // Code to send the message...
+
+  // Clear the input field
+  messageInput.value = "";
+}
+
+// Attach click event listener to the send button
+sendButton.addEventListener("click", sendMessage);
+
+    // Event listener for Enter key press
+    document.getElementById('message').addEventListener('keyup', function(event) {
+      if (event.keyCode === 13) {
+        sendMessage();
+      }
+    });
+
+    function sendMessage() {
+      const messageInput = document.getElementById('message');
+      const message = messageInput.value;
+
+      if (message !== '') {
+        createChatMessage(message, 'You');
+        messageInput.value = '';
+        // Send the message to the server or perform any desired action
+        // Here, we're just simulating a reply from the admin after 1 second
+        setTimeout(function() {
+          createChatMessage('I received your message!', 'Admin');
+        }, 1000);
+      }
+    }
+
+    // Simulating an initial message from the admin
+    setTimeout(function() {
+      createChatMessage('Welcome to the chat!', 'Admin');
+    }, 500);
+    
+    document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeForm(); // Call the function to close the form (replace 'closeForm' with the actual function name)
+    }
+  });
+
   </script>

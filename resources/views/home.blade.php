@@ -701,7 +701,7 @@ label {
    <img src="assets/img/Vector.png" alt="Info Icon">
   </div><br>
     <a>successfully logged In!</a><br><br>
-  </div>
+  </div>  
 </div>
           @if (session('errorMessage'))
           <div class="alert alert-danger" role="alert" id="errorMessage">

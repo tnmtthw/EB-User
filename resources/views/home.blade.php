@@ -449,16 +449,6 @@ label {
     background-color:white;
 
   }
-  .clean img{
-
-    width: 520px;
-    height:520px;
-  }
-  .img-fluid1{
-    width: 470px;
-    height:520px;
-  }
-
 </style>
 
 
@@ -667,6 +657,15 @@ label {
         
         <div class="d-flex flex-column text-center">
           {{-- LOGIN START HERE --}}
+
+          <div id="popup-container" style="display:none;">
+  <div id="popup">
+  <div class="check-circle">
+   <img src="assets/img/Vector.png" alt="Info Icon">
+  </div><br>
+    <a>successfully logged In!</a><br><br>
+  </div>
+</div>
           @if (session('errorMessage'))
           <div class="alert alert-danger" role="alert" id="errorMessage">
             {{ session('errorMessage') }}
@@ -682,8 +681,9 @@ label {
               <label class="form-label">Password</label>
               <input type="password" class="form-control shadow" name="password" required>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
           </form>
+
           {{-- LOGIN END HERE --}}
           <div class="modal-footer d-flex justify-content-center">
             <div class="signup">Not a member yet? <a href="{{ route('signup')}}" class="sign"> Sign Up</a></div>
@@ -695,6 +695,8 @@ label {
     </div>
   </div>
 </div>
+
+
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/aos/aos.js"></script>
@@ -735,6 +737,13 @@ label {
       modal.style.display = 'none';
     }
   });
+
+const submitButton = document.getElementById('submit-button');
+const popupContainer = document.getElementById('popup-container');
+
+submitButton.addEventListener('click', () => {
+  popupContainer.style.display = 'flex';
+});
 
  
 </script>

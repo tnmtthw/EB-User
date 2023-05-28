@@ -304,6 +304,45 @@ p {
   text-transform:none;
 }
 
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.button1 {
+  display: inline-block;
+  padding: 10px 20px;
+  width: 150px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #024AA2;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button1:hover {
+  background-color: #0477cc;
+}
 
 </style>
 
@@ -332,13 +371,21 @@ p {
               @if(Auth::check())
                 <a  href="{{ route('profile') }}">{{ Auth::user()->firstname }}</a>
               @endif
-              <a href="{{ route('logout')}}">Log out</a>
+              <a href="#" onclick="showLogoutConfirmation()">Log out</a>
               <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a> -->
                
              
             </ul>
           </li>
-          
+          <!-- Add the popup container -->
+<div id="popup-container" style="display: none;">
+  <div id="popup">
+    <h2><strong>Log Out</strong></h2>
+    <p><img src="assets/img/info.png" style="margin-right: 10px;" alt="Info Icon">Are you sure you want to log out?</p>
+    <button class="button1" onclick="logout()">Yes</button>
+    <button class="button1" onclick="cancelLogout()">Cancel</button>
+  </div>
+</div>
           
 <!-- 
           modal log in -->
@@ -350,3 +397,20 @@ p {
 
     </div>
   </header>
+  <script>
+    function showLogoutConfirmation() {
+  const popupContainer = document.getElementById('popup-container');
+  popupContainer.style.display = 'flex';
+}
+
+function logout() {
+  // Perform the logout operation here, e.g., redirect to the logout route
+  window.location.href = "{{ route('logout') }}";
+}
+
+function cancelLogout() {
+  const popupContainer = document.getElementById('popup-container');
+  popupContainer.style.display = 'none';
+}
+
+  </script>

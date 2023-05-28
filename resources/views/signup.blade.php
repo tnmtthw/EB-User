@@ -77,12 +77,6 @@
     
   }
 
-  h3 {
-    text-align: center;
-    padding: 2px;
-    border-bottom: solid 3px #47b2e4;
-  }
-
   h4 {
     padding-top:20px;
     padding-left:50px;
@@ -197,6 +191,29 @@ button[type="submit"] {
     cursor: pointer;
 }
 
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 50px;
+  text-align: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  border-radius: 50px;
+}
+
 </style>
 <body>
 
@@ -257,7 +274,7 @@ button[type="submit"] {
           <input type="text" id="active_status" name="active_status" value="1" hidden>
           <input type="text" id="account_status" name="account_status" value="0"hidden> 
           <h2 style="background-color: #024AA2;color:white; text-align: center;font-size:20px;height: 40px; width:800px;padding-top:7px;
-           border-top-left-radius: 15px; border-top-right-radius: 15px;">SIGN UP FORM</h2>
+           border-top-left-radius: 10px; border-top-right-radius: 10px;">SIGN UP FORM</h2>
           <h4  style="color: #024AA2;">Personal Details</h4>
           <div class="container">
             <div class="mt-5">
@@ -444,13 +461,20 @@ button[type="submit"] {
             </div>
             <br>
             <br>
-          <button type="submit">SUBMIT</button>
+          <button type="submit" id="submit-button">SUBMIT</button>
      
           <p style="text-align:center">Already have an account?  <a href={{ url('/') }}><u style="color: skyblue;">Sign in here</u></a></p>
         </form>
       </div>
     </section>
 
+    <div id="popup-container" style="display: none;">
+  <div id="popup">
+    <h3>Thank you for Signing Up!</h3>
+    <p>Your application is being reviewed. Please wait <br> for approval before logging in.</p>
+  </div>
+</div>
+          
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -476,3 +500,12 @@ button[type="submit"] {
 </body>
 
 </html>
+<script>
+  const submitButton = document.getElementById('submit-button');
+const popupContainer = document.getElementById('popup-container');
+
+submitButton.addEventListener('click', () => {
+  popupContainer.style.display = 'flex';
+});
+
+</script>

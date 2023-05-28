@@ -210,8 +210,7 @@ label {
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-color: #E0EEFE; 
-  background-image: linear-gradient(to bottom right, #E0EEFE, #7BC3EB);
-}
+  background: linear-gradient(119.71deg, #E0EEFE 56.4%, #B3E3FC 99.67%, rgba(255, 255, 255, 0) 106.48%, #60B7E6 111.13%, #7BC3EB 111.14%);}
 .row1 {
   max-width: 100%;
   background-color: #024AA2;
@@ -255,7 +254,7 @@ input[type="file"]
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
@@ -264,7 +263,7 @@ input[type="file"]
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
@@ -273,7 +272,7 @@ input[type="text3"]{
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
@@ -282,10 +281,9 @@ input[type="datetime-local"]{
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4); 
 }
-
 
 input[type="tel"] {
   position: relative;
@@ -294,24 +292,11 @@ input[type="tel"] {
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
   padding: 5px 5px 5px 40px;
   background-color: #f2f2f2;
 }
-
-input[type="tel"]::before {
-  content: "+63";
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(50%);
-  font-size: 14px;
-  color: #999;
-}
-
-
-
 
 input[type="submit"] {
   background-color: #024AA2;
@@ -324,15 +309,6 @@ input[type="submit"] {
   margin-left: 325px
 }
 
-input[type="checkbox"] {
-  vertical-align: middle;
-  margin-right: 10px;
-}
-
-label[for="agree"] {
-  display: inline-block;
-  padding-left: 5px;
-}
 #popup-container {
   position: fixed;
   top: 0;
@@ -396,9 +372,10 @@ label[for="agree"] {
   height: 200px; /* change to desired height */
   margin-bottom: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  padding: 5px;
+  padding: 10px;
+  margin-left: 20px;
 }
 
 .row3 {
@@ -406,7 +383,7 @@ label[for="agree"] {
 }
 
 .row3::before {
-  max-width: 100%;
+  max-width: 97%;
   content: "";
   position: absolute;
   top: -10px;
@@ -428,7 +405,7 @@ select#app_type {
   background-position: right 10px center;
   background-size: 20px;
    border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #666; /* Set text color */
   font-size: 16px;
   height: 30px;
@@ -477,7 +454,7 @@ select#app_type {
   <div class="row2">
     <div class="personal-info">
       <br>
-      <label for="personal-details" style="color: #024AA2;">Personal Details</label>
+      <label for="personal-details" style="color: #024AA2; font-size: 24px;">Personal Details</label>
       <div class="row">
         <div class="col">
           <label for="first-name">First Name</label>
@@ -509,7 +486,7 @@ select#app_type {
       </div>
     </div>
   
-        <label for="reason" style="color: #024AA2;">Complaint</label>
+        <label for="reason" style="color: #024AA2; font-size: 24px;">Complaint</label>
         <br>
         <br>
     <div class="row3">
@@ -542,7 +519,7 @@ select#app_type {
    
   </main><!-- End #main -->
 
- 
+  @include('include.footer')
 
 
 <div id="popup-container" style="display:none;">

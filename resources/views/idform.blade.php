@@ -232,7 +232,7 @@ label {
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-color: #E0EEFE; 
-  background-image: linear-gradient(to bottom right, #E0EEFE, #7BC3EB);
+  background: linear-gradient(119.71deg, #E0EEFE 1.03%, #E0EEFE 56.4%, #B3E3FC 99.67%, rgba(255, 255, 255, 0) 106.48%, #60B7E6 111.13%, #7BC3EB 111.14%);
 }
 .row1 {
   max-width: 100%;
@@ -269,16 +269,16 @@ label {
 }
 
 input[type="text"],
-input[type="email"],
-input[type="file"]
+input[type="email"]
  {
   max-width: 240px;
   width: 240px;
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  padding-left: 20px;
 }
 
  input[type="text1"]{
@@ -286,8 +286,9 @@ input[type="file"]
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  padding-left: 20px;
 }
 
 input[type="text3"]{
@@ -295,35 +296,22 @@ input[type="text3"]{
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
-input[type="tel"]{
+input[type="tel"] {
   position: relative;
   display: inline-block;
   width: 100%;
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  padding: 5px 5px 5px 40px;
-  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  padding-left: 20px;
+  
 }
-
-input[type="tel"]::before {
-  content: "+63";
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(50%);
-  font-size: 14px;
-  color: #999;
-}
-
-
-
 
 input[type="submit"] {
   background-color: #024AA2;
@@ -399,7 +387,7 @@ input[type="submit"] {
   height: 200px; /* change to desired height */
   margin-bottom: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
   padding: 5px;
 }
@@ -408,20 +396,6 @@ input[type="submit"] {
   position: relative;
 }
 
-.row3::before {
-  max-width: 100%;
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -30px;
-  margin: auto;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  z-index: -1;
-}
 
 select#precinct {
   appearance: none; /* Remove default arrow */
@@ -431,7 +405,7 @@ select#precinct {
   background-position: right 10px center;
   background-size: 20px;
    border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #666; /* Set text color */
   font-size: 16px;
   height: 40px;
@@ -461,18 +435,20 @@ input[type="date"]{
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
+  padding-left: 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4); 
 }
 
 .custom-file-upload {
-	display: inline-block;
+  display: inline-block;
   padding: 6px 12px;
   cursor: pointer;
   color: #fff;
   border-radius: 4px;
   background-color: transparent;
 }
+
 
 #img {
   display: none;
@@ -505,19 +481,18 @@ input[type="date"]{
   <div class="row2">
     <div class="personal-info">
       <br>
-      <label for="personal-details" style="color: #024AA2;">Personal Details</label>
       <div class="row">
         <div class="col">
           <label for="first-name">First Name</label>
-          <input type="text" id="first-name" name="first-name">
+          <input type="text" id="first-name" name="first-name" value="{{ Auth::user()->firstname }}">
         </div>
         <div class="col">
           <label for="middle-name">Middle Name</label>
-          <input type="text" id="middle-name" name="middle-name">
+          <input type="text" id="middle-name" name="middle-name" value="{{ Auth::user()->middlename }}">
         </div>
         <div class="col">
           <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" name="last-name">
+          <input type="text" id="last-name" name="last-name" value="{{ Auth::user()->lastname }}">
         </div>
         <div class="col">
           <label for="suffix">Suffix (optional)</label>
@@ -527,11 +502,11 @@ input[type="date"]{
      <div class="row">
       <div class="col">
             <label for="contact">Contact Number</label><br>
-            <input type="tel" id="contact" name="contact" pattern="[+]63[0-9]{10}" maxlength="11"  placeholder="Enter your phone number">
+            <input type="tel" id="contact" name="contact" maxlength="11"  placeholder="Enter your phone number" value="{{ Auth::user()->phone }}">
                 </div>
       <div class="col">
            <label for="birthday">Date of Birth</label><br>
-          <input type="date" id="birthday" name="birthday">
+          <input type="date" id="birthday" name="birthday" value="{{ Auth::user()->bday }}">
           </div>
           <div class="col">
           <label for="precinct">Voter's Precinct</label><br>

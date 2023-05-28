@@ -186,7 +186,7 @@ form{
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-color: #E0EEFE; 
-  background-image: linear-gradient(to bottom right, #E0EEFE, #7BC3EB);
+  background: linear-gradient(119.71deg, #E0EEFE 1.03%, #E0EEFE 56.4%, #B3E3FC 99.67%, rgba(255, 255, 255, 0) 106.48%, #60B7E6 111.13%, #7BC3EB 111.14%);
 }
 .row1 {
   max-width: 100%;
@@ -251,7 +251,7 @@ input[type="number"]
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
@@ -261,7 +261,7 @@ input[type="number"]
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
@@ -271,7 +271,7 @@ input[type="text3"]{
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
@@ -281,7 +281,7 @@ input[type="date"]{
   height: 40px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4); 
 }
 
@@ -293,7 +293,8 @@ input[type="submit"] {
   border-radius: 50px;
   cursor: pointer;
  align-self: center;
-  margin-left: 325px
+  margin-left: 280px;
+  
 }
 
 input[type="checkbox"] {
@@ -358,13 +359,14 @@ label[for="agree"] {
 
 
 .row3 input[type="text2"] {
-  width: 100%;
+  width: 95%;
   height: 200px; /* change to desired height */
   margin-bottom: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
   padding: 10px;
+  margin-left: 20px;
 }
 
 .row3 {
@@ -372,7 +374,7 @@ label[for="agree"] {
 }
 
 .row3::before {
-  max-width: 100%;
+  max-width: 95%;
   content: "";
   position: absolute;
   top: -10px;
@@ -394,7 +396,7 @@ select#por {
   background-position: right 10px center;
   background-size: 20px;
   border: none; /* Remove border */
-  border-radius: 5px;
+  border-radius: 10px;
   color: #666; /* Set text color */
   font-size: 16px;
   height: 40px;
@@ -437,6 +439,7 @@ input[type="radio"]:checked {
   background-color: #024AA2;
   color: #fff;
   border: none;
+  width: 300px;
   border-radius: 50px;
 }
 
@@ -537,7 +540,7 @@ input[type="radio"]:checked {
 
    
   
-        <label for="roa">Reason for Application</label>
+        <label for="roa" style="margin-left: 35px;">Reason for Application</label>
         <br>
         <br>
     <div class="row3">
@@ -546,12 +549,7 @@ input[type="radio"]:checked {
       </div>
     </div>
     <br>
-    <div class="row">
-    <div class="col">
-        <label for="img">Upload Signature</label><br>
-         <input type="file" id="signature" class="custom-file-upload" name="image">
-      </div>
-    </div>
+    <br>
     <div class="row" >
       <div class="col">
         

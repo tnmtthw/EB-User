@@ -242,7 +242,6 @@
 .hero1 {
   width: 100%;
   height: 100vh;
-  /* background: url(assets/img/bg3.png) top center no-repeat; */
   background-size: cover;
 }
 
@@ -340,33 +339,6 @@
   padding-left: 150px;
   padding-right: 150px;
 }
-.container-about1{
-  border-radius: 25px; 
-  background-color: white;
-  width: 1500px;
-  height: 480px;
-  padding-left: 150px;
-  padding-right: 150px;
-}
-
-.container-about2{
-  border-radius: 25px; 
-  background-color: white;
-  width: 1500px;
-  height: 480px;
-  padding-left: 150px;
-  padding-right: 150px;
-}
-.container-about3{
-  border-radius: 25px; 
-  background-color: white;
-  width: 1500px;
-  height: 400px;
-  padding-left: 150px;
-  padding-right: 150px;
-  display: flex;
-}
-
 .column-left,
 .column-right {
   flex: 1;
@@ -420,14 +392,60 @@
     border: solid 1px  #092F5E;
     
   }
-  .btn1:hover{
+.btn1:hover{
 
      background-color:transparent;
      
      color:#092F5E;
 
   }
-  
+  .btn2{
+    margin-top:50px;
+    background-color: #024AA2;
+    padding: 10px 30px  10px 30px; 
+    border-radius:25px;
+    color:white;
+    border: solid 1px  #092F5E;
+    float:right;
+    
+  }
+.btn1:hover{
+     background-color:transparent;
+     color:#092F5E;
+
+  }
+
+.container-about1 {
+  margin-bottom:40px;
+  border-radius:25px;
+  margin-top:0px;
+  background-color: white;
+  height: 550px;
+  width: 1250px;
+  padding: 20px;
+}
+
+.container-about1 .img-fluid {
+  width: 400px;
+  height:400px;
+}
+.container-about1 .col-lg-5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-about1 .content {
+  padding: 20px;
+}
+.container-about1 .content p {
+  color: #024AA2;
+  text-align:justify;
+
+}
+.container-about1 p{
+  padding-top:0px;
+
+}
 </style>
 
 <body>
@@ -435,97 +453,63 @@
 @include('include.navbar')
 
 <section id="hero1" class="hero d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <!-- <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap</h2> -->
-          <div data-aos="fade-up" data-aos-delay="600">
-            <div class="text-center text-lg-start">
-              <!-- <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>Get Started</span>
-                <i class="bi bi-arrow-right"></i> -->
-              </a>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 d-flex flex-column justify-content-center">
+        <!-- <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
+        <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap</h2> -->
+        <div data-aos="fade-up" data-aos-delay="600">
+          <div class="text-center text-lg-start">
+            <!-- <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <span>Get Started</span>
+              <i class="bi bi-arrow-right"></i> -->
+            </a>
           </div>
-        </div>
-        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <!-- <img src="assets/img/image1.png"class="img-fluid" alt=""> -->
         </div>
       </div>
+      <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <!-- <img src="assets/img/image1.png"class="img-fluid" alt=""> -->
+      </div>
     </div>
+  </div>
+</section><!-- End Hero -->
 
-  </section><!-- End Hero -->
-
- 
-
-  <header class="serviceheader"> Services </header>
-        <div class="section" data-aos="fade-up" >
-
-              <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-                <a href="{{ route('request') }}" class="button button-request">Request Documents</a>
-
-              <img src="assets/img/image2.png" style="height:250px;width: 300px;" >
-            </div>
-            
-    <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+<header class="serviceheader">Services</header>
+<div class="section" data-aos="fade-up">
+  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+    <a href="{{ route('request') }}" class="button button-request">Request Documents</a>
+    <img src="assets/img/image2.png" style="height:250px;width: 300px;">
+  </div>
+  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
     <a href="{{ route('compform')}}" class="button button-request">Send Complaint</a>
-
-          <img src="assets/img/image4.png" style="height:250px;width: 300px;" >
-    </div>
-
-    <div class="box1" data-aos="zoom-in" data-aos-delay="100">
+    <img src="assets/img/image4.png" style="height:250px;width: 300px;">
+  </div>
+  <div class="box1" data-aos="zoom-in" data-aos-delay="100">
     <a href="{{ route('helpdesk')}}" class="button button-request">Helpdesk</a>
+    <img src="assets/img/image4.png" style="height:250px;width: 300px;">
+  </div>
+</div>
 
-          <img src="assets/img/image4.png" style="height:250px;width: 300px;" >
+<section class="service1" style=" background: linear-gradient(rgba(67, 171, 224, 0.22), rgba(67, 171, 224, 0.22));">
+  <br>
+  <div class="container-info">
+    <div class="row">
+      <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
+        <div class="content1">
+          <h3><strong>About Barangay East Rembo</strong></h3>
+          <p>
+            Barangay East Rembo has a land area of 48.11 hectares with a population of 28,087 and a total household of 6,903. It has a 3-storey modern multi-purpose barangay hall, two public daycare centers, an elementary school (ERES), and a high school (THS). The barangay also has a covered court, health center, livelihood center, children’s park, cemented roads, sufficient potable water supply, and stable drainage system. Residents are mainly business owners, office employees, teachers, active and retired military personnel. As a self-sustaining community, the barangay also has its own talipapa, sari-sari stores, tire and auto supplies, bakery, carinderia, garments, drug stores, video & photo shops, computer rentals, barber shops, laundry shop, and beauty parlors.
+          </p>
+        </div>
+        <div class="read">
+          <button class="btn1">Read More</button>
+        </div>
+      </div>
+      <div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
+        <img src="assets/img/eastmap.png" class="imag1">
+      </div>
     </div>
-    
-
-
-</div>
-  
-<section  class="service1" style=" background: linear-gradient(rgba(67, 171, 224, 0.22), rgba(67, 171, 224, 0.22));" >
-
-<br>
-
-<div class="container-info">
-  
-<div class="row">
-<div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-  <div class="content1">
-
-    <h3 ><strong> About Barangay East Rembo</strong></h3>
-    
- 
-    <p>  Barangay East Rembo has a land are of 48.11 hectares with a population
-     of 28.087 and a total household of 6,903. It has a 3-storey modern multi-purpose
-     barangay hall, two public daycare centers, an elementary school (ERES)
-     and a high school (THS). The barangay also has a covered court, health center, livelihood center, children’s park,
-     cemented roads, sufficient potable water supply and stable drainage system. 
-     Residents are mainly business owners, office employees, teachers, active and retired military personnel. 
-     As a self-sustaining community, the barangay also has its own talipapa, sari-sari stores, tire and auto supplies,
-     bakery, carinderia, garments, drug stores,
-     video & photo shops, computer rentals, barber shops, laundry shop and beauty parlors.</p>
   </div>
-          <div class="read">
-          <button class="btn1"> Read More </button>
-
-          </div>
-
-</div>
-
-<div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
-  <img src="assets/img/eastmap.png"  class="imag1">
-</div>
-
-</div>
-
-    </div>    
-  </div>
-
-
-
   <div class="container-about1">
     <div class="row">
       <div class="col-lg-5 align-items-stretch order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
@@ -533,32 +517,28 @@
       </div>
       <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-1 order-lg-2">
         <div class="content">
-          <p style="color: #024AA2; text-align: center">HIstory of East Rembo</p>
+          <h3 style="color: #024AA2; text-align: center">History of East Rembo</h3>
           <br>
-          <p>In 1954, the Philippine Armed Forces authorized the construction of settlements for enlisted men serving in the Fort Bonifacio. East Rembo was a self-sustaining community, with the military administration not providing any assistance. In 1986, President Corazon C. Aquino granted land titles to its occupants and the barrios geographical-political boundary was turned-over to the civilian administration of the Municipality of Makati. In 1982, Jose Alamis was elected as the Barangay Captain and celebrated its feast day every October in honor of Our Lady of Fatima. In 1992, Archbishop Cardinal Jaime Sin issued a decree declaring the venerable Lady of Sorrows as its Patron Saint and changing its feast day every 15th day of September.</p>
+          <p>
+          The History of East Rembo started in 1954 when the PAF authorized the construction of Barrios for 
+          the reserved military serving in the armed forces who were living in Fort Bonifacio. East Rembo is 
+          the heart of the three barangays of West Rembo, Comembo and Pembo. These settlements were named after
+           EMBO, which means "Enlisted Men's Barrio''East Rembo is claimed to be a self-sustaining community.
+            Because after its foundation, it is recorded to haven't received any assistance from the military administration.
+             The military administration of the barrio begun in 1956 when, President Ferdinand E. Marcos issued Presidential
+              Proclamation 2425. in 1986, it was turned over to the Administration of Makati City.
+The Barangay, like every barangays in Makati, has its own Parish church, named the Mater Dolorosa Parish.
+          </p>
+          <div class="read2">
+          <button class="btn2">Read More</button>
+        </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-<br>
-<div class="container-about2">
-    <div class="row">
-      <div class="col-lg-5 align-items-stretch order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
-        <img src="assets/img/blogo.png" class="img-fluid">
-      </div>
-      <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-1 order-lg-2">
-        <div class="content">
-          <p style="color: #024AA2; text-align: center">HIstory of East Rembo</p>
-          <br>
-          <p>In 1954, the Philippine Armed Forces authorized the construction of settlements for enlisted men serving in the Fort Bonifacio. East Rembo was a self-sustaining community, with the military administration not providing any assistance. In 1986, President Corazon C. Aquino granted land titles to its occupants and the barrios geographical-political boundary was turned-over to the civilian administration of the Municipality of Makati. In 1982, Jose Alamis was elected as the Barangay Captain and celebrated its feast day every October in honor of Our Lady of Fatima. In 1992, Archbishop Cardinal Jaime Sin issued a decree declaring the venerable Lady of Sorrows as its Patron Saint and changing its feast day every 15th day of September.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 </section>
+
+
 
 
 @include('include.footer')

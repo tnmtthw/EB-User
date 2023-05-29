@@ -514,12 +514,15 @@ label {
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
+      <!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
+<!-- ======= Hero Section ======= -->
+
   <section id="hero" class="d-flex align-items-center">
   <div class="container">
     <div class="row">
@@ -534,7 +537,9 @@ label {
       </div>
     </div>
   </div>
-</section><!-- End Hero -->
+</section>
+
+<!-- End Hero -->
 
 <header class="serviceheader">Services</header>
 <div class="section" data-aos="fade-up">
@@ -643,33 +648,12 @@ label {
     </div>
   </div>
 </section>
-<!-- MISSION VISTION SECTION -->
-<!-- <section id="mission-vision" style="background: rgba(67, 171, 224, 0.22);">
-  <div class="container mission-vision-container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="mission">
-          <h2 class="mission-title" style="color: yellow;">Mission</h2>
-          <p class="mission-content">East Rembo intends to deliver excellent social services through a healthy, safe, and clean environment. Our mission is to continuously increase the preparedness of residents, enhance the accessibility and quality of health services, develop a peaceful and disciplined community, and create more business opportunities through livelihood programs.</p>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="vision">
-          <h2 class="vision-title" style="color: blue;">Vision</h2>
-          <p class="vision-content">East Rembo envisions becoming one of the most resilient barangays in Makati City. Our vision is to have empowered, God-loving, and professional citizens living in a progressive economy, a disaster-resilient community, and an ecologically balanced environment. We strive for excellent public service and fair, transparent governance.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 
-
-<!-- End Why Us Section -->
-
-    <!-- ======= Portfolio Section ======= -->
    
-  </main><!-- End #main -->
+  </main>
+  
+  <!-- End #main -->
 
   <!-- ======= Footer ======= -->
   

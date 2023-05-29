@@ -37,11 +37,19 @@
   background-color: #4981C6;
   background-size: cover;
   background-repeat:   no-repeat;
-    background-position: center center;  
+  background-position: center center;  
 
 }
+.profilebg {
+  margin-left:15%;
+    width:1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
 #profilebg {
-
+  
    background:  linear-gradient(
     to right,
     #fefefe 10%,
@@ -67,9 +75,10 @@ label{
     font-weight: bold;
 }
 
-h4{
+.col-sm h4{
     color: #024AA2;
     font-weight: bold;
+    font-size:40px;
 }
 .container5{
   padding-top: 30px;
@@ -90,6 +99,8 @@ border-radius: 20px;
 }
 .button {
   background-color: #024AA2;
+  height:40px;
+  padding-top:7px;
   border-radius: 25px;
   color: #fff;
   text-decoration: none;
@@ -104,6 +115,141 @@ border-radius: 20px;
     margin-left: 500px;
     text-align: center;
   }
+  .col-sm{
+    margin-left: 0px;
+  }
+
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+/* Modal */
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  width: 500px;
+  max-width: 90%;
+  height: fit-content;
+  border: 1px solid #888;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form Styling */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+  }
+}
+ 
 </style>
 </head>
 
@@ -122,20 +268,20 @@ border-radius: 20px;
   <!-- ======= Header ======= -->
 
 
-    <section id="profilebg" class="profilebg">
+  <section id="profilebg" class="profilebg">
       <div class="container2" data-aos="fade-up">
         <div class="personal-info">
         <div class="row">
         <div class="col-sm">
             <div class="container5">
-            <img class="img-format " src="assets/img/news.png">
+            <img class="img-format " src="assets/img/deku.jpg">
 
         </div>
-        </div>
-       
+        
+ </div>
+
         <div class="col-sm" >
-        <br>     
-        <h4>Personal Information</h4>
+        <h4>Personal Information</h4> 
         <br>
         <label for="firstname" class="underline-label">First Name: </label>
         <span>{{ Auth::user()->firstname }}</span>
@@ -153,8 +299,10 @@ border-radius: 20px;
         <label for="sitio" class="underline-label">Sitio: </label>
         <span>{{ Auth::user()->sitio }}</span>
         </div>
+
         
         <div class="col-sm">
+        <br>
         <br>
         <h4 style="color: white;">blank</h4>
         <br>
@@ -170,7 +318,9 @@ border-radius: 20px;
         </div>
         <br>
         <div class="button-container">
-        <a href="{{ route('compform')}}" class="button">EDIT PERSONAL INFORMATION</a>
+        <button id="editButton" class="button">EDIT PERSONAL INFORMATION</button>
+
+
         </div>
     
         </div>
@@ -180,6 +330,40 @@ border-radius: 20px;
     <!-- ======= Portfolio Section ======= -->
    
   </main><!-- End #main -->
+
+  <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Personal Information</h2>
+    <form id="editForm">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+      
+      <label for="middleName">Middle Name:</label>
+      <input type="text" id="middleName" name="middleName" required>
+      
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required>
+      
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+      
+      <label for="sitio">Sitio:</label>
+      <input type="text" id="sitio" name="sitio" required>
+      
+      <label for="gender">Gender:</label>
+      <input type="text" id="gender" name="gender" required>
+      
+      <label for="contactNumber">Contact Number:</label>
+      <input type="tel" id="contactNumber" name="contactNumber" required>
+      
+      <label for="emailAddress">Email Address:</label>
+      <input type="email" id="emailAddress" name="emailAddress" required>
+      
+      <input type="submit" value="Save">
+    </form>
+  </div>
+</div>
 
   <!-- ======= Footer ======= -->
   @include('include.footer')
@@ -196,8 +380,37 @@ border-radius: 20px;
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js">
+    
+  </script>
 
+<script>
+// Get the modal
+const modal = document.getElementById("modal");
+
+// Get the button that opens the modal
+const editButton = document.getElementById("editButton");
+
+// Get the <span> element that closes the modal
+const closeSpan = document.getElementsByClassName("close")[0];
+
+// Open the modal when the button is clicked
+editButton.addEventListener("click", function() {
+  modal.style.display = "block";
+});
+
+// Close the modal when the <span> element is clicked
+closeSpan.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+// Close the modal when the user clicks outside of it
+window.addEventListener("click", function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+</script>
 </body>
 
 </html>

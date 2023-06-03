@@ -284,32 +284,6 @@ a:hover {
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center">
-
-    <h1 class="logo me-auto" style="align-content: left;"><a href="index.php"><span>E</span>Barangay</a></h1>
-    
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a  href="{{ url('/') }}">Home</a></li>
-          <li><a href="">About</a></li>
-     <li><a href="">Services</a></li>
-           <li><a href="">Contact</a></li>
-          <!-- <li><a  href="{{ route('logout')}}">Logout</a></li> -->
-          <div class="container">
- 		<a style="color: white"><span id='clock'></span></a>
-</div>
-          
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
- <body  >
 
   <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
@@ -422,27 +396,6 @@ a:hover {
 </html>
 <script>
 
-	var dt = new Date();
-var hours = dt.getHours();
-var minutes = dt.getMinutes();
-var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-var timeString = hours + ':' + minutes + '' + ampm;
-document.getElementById('clock').innerHTML = dt.toDateString() + ' ' + timeString;
-
-function clock() {
-    var dt = new Date();
-    var hours = dt.getHours();
-    var minutes = dt.getMinutes();
-    var ampm = hours >= 12 ? 'pm' : 'am';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    var timeString = hours + ':' + minutes + '' + ampm;
-    clockElement.textContent = dt.toDateString() + ' ' + timeString;
-}
-
-setInterval(clock, 1000);
 
 
 

@@ -41,7 +41,7 @@
 
 }
 .profilebg {
-  margin-left:15%;
+  margin-left:5%;
     width:1500px;
     display: flex;
     justify-content: center;
@@ -98,21 +98,27 @@ border-radius: 20px;
     border-radius: 50%;
 }
 .button {
-  background-color: #024AA2;
   height:40px;
   padding-top:7px;
   border-radius: 25px;
   color: #fff;
-  text-decoration: none;
-  display: inline-block;
   transition: background-color 0.3s ease;
   text-align: center;
+  background-color: #024AA2;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 
 }
 .button-container .button{
     display: block;
     width: 350px;
-    margin-left: 500px;
+    margin-left: 400px;
     text-align: center;
   }
   .col-sm{
@@ -155,18 +161,7 @@ border-radius: 20px;
   cursor: pointer;
 }
 
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+
 /* Modal */
 #modal {
   display: none;
@@ -274,7 +269,7 @@ input[type="submit"]:hover {
         <div class="row">
         <div class="col-sm">
             <div class="container5">
-            <img class="img-format " src="assets/img/deku.jpg">
+            <img class="img-format " src="assets/img/profile.jpg">
 
         </div>
         

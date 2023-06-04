@@ -41,7 +41,7 @@
 
 }
 .profilebg {
-  margin-left:15%;
+  margin-left:5%;
     width:1500px;
     display: flex;
     justify-content: center;
@@ -98,21 +98,27 @@ border-radius: 20px;
     border-radius: 50%;
 }
 .button {
-  background-color: #024AA2;
   height:40px;
   padding-top:7px;
   border-radius: 25px;
   color: #fff;
-  text-decoration: none;
-  display: inline-block;
   transition: background-color 0.3s ease;
   text-align: center;
+  background-color: #024AA2;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 
 }
 .button-container .button{
     display: block;
     width: 350px;
-    margin-left: 500px;
+    margin-left: 400px;
     text-align: center;
   }
   .col-sm{
@@ -155,18 +161,7 @@ border-radius: 20px;
   cursor: pointer;
 }
 
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+
 /* Modal */
 #modal {
   display: none;
@@ -269,14 +264,16 @@ input[type="submit"]:hover {
 
 
   <section id="profilebg" class="profilebg">
-    <div class="container2" data-aos="fade-up">
-      <div class="personal-info">
+      <div class="container2" data-aos="fade-up">
+        <div class="personal-info">
         <div class="row">
-          <div class="col-sm">
+        <div class="col-sm">
             <div class="container5">
-              <img class="img-format" src="{{ Auth::user()->avatar ?: 'assets/img/deku.jpg' }}">
-            </div> 
-          </div>
+            <img class="img-format " src="assets/img/profile.jpg">
+
+        </div>
+        
+ </div>
 
         <div class="col-sm" >
         <h4>Personal Information</h4> 
@@ -292,7 +289,7 @@ input[type="submit"]:hover {
         <span>{{ Auth::user()->lastname }}</span>
         <br><br>
         <label for="lastname" class="underline-label">Address: </label>
-        <span>{{ Auth::user()->house_number}} {{ Auth::user()->street}} {{ Auth::user()->brgy }}, {{ Auth::user()->city}}</span>
+        <span>{{ Auth::user()->house_number}} ,{{ Auth::user()->street}} ,{{ Auth::user()->brgy }} ,{{ Auth::user()->city}}</span>
         <br><br>
         <label for="sitio" class="underline-label">Sitio: </label>
         <span>{{ Auth::user()->sitio }}</span>
@@ -333,75 +330,35 @@ input[type="submit"]:hover {
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>Personal Information</h2>
-
-    <form action="{{ route('update.profile') }}" method="POST">
-      @csrf
-      @method('PUT')
-
+    <form id="editForm">
       <label for="firstName">First Name:</label>
-      <input type="text" id="firstname" name="firstname" value="{{ Auth::user()->firstname }}" required>
+      <input type="text" id="firstName" name="firstName" required>
       
       <label for="middleName">Middle Name:</label>
-      <input type="text" id="middlename" name="middlename" value="{{ Auth::user()->middlename }}" required>
+      <input type="text" id="middleName" name="middleName" required>
       
       <label for="lastName">Last Name:</label>
-      <input type="text" id="lastname" name="lastname" value="{{ Auth::user()->lastname }}" required>
+      <input type="text" id="lastName" name="lastName" required>
+      
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+      
+      <label for="sitio">Sitio:</label>
+      <input type="text" id="sitio" name="sitio" required>
       
       <label for="gender">Gender:</label>
-      <div class="gender-option">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gender" id="male" value="Male" {{ Auth::user()->gender == 'Male' ? 'checked' : '' }}>
-          <label class="form-check-label" for="male">Male</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gender" id="female" value="Female" {{ Auth::user()->gender == 'Female' ? 'checked' : '' }}>
-          <label class="form-check-label" for="female">Female</label>
-        </div>
-      </div>
-        
+      <input type="text" id="gender" name="gender" required>
       
       <label for="contactNumber">Contact Number:</label>
-      <input type="tel" id="phone" name="phone" value="{{ Auth::user()->phone }}" required>
+      <input type="tel" id="contactNumber" name="contactNumber" required>
       
       <label for="emailAddress">Email Address:</label>
-      <input type="email" id="email" name="email" value="{{ Auth::user()->email }}" required>
+      <input type="email" id="emailAddress" name="emailAddress" required>
       
       <input type="submit" value="Save">
     </form>
   </div>
 </div>
-
-
-      {{-- <label for="address">House Number:</label>
-      <input type="text" id="house_number" name="house_number" value="{{ Auth::user()->house_number }}" required>
-
-      
-      @php
-      $filePath = public_path('streets.txt');
-      $streets = file($filePath, FILE_IGNORE_NEW_LINES);
-      @endphp
-      <label for="address">Street:</label>
-      <select id="street" name="street" class="form-control">
-        <option value="">Select a street</option>
-        @foreach($streets as $street)
-          <option value="{{ $street }}" {{ Auth::user()->street == $street ? 'selected' : '' }}>
-            {{ $street }}
-          </option>
-        @endforeach
-      </select>
-      
-      
-      <label for="sitio">Sitio:</label>
-      <select id="sitio" name="sitio" class="form-control">
-        <option value="">Select a sitio</option>
-        <option value="1" {{ Auth::user()->sitio == 1 ? 'selected' : '' }}>Sitio 1</option>
-        <option value="2" {{ Auth::user()->sitio == 2 ? 'selected' : '' }}>Sitio 2</option>
-        <option value="3" {{ Auth::user()->sitio == 3 ? 'selected' : '' }}>Sitio 3</option>
-        <option value="4" {{ Auth::user()->sitio == 4 ? 'selected' : '' }}>Sitio 4</option>
-        <option value="5" {{ Auth::user()->sitio == 5 ? 'selected' : '' }}>Sitio 5</option>
-        <option value="6" {{ Auth::user()->sitio == 6 ? 'selected' : '' }}>Sitio 6</option>
-        <option value="7" {{ Auth::user()->sitio == 7 ? 'selected' : '' }}>Sitio 7</option>
-      </select>       --}}
 
   <!-- ======= Footer ======= -->
   @include('include.footer')

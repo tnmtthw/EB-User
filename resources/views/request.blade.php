@@ -330,7 +330,7 @@ c;
                     <img src="assets/img/ID3.png" style="max-width: 100%; max-height: 100%;">
                   </div>
               
-                  <a href="{{ route('idform')}}"><button class="read-more-btn"><span style="text-align: center;">BARANGAY ID</span></i></button></a>
+                  <a href="{{ route('bid')}}"><button class="read-more-btn"><span style="text-align: center;">BARANGAY ID</span></i></button></a>
             </div>
           </div>
 

@@ -473,90 +473,83 @@ input[type="date"]{
 <br>
 
   <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container3" data-aos="fade-up">
-  <div class="row1" style="text-align: center;">
-    <h1>Barangay ID Form</h1>
-  </div>
-  <div class="row2">
-    <div class="personal-info">
-      <br>
-      <div class="row">
-        <div class="col">
-          <label for="first-name">First Name</label>
-          <input type="text" id="first-name" name="first-name" value="{{ Auth::user()->firstname }}">
-        </div>
-        <div class="col">
-          <label for="middle-name">Middle Name</label>
-          <input type="text" id="middle-name" name="middle-name" value="{{ Auth::user()->middlename }}">
-        </div>
-        <div class="col">
-          <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" name="last-name" value="{{ Auth::user()->lastname }}">
-        </div>
-        <div class="col">
-          <label for="suffix">Suffix (optional)</label>
-          <input type="text" id="suffix" name="suffix">
-        </div>
-      </div>
-     <div class="row">
-      <div class="col">
-            <label for="contact">Contact Number</label><br>
-            <input type="tel" id="contact" name="contact" maxlength="11"  placeholder="Enter your phone number" value="{{ Auth::user()->phone }}">
-                </div>
-      <div class="col">
-           <label for="birthday">Date of Birth</label><br>
-          <input type="date" id="birthday" name="birthday" value="{{ Auth::user()->bday }}">
+  <section id="services" class="services section-bg">
+  <div class="container3" data-aos="fade-up">
+    <div class="row1" style="text-align: center;">
+      <h1>BARANGAY ID FORM</h1>
+    </div>
+    <div class="row2">
+      <div class="personal-info">
+        <br>
+        <div class="row">
+          <div class="col">
+            <label for="first-name">First Name</label>
+            <input type="text" id="firstname" name="firstname" value="{{ Auth::user()->firstname }}">
           </div>
           <div class="col">
-          <label for="precinct">Voter's Precinct</label><br>
-<select  name="precinct" id="precinct" placeholder="Select Precinct">
-<option value="1">0817A</option>
-<option value="2">0817B</option>
-<option value="3">0818A</option>
-<option value="4">0818B</option>
-<option value="5">0819A</option>
-<option value="6">0820A</option>
-<option value="7">0820B</option>
-<option value="8">0821A</option>
-<option value="9">0823A</option>
-<option value="10">0822A</option>
-<option value="11">0821B</option>
-
-</select>
+            <label for="middle-name">Middle Name</label>
+            <input type="text" id="middlename" name="middlename" value="{{ Auth::user()->middlename }}">
+          </div>
+          <div class="col">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="lastname" name="lastname" value="{{ Auth::user()->lastname }}">
+          </div>
+          <div class="col">
+            <label for="suffix">Suffix (optional)</label>
+            <input type="text" id="suffix" name="suffix">
+          </div>
         </div>
-    </div>
-    <div class="row">
-    <div class="col">
-        <label for="pob">Place of Birth</label>
-        <input type="text1" id="pob" name="pob" placeholder="Enter Place of Birth">
+        <div class="row">
+          <div class="col">
+            <label for="contact">Contact Number</label><br>
+            <input type="tel" id="phone" name="phone" maxlength="11" placeholder="Enter your phone number" value="{{ Auth::user()->phone }}">
+          </div>
+          <div class="col">
+            <label for="birthday">Date bday Birth</label><br>
+            <input type="date" id="birthday" name="bday" value="{{ Auth::user()->bday }}">
+          </div>
+          <div class="col">
+            <label for="precinct">Voter's Precinct</label><br>
+            <select name="precinct" id="precinct" placeholder="Select Precinct">
+              <option value="1">0817A</option>
+              <option value="2">0817B</option>
+              <option value="3">0818A</option>
+              <option value="4">0818B</option>
+              <option value="5">0819A</option>
+              <option value="6">0820A</option>
+              <option value="7">0820B</option>
+              <option value="8">0821A</option>
+              <option value="9">0823A</option>
+              <option value="10">0822A</option>
+              <option value="11">0821B</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="pob">Place of Birth</label>
+            <input type="text1" id="pob" name="pob" placeholder="Enter Place of Birth">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="img">Upload Photo</label><br>
+            <input type="file" id="image" class="custom-file-upload" name="image">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col">
+            <form>
+              <input type="submit" id="submit-button" value="Submit">
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-    <div class="col">
-        <label for="img">Upload Photo</label><br>
-         <input type="file" id="photo" class="custom-file-upload" name="image">
-      </div>
-    </div>
-    <br>
-    <div class="row" >
-      <div class="col">
+  </div>
+</section>
 
-
-        
-  <input type="submit" id="submit-button" value="Submit">
-      </div>
-    </div>
-     
-    
-  </form>
-</div>
-</div>
-
-  
-        
-        
-    </section>
     </body><!-- End Services Section -->
 
  

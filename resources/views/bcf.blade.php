@@ -464,10 +464,9 @@ input[type="radio"]:checked {
 <br>
 <br>
 
-    <form action="{{ route('docuRequest') }}" method="POST" enctype="multipart/form-data">
+  <form action="{{ route('docuRequest') }}" method="POST" enctype="multipart/form-data">
   @csrf
-
-  <!-- ======= Services Section ======= -->
+  <input type="hidden" id="type" name="type" value="Barangay Clearance">
     <section id="services">
       <div class="container3" data-aos="fade-up">
   <div class="row1" style="text-align: center;">

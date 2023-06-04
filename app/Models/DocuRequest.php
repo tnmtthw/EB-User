@@ -22,7 +22,8 @@ class DocuRequest extends Model
         'howner',
         'rhowner',
         'roa',
-        'signature',
+        'image',
+        'type',
         'status',
         'user_id',
     ];

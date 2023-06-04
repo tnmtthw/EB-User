@@ -19,10 +19,11 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
+            'avatar' => $this->faker->imageUrl(),
             'firstname' => $this->faker->firstName,
             'middlename' =>$this->faker->firstNameMale,
             'lastname' => $this->faker->lastName,
-            'phone' => $this->faker->numerify('+63 (9##) ###-####'),
+            'phone' => $this->faker->regexify('09[0-9]{9}'),
             'bday' => $this->faker->dateTimeBetween('-50 years', '-20 years')->format('Y-m-d'),
             'gender' => $this->faker->randomElement(['Male', 'Female']),
             'house_number' => $this->faker->buildingNumber,
@@ -31,7 +32,7 @@ class UserFactory extends Factory
                 $streetsArray = explode("\n", $streets);
                 return $this->faker->randomElement($streetsArray);
             },
-            'sitio' => $this->faker->randomElement(['Sitio 1', 'Sitio 2', 'Sitio 3', 'Sitio 4', 'Sitio 5', 'Sitio 6', 'Sitio 7']),
+            'sitio' => $this->faker->randomElement(['1', '2', '3', '4', '5', '6', '7']),
             'brgy' => 'East Rembo',
             'city' => 'Makati City',
             'zip' => '1216',

@@ -221,7 +221,7 @@ button[type="submit"] {
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-      <h4 class="logo me-auto"><a href="index.html">EBarangay</a></h4>
+      <h4 class="logo me-auto"><a href="/">EBarangay</a></h4>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       <nav id="navbar" class="navbar">
@@ -334,11 +334,11 @@ button[type="submit"] {
                   <label>Gender</label>
                   <div class="gender-option">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                      <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
                       <label class="form-check-label" for="male">Male</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                      <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
                       <label class="form-check-label" for="female">Female</label>
                     </div>
                   </div>                  
@@ -372,14 +372,14 @@ button[type="submit"] {
                 <div class="form-group">
                   <label for="sitio">Sitio</label>
                   <select id="sitio" name="sitio" class="form-control">
-                    <option value="">Select a Sitio</option>
-                    <option value="Sitio1">Sitio 1</option>
-                    <option value="Sitio2">Sitio 2</option>
-                    <option value="Sitio3">Sitio 3</option>
-                    <option value="Sitio4">Sitio 4</option>
-                    <option value="Sitio4">Sitio 5</option>
-                    <option value="Sitio4">Sitio 6</option>
-                    <option value="Sitio4">Sitio 7</option>
+                    <option value="">Select a sitio</option>
+                    <option value="1">Sitio 1</option>
+                    <option value="2">Sitio 2</option>
+                    <option value="3">Sitio 3</option>
+                    <option value="4">Sitio 4</option>
+                    <option value="5">Sitio 5</option>
+                    <option value="6">Sitio 6</option>
+                    <option value="7">Sitio 7</option>
                   </select>
                 </div>
               </div>

@@ -26,9 +26,10 @@ class DocuRequestController extends Controller
         $data->roa = $request->input('roa');
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $path = Storage::disk('s3')->put('/images/signature', $image);
+            $path = Storage::disk('s3')->put('public/img/signature', $image);
             $data['image'] = $path;
         }   
+        $data->type = $request->input('type');
         $data->user_id = auth()->user()->id;
         $data->save();
     

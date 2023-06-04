@@ -25,7 +25,8 @@ return new class extends Migration
             $table->string('rhowner')->nullable();
             $table->string('roa')->nullable();
             $table->string('image')->nullable();
-            $table->enum('status', ['Pending', 'Approved'])->default('Pending');
+            $table->enum('type', ['Barangay Clearance', 'Barangay ID']);
+            $table->enum('status', ['Pending', 'Approved', 'On Going', 'For Pickup', 'Claimed'])->default('Pending');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();            

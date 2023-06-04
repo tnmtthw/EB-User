@@ -62,7 +62,7 @@ class LoginController extends Controller
         $data['zip'] = $request->zip;
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $path = Storage::disk('s3')->put('/images/sitio_clearance', $image);
+            $path = Storage::disk('s3')->put('public/img/sitio_clearance', $image);
             $data['image'] = $path;
         }        
         $data['username'] = $request->username;
@@ -86,5 +86,20 @@ class LoginController extends Controller
     function logout(){
         Auth::logout();
         return redirect('/')->with('status', 'You have been logged out successfully.');
+    }
+
+    function update(Request $request)
+    {
+        $user = Auth::user();
+
+        $user->firstname = $request->input('firstname');
+        $user->middlename = $request->input('middlename');
+        $user->lastname = $request->input('lastname');
+        $user->gender = $request->input('gender');
+        $user->phone = $request->input('phone');
+        $user->email = $request->input('email');
+        $user->save();
+
+        return redirect()->back()->with('success', 'Profile updated successfully');
     }
 }

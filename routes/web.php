@@ -26,19 +26,6 @@ Route::get('/', function () {
     }
 })->name('home');
 
-// Route::get('home', function () {
-//     if (Auth::check()) {
-//         return redirect()->route('welcome');
-//     } else {
-//         return view('home');
-//     }
-// })->name('home');
-
-// Route::get('/home', function () {
-//     $announcement = announcement::all();
-//     return view('home', compact('announcement'));
-// })->name('home');
-  
 
 Route::middleware(['auth'])->group(function () {
     // protected routes here
@@ -74,37 +61,24 @@ Route::middleware(['auth'])->group(function () {
         return view('compform');
     })->name('compform');
 
-    Route::get('/idform', function () {
-        return view('idform');
-    })->name('idform');
+    Route::get('/bid', function () {
+        return view('bid');
+    })->name('bid');
 
     Route::get('/helpdesk', function () {
         return view('helpdesk');
     })->name('helpdesk');
 
+    //Profile Route
     Route::get('/profile', function () {
         return view('profile');
     })->name('profile');
 
+    Route::put('/profile', [LoginController::class, 'update'])->name('update.profile');
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    
-    // Route::get('/certificate/bc', function () {
-    //     return view('certificate.bc');
-    // })->name('certificate.bc');
-
-    // Route::get('/certificate/bca', function () {
-    //     return view('certificate.bca');
-    // })->name('certificate.bca');
-
-    // Route::get('/certificate/bcaf', function () {
-    //     return view('certificate.bcaf');
-    // })->name('certificate.bcaf');
-
-    // Route::get('/certificate/bcr', function () {
-    //     return view('certificate.bcr');
-    // })->name('certificate.bcr');
 });
 
 

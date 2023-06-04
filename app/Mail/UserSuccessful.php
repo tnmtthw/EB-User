@@ -32,6 +32,6 @@ class UserSuccessful extends Mailable
     public function build()
     {
         return $this->view('email.successful')
-                    ->subject('Welcome to Your Application');
+                    ->subject('EBarangay Registration Successful');
     }
 }

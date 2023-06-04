@@ -101,13 +101,12 @@
 </head>
 <body>
 	<div class="container">
-		<img src="https://e-barangay-files.s3.ap-southeast-1.amazonaws.com/public/image/EB-logo-mail.png" alt="Logo" class="logo">
-		<h1 class="name">EBarangay</h1>
+		<img src="{{ $message->embed(public_path('assets/img/erlogo_mail.png')) }}" alt="Logo" class="logo">
+		{{-- <h1 class="name">EBarangay</h1> --}}
 		<div class="inner">
 			<h1>Hello {{ $user->firstname }},</h1>
 			<p>Congratulations! Your registration with EBarangay has been successful.</p>
 			<p>Please wait for admin approval.</p>
-			<a><button>Login</button></a>
 		</div>		
 	</div>
 </body>

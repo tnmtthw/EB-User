@@ -203,68 +203,73 @@ border-radius: 15px;
     <br>
     <div id="pages-container">
       <div id="all-page" class="page">
-        <div class="pagecontainer">
-          <span class="blue-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Barangay Clearance</strong></span> <br>
-          Date Requested: April 21, 2023<br>
-          Status: Completed</p></div>
-          <br>
-    <div class="pagecontainer">
-          <span class="green-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Certificate of Indigency</strong></span> <br>
-          Date Requested: April 21, 2023<br>
-          Status: Ongoing</p></div>
-    <br>
-    <div class="pagecontainer">
-          <span class="red-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Business Permit</strong></span> <br>
-          Date Requested: April 21, 2023<br>
-          Status: Cancelled</p></div>
+        @foreach($dashboard as $docuRequest)
+        @if($docuRequest->user_id == auth()->user()->id)
+            <div class="pagecontainer">
+                @if($docuRequest->status == 0)
+                    <span class="blue-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>{{ $docuRequest->type }}</strong></span> <br>
+                    Date Requested: {{ $docuRequest->created_at }}<br>
+                    Status: Pending</p></div>
+                @elseif($docuRequest->status == 1)
+                    <span class="blue-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>{{ $docuRequest->type }}</strong></span> <br>
+                    Date Requested: {{ $docuRequest->created_at }}<br>
+                    Status: Approved</p></div>
+                @elseif($docuRequest->status == 2)
+                    <span class="blue-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>{{ $docuRequest->type }}</strong></span> <br>
+                    Date Requested: {{ $docuRequest->created_at }}<br>
+                    Status: For Pickup</p></div>
+                @elseif($docuRequest->status == 3)
+                    <span class="green-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>{{ $docuRequest->type }}</strong></span> <br>
+                    Date Requested: {{ $docuRequest->created_at }}<br>
+                    Status: Complete</p></div>
+                @elseif($docuRequest->status == 4)
+                    <span class="red-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>{{ $docuRequest->type }}</strong></span> <br>
+                    Date Requested: {{ $docuRequest->created_at }}<br>
+                    Status: Cancel</p></div>
+                @endif
+                <br>
+            @endif
+        @endforeach
     </div>
-      <div id="ongoing-page" class="page">
-      <div class="pagecontainer">
-          <span class="green-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Barangay Clearance</strong></span> <br>
-          Date Requested: April 21, 2023<br>
-          Status: Completed</p></div>
-          <br>
-    <div class="pagecontainer">
-          <span class="green-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Certificate of Indigency</strong></span> <br>
-          Date Requested: April 21, 2023<br>
-          Status: Ongoing</p></div>
-    <br>
-    <div class="pagecontainer">
-          <span class="green-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Business Permit</strong></span> <br>
-          Date Requested: April 21, 2023<br>
-          Status: Cancelled</p></div>
-      </div>
-      <div id="completed-page" class="page">
-      <div class="pagecontainer">
-          <span class="blue-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Barangay Clearance</strong></span> <br>
-          Date Requested: April 21, 2023<br>
-          Status: Completed</p></div>
-          <br>
-    <div class="pagecontainer">
-          <span class="blue-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Certificate of Indigency</strong></span> <br>
-          Date Requested: April 21, 2023<br>
-          Status: Ongoing</p></div>
-    <br>
-    <div class="pagecontainer">
-          <span class="blue-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Business Permit</strong></span> <br>
-          Date Requested: April 21, 2023<br>
-          Status: Cancelled</p></div>
-      </div>
-      <div id="cancelled-page" class="page">
-      <div class="pagecontainer">
-          <span class="red-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Barangay Clearance</strong></span> <br>
-          Date Requested: April 21, 2023<br>
-          Status: Completed</p></div>
-          <br>
-    <div class="pagecontainer">
-          <span class="red-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Certificate of Indigency</strong></span> <br>
-          Date Requested: April 21, 2023<br>
-          Status: Ongoing</p></div>
-    <br>
-    <div class="pagecontainer">
-          <span class="red-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Business Permit</strong></span> <br>
-          Date Requested: April 21, 2023<br>
-          Status: Cancelled</p></div>
+    <div id="ongoing-page" class="page">
+        @foreach($dashboard as $docuRequest)
+            @if($docuRequest->user_id == auth()->user()->id && ($docuRequest->status == 0 || $docuRequest->status == 1 || $docuRequest->status == 2))
+                <div class="pagecontainer">
+                    <span class="blue-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>{{ $docuRequest->type }}</strong></span> <br>
+                    Date Requested: {{ $docuRequest->created_at }}<br>
+                    @if($docuRequest->status == 0)
+                        Status: Pending</p></div>
+                    @elseif($docuRequest->status == 1)
+                        Status: Approved</p></div>
+                    @elseif($docuRequest->status == 2)
+                        Status: For Pickup</p></div>
+                    @endif
+                    <br>
+                @endif
+            @endforeach
+    </div>
+    <div id="completed-page" class="page">
+        @foreach($dashboard as $docuRequest)
+            @if($docuRequest->user_id == auth()->user()->id && $docuRequest->status == 3)
+                <div class="pagecontainer">
+                    <span class="green-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>{{ $docuRequest->type }}</strong></span> <br>
+                    Date Requested: {{ $docuRequest->created_at }}<br>
+                    Status: Completed</p></div>
+                <br>
+            @endif
+        @endforeach
+    </div>
+    <div id="cancelled-page" class="page">
+        @foreach($dashboard as $docuRequest)
+            @if($docuRequest->user_id == auth()->user()->id && $docuRequest->status == 4)
+                <div class="pagecontainer">
+                    <span class="red-dot"></span><p><span style="color:#024AA2; font-size: 23px;";><strong>Barangay Clearance</strong></span> <br>
+                    Date Requested: {{ $docuRequest->created_at }}<br>
+                    Status: Cancel</p></div>
+                <br>
+            @endif
+        @endforeach
+    </div>    
       </div>
     </div>
   </div>

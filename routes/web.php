@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DocuRequestController;
+use App\Models\DocuRequest;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Auth;
 
@@ -78,6 +79,11 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/dashboard', function () {
         return view('dashboard');
+    })->name('dashboard');
+
+    Route::get('/dashboard', function () {
+        $dashboard  = DocuRequest::all();
+        return view('dashboard', compact('dashboard'));
     })->name('dashboard');
 });
 

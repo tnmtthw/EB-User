@@ -219,8 +219,7 @@
   background-color: #024AA2;
   border-radius: 25px;
   color: #fff;
-  padding: 10px 94px;
-  
+  width: 300px;
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.3s ease;
@@ -420,15 +419,12 @@
   border-radius:25px;
   margin-top:0px;
   background-color: white;
-  height: 550px;
+  height: 450px;
   width: 1250px;
   padding: 20px;
 }
 
-.container-about1 .img-fluid {
-  width: 400px;
-  height:400px;
-}
+
 .container-about1 .col-lg-5 {
   display: flex;
   align-items: center;
@@ -486,7 +482,7 @@
   </div>
   <div class="box1" data-aos="zoom-in" data-aos-delay="100">
     <a href="{{ route('helpdesk')}}" class="button button-request">Helpdesk</a>
-    <img src="assets/img/image4.png" style="height:250px;width: 300px;">
+    <img src="assets/img/helpdesk.png" style="height:250px;width: 200px;">
   </div>
 </div>
 
@@ -501,19 +497,35 @@
             Barangay East Rembo has a land area of 48.11 hectares with a population of 28,087 and a total household of 6,903. It has a 3-storey modern multi-purpose barangay hall, two public daycare centers, an elementary school (ERES), and a high school (THS). The barangay also has a covered court, health center, livelihood center, children’s park, cemented roads, sufficient potable water supply, and stable drainage system. Residents are mainly business owners, office employees, teachers, active and retired military personnel. As a self-sustaining community, the barangay also has its own talipapa, sari-sari stores, tire and auto supplies, bakery, carinderia, garments, drug stores, video & photo shops, computer rentals, barber shops, laundry shop, and beauty parlors.
           </p>
         </div>
-        <div class="read">
-          <button class="btn1">Read More</button>
-        </div>
       </div>
       <div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
         <img src="assets/img/eastmap.png" class="imag1">
       </div>
     </div>
   </div>
-  <div class="container-about1">
+
+<div class="container-about1">
+    <div class="row">
+      <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-1 order-lg-2">
+        <div class="content1">
+          <h3 style="color: #024AA2; text-align: center; font-size: 40px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);"><strong>Population <span style="color: yellow;">Count</span></strong></h3>
+         <h4 style="color: #092F5E; text-align: justify;"><span style="padding-left: 250px;"> Population: 28,087</span><br>
+         <span style="padding-left: 190px;">Number of Households: 6,903</span> <br>
+         <span style="padding-left: 140px;"> Average Household Size: 4 - 6 members </span></h4>
+        <p style=" color: #092F5E; padding-left: 110px;">Source: Philippine Statistics Authority, Census of Population, 2015</p>
+        </div>
+      </div>
+      <div class="col-lg-5 align-items-stretch order-1 order-lg-2" data-aos="fade-right" data-aos-delay="100">
+        <img src="assets/img/pop.png" class="imag1">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-info">
     <div class="row">
       <div class="col-lg-5 align-items-stretch order-2 order-lg-1" data-aos="fade-right" data-aos-delay="100">
-        <img src="assets/img/blogo.png" class="img-fluid">
+        <img src="assets/img/blogo.png" style=" width: 430px;
+  height:400px;">
       </div>
       <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-1 order-lg-2">
         <div class="content">
@@ -536,6 +548,7 @@ The Barangay, like every barangays in Makati, has its own Parish church, named t
       </div>
     </div>
 </div>
+
 </section>
 
 

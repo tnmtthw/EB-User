@@ -241,11 +241,23 @@ label {
   margin-right: 30px;
   padding: 10px 0px;
   text-align: center;
- 
 }
 
 .button:hover{
   background-color:#43ABE0;
+}
+.button-request {
+  background-color: #024AA2;
+  border-radius: 25px;
+  color: #fff;
+  width: 300px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.button-request:hover {
+  background-color: #0466c8;
 }
 .inner {
   height: 800px;
@@ -544,18 +556,19 @@ label {
 <header class="serviceheader">Services</header>
 <div class="section" data-aos="fade-up">
   <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-    <div class="button">Request Documents</div>
-    <img src="assets/img/image2.png" style="height:250px;width:300px;">
+    <a href="{{ route('request') }}" class="button button-request">Request Documents</a>
+    <img src="assets/img/image2.png" style="height:250px;width: 300px;">
   </div>
   <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-    <div class="button">Schedule Appointment</div>
-    <img src="assets/img/image3.png" style="height:250px;width:300px;">
+    <a href="{{ route('compform')}}" class="button button-request">Send Complaint</a>
+    <img src="assets/img/image4.png" style="height:250px;width: 300px;">
   </div>
   <div class="box1" data-aos="zoom-in" data-aos-delay="100">
-    <div class="button">Send Complaints</div>
-    <img src="assets/img/image4.png" style="height:250px;width:300px;">
+    <a href="{{ route('helpdesk')}}" class="button button-request">Helpdesk</a>
+    <img src="assets/img/helpdesk.png" style="height:250px;width: 200px;">
   </div>
 </div>
+
 
 <section id="about" class="about">
   <div class="container" data-aos="fade-up">

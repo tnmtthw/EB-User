@@ -159,7 +159,6 @@ end HEADER */
 
 .services .service-box.red {
   border-bottom: 3px solid rgba(2, 74, 162, 1);
-c;
 }
 
 .services .service-box.red .icon {
@@ -337,7 +336,7 @@ c;
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-box red">
             <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
-                    <img src="assets/img/permit.png" style="max-width: 100%; max-height: 100%;">
+                    <img src="assets/img/not.png" style="max-width: 80%; max-height: 80%;">
                   </div>
               
                   <a href="{{ route('bcaf')}}" > <button class="read-more-btn"><span style="text-align: center;">BUSINESS CLEARANCE</span></i></button></a>
@@ -347,7 +346,7 @@ c;
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-box red">
             <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
-                    <img src="assets/img/doc2.png" style="max-width: 100%; max-height: 100%;">
+            <img src="assets/img/not.png" style="max-width: 80%; max-height: 80%;">
                   </div>
              
                   <a href="{{ route('bcr')}}" ><button class="read-more-btn"><span style="text-align: center;">INDEGENCY CERTFICATE</span></i></button></a>
@@ -357,7 +356,7 @@ c;
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
             <div class="service-box red">
             <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
-                    <img src="assets/img/doc3.png" style="max-width: 100%; max-height: 100%;height:200px; width:192px;">
+            <img src="assets/img/not.png" style="max-width: 80%; max-height: 80%;">
                   </div>
              
                   <a href="{{ route('bcf') }}" > <button class="read-more-btn"><span style="text-align: center;">BUILDING PERMIT</span></i></button></a>
@@ -367,7 +366,7 @@ c;
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
             <div class="service-box red">
             <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
-                    <img src="assets//img/ID1.png" style="max-width: 100%; max-height: 100%;">
+            <img src="assets/img/not.png" style="max-width: 80%; max-height: 80%;">
                   </div>
            
                   <button class="read-more-btn"><span style="text-align: center;">INDEGENCY ID</span></i></button>
@@ -377,7 +376,7 @@ c;
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
             <div class="service-box red">
             <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
-                    <img src="assets//img/ID4.png" style="max-width: 100%; max-height: 100%;height:215px; width:192px;">
+            <img src="assets/img/not.png" style="max-width: 80%; max-height: 80%;">
                   </div>
            
                   <button class="read-more-btn"><span style="text-align: center;">INDEGENCY ID</span></i></button>
@@ -386,7 +385,7 @@ c;
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
             <div class="service-box red">
             <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
-                    <img src="assets//img/ID1.png" style="max-width: 100%; max-height: 100%;">
+            <img src="assets/img/not.png" style="max-width: 80%; max-height: 80%;">
                   </div>
            
                   <button class="read-more-btn"><span style="text-align: center;">INDEGENCY ID</span></i></button>

@@ -128,22 +128,25 @@ border-radius: 20px;
   .modal {
   display: none;
   position: fixed;
-  z-index: 9999;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
+  
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background:  linear-gradient(161.45deg, #81CEF4 12.56%, #E0EEFE 97.92%);;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 40%;
+  height: 650px;
   max-width: 600px;
+  overflow: hidden;
+  
 }
 
 .close {
@@ -162,52 +165,10 @@ border-radius: 20px;
 }
 
 
-/* Modal */
-#modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  width: 500px;
-  max-width: 90%;
-  height: fit-content;
-  border: 1px solid #888;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 /* Form Styling */
 form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
 }
 
@@ -218,31 +179,39 @@ label {
 input[type="text"],
 input[type="tel"],
 input[type="email"] {
-  width: 100%;
+  width: 80%;
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
 input[type="submit"] {
   padding: 8px 16px;
-  background-color: #4caf50;
+  background-color:#024AA2;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 50px;
+  width: 300px;
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #43ABE0;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .modal-content {
-    width: 90%;
+    width: 100%;
   }
+}
+
+#closebtn {
+  position: absolute;
+  top: auto;
+  right: 50px;
+  cursor: pointer;
 }
  
 </style>
@@ -325,8 +294,8 @@ input[type="submit"]:hover {
 
   <div id="modal" class="modal">
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Personal Information</h2>
+  <img src="assets/img/x.png" id="closebtn" alt="Close" onclick="closeForm()">
+    <h4 style="color: #024AA2;">Personal Information</h4>
 
     <form action="{{ route('update.profile') }}" method="POST">
       @csrf
@@ -360,7 +329,7 @@ input[type="submit"]:hover {
       <label for="emailAddress">Email Address:</label>
       <input type="email" id="email" name="email" value="{{ Auth::user()->email }}" required>
       
-      <input type="submit" value="Save">
+      <input type="submit" value="UPDATE USER PROFILE">
     </form>
   </div>
 </div>
@@ -442,6 +411,11 @@ window.addEventListener("click", function(event) {
     modal.style.display = "none";
   }
 });
+
+function closeForm() {
+    document.getElementById("modal").style.display = "none";
+  }
+  
 </script>
 </body>
 

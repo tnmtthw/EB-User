@@ -1,7 +1,4 @@
 <style>
-  .footer-top {
-    background: linear-gradient(95.28deg, #092F5E -1.27%, #2F2F2F -1.27%, #2F2F2F 25.52%, #1A3E6D 119.15%);
-}
 ul {
   list-style-type: none;
 }

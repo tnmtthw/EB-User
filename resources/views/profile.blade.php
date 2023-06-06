@@ -329,7 +329,7 @@ input[type="submit"]:hover {
       <label for="emailAddress">Email Address:</label>
       <input type="email" id="email" name="email" value="{{ Auth::user()->email }}" required>
       
-      <input type="submit" value="UPDATE USER PROFILE">
+      <input type="submit" style="margin-left: 125px;" value="UPDATE USER PROFILE">
     </form>
   </div>
 </div>
